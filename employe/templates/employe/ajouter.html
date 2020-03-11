@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Créer un compte conducteur</h2>
+
+<div class="contentbox">
+    <form class="formulaire" method="POST">
+        {% csrf_token %}
+
+        <div class="champ">
+            <label for="num_employe">Num. employé : </label>
+            <input id="num_employe" type="text" name="num_employe">
+        </div>
+
+        <div class="champ">
+            <label for="nom">Nom: </label>
+            <input id="nom" type="text" name="nom">
+        </div>
+
+        <div class="champ">
+            <label for="prenom">Prénom : </label>
+            <input id="prenom" type="text" name="prenom">
+        </div>
+
+        <div class="champ">
+            <label for="tel">Tél. : </label>
+            <input id="tel" type="text" name="tel">
+        </div>
+
+        <div class="champ">
+            <label for="adresse">Adresse : </label>
+            <input id="adresse" type="text" name="adresse">
+        </div>
+
+        <div class="champ">
+            <label for="email">email : </label>
+            <input id="email" type="email" name="email">
+        </div>
+
+        <div class="champ">
+            <label for="num_permis">Numéro de permis : </label>
+            <input id="num_permis" type="text" name="num_permis">
+        </div>
+
+        <div class="champ">
+            <label for="date_de_debut">Date de début (jj/mm/aaaa) : </label>
+            <input id="date_de_debut" type="date" name="date_de_debut">
+        </div>
+
+        <div class="champ">
+            <label for="date_de_fin">Date de fin   (jj/mm/aaaa) : </label>
+            <input id="date_de_fin" type="date" name="date_de_fin">
+        </div>
+
+        <div class="boutons">
+            <button class="ok" type="submit" value="Ajouter">Ajouter</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

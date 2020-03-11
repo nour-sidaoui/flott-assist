@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Profil conducteur</h2>
+
+<div class="contentbox">
+    <form class="formulaire" method="POST">
+        {% csrf_token %}
+
+        <div class="champ">
+            <label for="num_employe">Num. employé : </label>
+            <input id="num_employe" type="text" name="num_employe" value='{{formulaire.num_employe.value}}' >
+        </div>
+
+        <div class="champ">
+            <label for="nom">Nom: </label>
+            <input id="nom" type="text" name="nom" value='{{formulaire.nom.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="prenom">Prénom : </label>
+            <input id="prenom" type="text" name="prenom" value='{{formulaire.prenom.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="tel">Tél. : </label>
+            <input id="tel" type="text" name="tel" value='{{formulaire.tel.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="adresse">Adresse : </label>
+            <input id="adresse" type="text" name="adresse" value='{{formulaire.adresse.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="email">email : </label>
+            <input id="email" type="email" name="email" value='{{formulaire.email.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="num_permis">Numéro de permis : </label>
+            <input id="num_permis" type="text" name="num_permis" value='{{formulaire.num_permis.value}}'>
+        </div>
+
+        <div class="champ">
+            <label for="date_de_debut">Date de début (jj/mm/aaaa) : </label>
+            <input id="date_de_debut" type="date" name="date_de_debut" value='{{formulaire.date_de_debut.value|date:"Y-m-d" }}'>
+        </div>
+
+        <div class="champ">
+            <label for="date_de_fin">Date de fin   (jj/mm/aaaa) : </label>
+            <input id="date_de_fin" type="date" name="date_de_fin" value='{{formulaire.date_de_fin.value|date:"Y-m-d"}}'>
+        </div>
+
+        <div class="boutons">
+            <button class="ok" type="submit" value="Ajouter">Sauvegarder modifications</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

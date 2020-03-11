@@ -1,0 +1,65 @@
+<div class="listmenu scrollable">
+    <div class="listline">
+        <button type="button" class="collapsible">Admin(s)</button>
+            {% if liste_admin %}
+                {% for admin in liste_admin %}
+                    <div class="content">
+                        <div class="dropdown_line">
+                            <a href="{% url 'employe:voir_profil' admin.num_employe %}">{{admin}}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p> Aucun admin à afficher</p>
+            {% endif %}
+    </div>
+
+    <div class="listline not_first">
+        <button type="button" class="collapsible">Conducteurs</button>
+            {% if liste_conducteurs_presents %}
+                {% for conducteur in liste_conducteurs_presents %}
+                    <div class="content">
+                        <div class="dropdown_line">
+                            <a href="{% url 'employe:voir_profil' conducteur.num_employe %}">{{conducteur}}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p> Aucun conducteur à afficher</p>
+            {% endif %}
+    </div>
+
+    <div class="listline not_first">
+        <button type="button" class="collapsible">Véhicules</button>
+            {% if liste_vehicules %}
+                {% for vehicule in liste_vehicules %}
+                    <div class="content">
+                        <div class="dropdown_line">
+                            <a href="fiche_vehicule/{{vehicule.id}}/">{{vehicule}}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p> Aucun véhicule à afficher</p>
+            {% endif %}
+    </div>
+</div>
+
+
+<script>
+
+(function($){
+
+    $( document ).ready(function() {
+
+        $('.listline .collapsible').on('click', function(){
+
+            $(this).parent().children('.content').slideToggle(200);
+
+        });
+
+    });
+
+}(window.jQuery || window.$));
+
+</script>
