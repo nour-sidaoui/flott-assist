@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	color: #5D5D5D;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 1vw;
+	font-size: 1vmax;
 	font-weight: 400;
 	background-repeat: no-repeat;
 	background-size: auto 40vh;
@@ -15,10 +15,6 @@ b{
 	font-weight:600;
 }
 
-
-p {
-	white-space: pre;
-}
 
 a {
 	color: #5D5D5D;
@@ -36,27 +32,27 @@ header{
 
 h1{
 	font-weight: normal;
-	font-size: 3.5vw;
+	font-size: 3vw;
 }
 
 h2{
 	font-weight: normal;
-	font-size: 2.7vw;
+	font-size: 2.6vw;
 }
 
 h3{
 	font-weight: normal;
-	font-size: 1.9vw;
+	font-size: 2.2vw;
 }
 
 h4{
 	font-weight: normal;
-	font-size: 1.4vw;
+	font-size: 1.8vw;
 }
 
 h5{
 	font-weight: normal;
-	font-size: 1.2vw;
+	font-size: 1.4vw;
 }
 
 h6{
@@ -112,6 +108,18 @@ img{
 	margin-left: 2vw;
 }
 
+.droite {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: .5vh 1vw;
+}
+
+.rightmargin{
+	margin-right: 1.5vw;
+}
+
 .navbar .tab{
 	height: 3vh;
 	text-align: center;
@@ -152,6 +160,7 @@ img{
 } 
 
 .main_div {
+	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -216,11 +225,25 @@ footer {
 	align-items: center;
 	padding-left: 10px;
 	padding-right: 10px;
-	height: 1.5rem;
+    height: 1.2rem;
 	overflow: hidden;
 	border: 1px solid #b9b9b9;
 	border-radius: 8px;
 }
+
+p.profil {
+	width: 80%;
+}
+
+a.profil {
+	width: 20%;
+	text-align: right;
+}
+
+p.aucun{
+    margin: 5px 10px;
+}
+
 
 .dropdown_line {
 	display: flex;
@@ -237,11 +260,20 @@ footer {
 
 
 .contentbox{
-	margin-top: 3vh; 
-	height: 64vh;
+	margin: auto; 
+	min-height: 30vh;
 	width: 100%;
 	border: 1px solid #b9b9b9;
 	border-radius: 8px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.verticalmar {
+	margin-top: 1.5vh;
+	margin-bottom: 1.5vh;	
 }
 
 .boutons {
@@ -263,27 +295,47 @@ footer {
 	background-color: white;
 }
 
-.formulaire{
-	display: flex;
-	flex-direction: column;
+.formulaire {
+	margin-top: 2vh;
 }
 
-.champ{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+.formulaire p{
+	display: grid;
+	grid-template-areas: 
+		"label	input"
+		"none	helpandlist";
+	grid-template-columns: 2fr 5fr;
 }
 
-.champ label{
-	width: 28%;
-	margin: 1.5vh;
+
+.formulaire p label{
+	padding-left: 1vw;
+	align-self: center;
+	line-height: 1;
+	grid-area: label;
 }
 
-.champ input{
-	width: 72%;
+
+.formulaire p input{
+	float: right;
+	padding: : 10px 1vw;
+	grid-area: input;
+}
+
+
+.formulaire p span.helptext {
+    grid-area: helpandlist;
+    margin: 0 1.5%;
+}
+
+.formulaire ul {
+	text-align: center;
+    padding-left: 1vw;
+}
+
+.contentbox input:not([type=checkbox]){
 	padding-left: 1vh;
-	margin: 1.5vh;
+	margin: 1.5vh 1.5%;
 	border: 1px solid #b9b9b9;
 	border-radius: 8px;
 	background-color: white;
@@ -291,6 +343,11 @@ footer {
 	outline: none;
 	appearance: none;
 	-webkit-appearance: none;
+}
+
+.contentbox input[type='checkbox']{
+	padding-left: 1vh;
+	margin: 1.5vh 1.5%;
 }
 
 .champ label{
@@ -332,13 +389,41 @@ ul.errorlist ul.errorlist{
 }
 
 li.success{
-
 	color: #5bad5b;
 }
 
 
+.recherche {
 
+	margin: auto; 
+	height: 7vh;
+	width: 100%;
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+}
 
+.block_title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	width: 100%;
+	height: 1.2rem;
+	text-align: center;
+	background-color: #5D5D5D;
+	color: #fdde33;
+	border-radius: 7px;
+}
+
+.drop-lists{
+	display: flex;
+	justify-content: center;
+}
+
+.dropdown {
+	padding: 0 .2vw;
+	width: 49%;
+}
 
 
 

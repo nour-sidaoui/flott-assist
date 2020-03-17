@@ -1,18 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Page Véhicules</h1>
+<h3 class="verticalmar">Page Véhicules</h3>
+
 <br>
 
+<div class="contentbox scrollable">
     {% if liste_vehicules %}
-        <ul>
         {% for vehicule in liste_vehicules %}
-            <li><a href="fiche_vehicule/{{vehicule.id}}/">{{vehicule}}</a></li>
+
+            <div class="content">
+                <p class="elem">{{vehicule}}</p>
+                <a class="profil" href="{% url 'vehicule:fiche_veh' vehicule.id %}">voir fiche</a>
+            </div>
+
         {% endfor %}
-        </ul>
     {% else %}
-        <p>No vehicule are available.</p>
+        <p class="aucun centered">Aucun véhicule à afficher.</p>
     {% endif %}
+</div>
+
+<div class="boutons">
+    <div id="ajouter">
+        <a href="{% url 'vehicule:ajouter_vehicule' %}">Ajouter véhicule</a>
+    </div>
+</div>
 
 
 {% endblock content %}

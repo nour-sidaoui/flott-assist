@@ -26,11 +26,14 @@ SECRET_KEY = '6)$fc)m8crei*l8m!8vo1sppq5(bu$s6u_#0=h(cqkt-67!6ji'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'historique.apps.HistoriqueConfig',
     'employe.apps.EmployeConfig',
     'vehicule.apps.VehiculeConfig',
     'django.contrib.admin',

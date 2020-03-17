@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="contentbox">
+
+    <h2 class="centered verticalmar">Login</h2>
+
+    <form class="formulaire" method="post">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <div class="boutons">
+            <button class="ok" type="submit" >Connexion</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock content %}

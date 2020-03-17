@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="verticalmar">Créer un compte conducteur</h3>
+<h3 class="verticalmar">Ajouter nouveau véhicule</h3>
 
 <div class="contentbox scrollable">
     <form class="formulaire" method="POST">
         {% csrf_token %}
 
-        {{ creer_user_form.as_p }}
-        {{ creer_cond_form.as_p }}
+        {{ creer_veh_form.as_p }}
 
         <div class="boutons">
             <button class="ok" type="submit" value="Ajouter">Ajouter</button>

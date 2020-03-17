@@ -7,8 +7,7 @@
     <form class="formulaire" method="POST">
         {% csrf_token %}
 
-        {{user_form_modifier.as_p}}
-        {{cond_form_modifier.as_p}}
+        {{veh_form_modifier.as_p}}
 
         <div class="boutons">
             <button class="ok" type="submit" value="Ajouter">Sauvegarder modifications</button>

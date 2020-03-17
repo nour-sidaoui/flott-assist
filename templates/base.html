@@ -22,7 +22,10 @@
             </figure>
         </div>
 
+
         <nav class="navbar">
+        {% if user.is_authenticated %}
+
             <div class="gauche">
                 <div class="tab">
                     <a href="{% url 'employe:index' %}">Tableau de Bord</a>
@@ -37,37 +40,47 @@
                 </div>
 
                 <div class="tab">
-                    <span>Historique</span>
+                    <a href="{% url 'historique:page_recherche' %}">Historique</a>
                 </div>
             </div>
+
+        {% endif %}
+            <div class="droite rightmargin">
+                {% if user.is_authenticated %}
+                    <p class="rightmargin"> Vous êtes connecté en tant que : {{ request.user|capfirst }}</p>
+                {% endif %}
+
+                <a href="{% url 'logout' %}">Fermer session</a>
+            </div>
         </nav>
+
+
     </header>
 
-    <section class="espace_principal">
-        <div class="section_gauche">
+        <section class="espace_principal">
+
             {% include 'gauche.html' %}
-        </div>
 
-        <div class="main_div">
-            {% if messages %}
-            <ul class="messages">
-                {% for message in messages %}
-                <li class="{{ message.tags }}">{{ message }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
+            <div class="main_div">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
 
-            {% block content %}
-            {% endblock %}
-        </div>
+                {% block content %}
+                {% endblock %}
+            </div>
 
-        <div class="section_droite">
             {% include 'droite.html' %}
-        </div>
-    </section>
+
+        </section>
 
     <footer>
         © Copyright Nour SIDAOUI
     </footer>
 </body>
 </html>
+

@@ -1,24 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Conducteurs</h2>
+<h3 class="verticalmar">Conducteurs</h3>
+
+<br>
 
 <div class="contentbox scrollable">
     {% if liste_conducteurs %}
         {% for conducteur in liste_conducteurs %}
+
             <div class="content">
                 <p class="elem">{{conducteur}}</p>
-                <a class="profil" href="{% url 'employe:voir_profil' conducteur.num_employe %}">voir profil</a>
+                <a class="profil" href="{% url 'employe:voir_profil' conducteur.id %}">voir profil</a>
             </div>
+
         {% endfor %}
     {% else %}
-        <p>Aucun conducteur à afficher.</p>
+        <p class="aucun centered">Aucun conducteur à afficher.</p>
     {% endif %}
 </div>
 
 <div class="boutons">
     <div id="ajouter">
-        <a href="{% url 'employe:ajouter' %}">Ajouter conducteur</a>
+        <a href="{% url 'employe:ajouter_cond' %}">Ajouter conducteur</a>
     </div>
 </div>
 

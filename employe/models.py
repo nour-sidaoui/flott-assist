@@ -5,22 +5,18 @@ from django.contrib.auth.models import User
 
 
 class Employe(models.Model):
-    # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    num_employe = models.IntegerField(primary_key=True)
-    nom = models.CharField(max_length=255)
-    prenom = models.CharField(max_length=255)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     tel = models.CharField(max_length=10)
     adresse = models.CharField(max_length=255)
     email = models.EmailField(max_length=50)
-    admin = models.BooleanField()
     num_permis = models.CharField(max_length=9, null=True)
     date_de_debut = models.DateField(null=True)
     date_de_fin = models.DateField(null=True, blank=True)
     id_vehicule = models.ManyToManyField('vehicule.Vehicule', through='Conduire', blank=True)
 
     def __str__(self):
-        full_name = [str(self.prenom).capitalize(),
-                     str(self.nom).upper()]
+        full_name = [str(self.user.first_name).capitalize(),
+                     str(self.user.last_name).upper()]
         return " ".join(full_name)
 
 
