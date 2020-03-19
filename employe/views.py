@@ -35,13 +35,6 @@ def logout_request(request):
 
 
 @login_required
-def index(request):
-    return render(request=request,
-                  template_name='employe/index.html',
-                  context=updated_context())
-
-
-@login_required
 def page_conducteurs(request):
     return render(request=request,
                   template_name='employe/conducteurs.html',
@@ -67,10 +60,10 @@ def ajouter(request):
             messages.error(request, creer_user_form.errors)
             messages.error(request, creer_cond_form.errors)
             return redirect('employe:ajouter_cond')
-    else:
-        context = updated_context()
-        context['creer_user_form'] = CreerUser()
-        context['creer_cond_form'] = CreerCond()
+
+    context = updated_context()
+    context['creer_user_form'] = CreerUser()
+    context['creer_cond_form'] = CreerCond()
 
     return render(request=request,
                   template_name='employe/ajouter.html',
@@ -98,9 +91,9 @@ def voir_profil(request, pk):
         else:
             messages.error(request, user_filled_form.errors)
             messages.error(request, cond_filled_form.errors)
-    else:
-        user_filled_form = ModifierUser(instance=conducteur.user)
-        cond_filled_form = ModifierCond(instance=conducteur)
+
+    user_filled_form = ModifierUser(instance=conducteur.user)
+    cond_filled_form = ModifierCond(instance=conducteur)
 
     context = updated_context()
     context['user_form_modifier'] = user_filled_form

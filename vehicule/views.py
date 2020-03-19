@@ -51,8 +51,6 @@ def ajouter_veh(request):
                   context=context)
 
 
-# def fiche_vehicule(request, veh_id):
-#     return HttpResponse("<h1>Vous êtes sur la page du vehicule immat: %s.</h1>" % Vehicule.objects.get(id=veh_id))
 @login_required
 def fiche_vehicule(request, pk):
     vehicule = get_object_or_404(Vehicule, id=pk)

@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 from django.contrib.auth.models import User
+from datetime import datetime
 
 
 class Employe(models.Model):
@@ -21,12 +22,12 @@ class Employe(models.Model):
 
 
 class Conduire(models.Model):
-    num_employe = models.ForeignKey(Employe, on_delete=models.PROTECT)
+    id_employe = models.ForeignKey(Employe, on_delete=models.PROTECT)
     id_vehicule = models.ForeignKey('vehicule.Vehicule', on_delete=models.PROTECT)
     km_prise = models.IntegerField(null=False)
-    date_prise = models.DateTimeField(null=False, blank=False, default=timezone.now())
+    date_et_temps_de_prise = models.DateTimeField(null=False, blank=False, default=datetime.now())
     km_restit = models.IntegerField(null=True, blank=True)
-    date_restit = models.DateTimeField(null=True, blank=True)
+    date_et_temps_de_restitution = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Conduire"
@@ -36,6 +37,6 @@ class Amende(models.Model):
     date = models.DateField()
     infraction = models.CharField(max_length=255)
     montant = models.IntegerField()
-    num_employe = models.ForeignKey(Employe, on_delete=models.PROTECT)
+    id_employe = models.ForeignKey(Employe, on_delete=models.PROTECT)
     id_vehicule = models.ForeignKey('vehicule.Vehicule', on_delete=models.PROTECT)
 

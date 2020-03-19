@@ -322,6 +322,17 @@ p.aucun{
 	grid-area: input;
 }
 
+.formulaire p select{
+	padding: : 10px 1vw;
+	float: right;
+	grid-area: input;
+	margin: 1.5vh 1.5%;
+	border: 1px solid #b9b9b9;
+	border-radius: 4px;
+	background-color: white;
+	color: #5D5D5D;
+}
+
 
 .formulaire p span.helptext {
     grid-area: helpandlist;
@@ -337,7 +348,7 @@ p.aucun{
 	padding-left: 1vh;
 	margin: 1.5vh 1.5%;
 	border: 1px solid #b9b9b9;
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: white;
 	color: #5D5D5D;
 	outline: none;
@@ -365,6 +376,7 @@ p.aucun{
 	border-radius: 8px;
 	font-family: 'Ubuntu', sans-serif;
 	color: #5D5D5D;
+	background-color: white;
 }
 
 .messages {
@@ -411,19 +423,115 @@ li.success{
 	height: 1.2rem;
 	text-align: center;
 	background-color: #5D5D5D;
-	color: #fdde33;
+	color: white;
 	border-radius: 7px;
 }
 
+.form_rechercher {
+	height: calc(100% - 1.2rem);
+}
+
 .drop-lists{
+	height: 100%;
+	margin: auto; 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .dropdown {
+	display: inline;
 	padding: 0 .2vw;
 	width: 49%;
 }
 
+.resultats {
+	margin: 10px auto 3vh auto; 
+	min-height: 55vh;
+	width: 100%;
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+}
+
+/* Page d'accueil */
+
+.content_accueil {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 62vh;
+	width: 100%;
+}
+
+.full {
+	height: calc(100% - 1.2rem);
+	width: 100%;
+}
+
+.col1 {
+	height: 100%;
+	width: 48%;
+}
+
+.col2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	width: 48%;
+}
+
+.circulation {
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+	height: 100%;
+	width: 100%;
+}
+
+.gestionnaire_box {
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+	height: 11vh;
+}
+
+.flexcenterwrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.flexrow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.borders {
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+}
+
+
+.button_gestionnaire {
+	width: 48%;
+	color: #5D5D5D;
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+	background-color: white;
+	margin-bottom: 3px;
+	border-radius: 8px;
+}
+
+.controles_tech {
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+	height: 23vh;
+}
+
+.problemes {
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+	height: 23vh;
+}
 
 

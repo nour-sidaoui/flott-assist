@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="verticalmar">Réstituer véhicule</h3>
+
+<div class="contentbox scrollable">
+
+      <form method="post" id="RestituerVehicule" vehicules_dropdown_url="{% url 'dashboard:ajax_charger_vehicules' %}" novalidate>
+
+    {% csrf_token %}
+
+    <table>
+      {{ restit_form.as_table }}
+    </table>
+
+    <button type="submit">Save</button>
+
+  </form>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_id_employe").change(function () {
+    var url = $("#RestituerVehicule").attr("vehicules_dropdown_url");  // On récupère l'url de la view "charger_vehicules"
+    var idConducteur = $(this).val();                                  // On récupère l'id sélectionné  de l'input HTML
+
+    $.ajax({                                                           // On initialize une requête AJAX
+      url: url,                                                        // On défini l'url de la requête
+      data: {
+        'employe': idConducteur                                        // On ajoute le pk Conducteur aux paramètres GET
+        },
+      success: function (data) {                                       // `data` est le 'return' d'ajax_charger_vehicules
+        $("#id_id_vehicule").html(data);                               //  On replace le contenu de la dropdown avec les données reçues
+        }
+      });
+
+    });
+  </script>
+
+{% endblock content %}
+

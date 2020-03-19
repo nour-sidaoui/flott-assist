@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="verticalmar">Attribuer véhicule</h3>
+
+<div class="contentbox scrollable">
+    <form class="formulaire" method="post">
+
+        {% csrf_token %}
+
+        {{ attribuer_form.as_p }}
+
+        <div class="boutons">
+            <button class="ok" type="submit" value="Attribuer">Attribuer</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock content %}
+

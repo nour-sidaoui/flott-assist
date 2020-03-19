@@ -3,47 +3,57 @@
 
 <h3 class="verticalmar">Historique</h3>
 
-<div class="recherche">
-    <div class="block_title">
-        <h5>Recherche par :</h5>
+<div>
+    <div class="recherche">
+
+        <div class="block_title">
+            <h6>Recherche par :</h6>
+        </div>
+
+        <form class="form_rechercher" method="post">
+
+            {% csrf_token %}
+
+            <div class="drop-lists">
+                <select class="dropdown" name='recherche_cond' onchange='if(this.value != 0) { this.form.submit(); }'>
+                    <option value='0'>Conducteur</option>
+
+                    {% if liste_conducteurs %}
+                        {% for conducteur in liste_conducteurs %}
+
+                            <option value='{{ conducteur.id }}'>{{conducteur}}</option>
+
+                        {% endfor %}
+
+                    {% else %}
+                            <option value='0'>Aucun conducteur à afficher.</option>
+                    {% endif %}
+
+                </select>
+
+                <select class="dropdown" name='recherche_veh' onchange='if(this.value != 0) { this.form.submit(); }'>
+                    <option value='0'>Véhicule</option>
+
+                    {% if liste_vehicules %}
+                        {% for vehicule in liste_vehicules %}
+
+                            <option value='{{ vehicule.id }}'>{{vehicule}}</option>
+
+                        {% endfor %}
+
+                    {% else %}
+                            <option value='0'>Aucun véhicule à afficher.</option>
+                    {% endif %}
+
+                </select>
+            </div>
+        </form>
+
     </div>
 
-    <form method="post">
-        <div class="drop-lists">
-            <select class="dropdown" name='recherche_cond' onchange='if(this.value != 0) { this.form.submit(); }'>
-                <option value='0'>Conducteur</option>
+    <div class="resultats">
 
-                {% if liste_conducteurs %}
-                    {% for conducteur in liste_conducteurs %}
-
-                        <option value='{{ conducteur.id }}'>{{conducteur}}</option>
-
-                    {% endfor %}
-
-                {% else %}
-                        <option value='0'>Aucun conducteur à afficher.</option>
-                {% endif %}
-
-            </select>
-
-            <select class="dropdown" name='recherche_veh' onchange='if(this.value != 0) { this.form.submit(); }'>
-                <option value='0'>Véhicule</option>
-
-                {% if liste_vehicules %}
-                    {% for vehicule in liste_vehicules %}
-
-                        <option value='{{ vehicule.id }}'>{{vehicule}}</option>
-
-                    {% endfor %}
-
-                {% else %}
-                        <option value='0'>Aucun véhicule à afficher.</option>
-                {% endif %}
-
-            </select>
-        </div>
-    </form>
-
+    </div>
 </div>
 
 <!--<script>-->

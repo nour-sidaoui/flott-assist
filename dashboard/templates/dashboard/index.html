@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Tableau de bord</h3>
+
+
+<div class="content_accueil">
+
+    <div class="col1">
+        <div class="circulation">
+
+            <div class="block_title">
+                <h6>Véhicules en circulation</h6>
+            </div>
+
+            <div class="flexcenterwrap full scrollable">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col2">
+        <div class="gestionnaire_box">
+
+            <div class="block_title">
+                <h6>Gestionnaire</h6>
+            </div>
+
+            <div class="flexcenterwrap full scrollable">
+                <button class="button_gestionnaire" onclick="window.location.href = 'attribuer/';">Attribuer véhicule</button>
+                <button class="button_gestionnaire" onclick="window.location.href = 'restituer';">Réstituer véhicule</button>
+                <button class="button_gestionnaire" onclick="window.location.href = '#';">Ajouter amende</button>
+                <button class="button_gestionnaire" onclick="window.location.href = '#';">Saisir entretien</button>
+            </div>
+
+        </div>
+
+        <div class="controles_tech">
+            <div class="block_title">
+                <h6>Contrôles techniques</h6>
+            </div>
+
+            <div class="full scrollable">
+
+                <!-- CONTENT HERE -->
+
+            </div>
+
+        </div>
+
+        <div class="problemes">
+            <div class="block_title">
+                <h6>Problèmes signalés</h6>
+            </div>
+
+            <div class="full scrollable">
+
+                <!-- CONTENT HERE -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock content %}

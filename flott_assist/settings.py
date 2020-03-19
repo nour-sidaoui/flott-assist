@@ -33,6 +33,7 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'dashboard.apps.DashboardConfig',
     'historique.apps.HistoriqueConfig',
     'employe.apps.EmployeConfig',
     'vehicule.apps.VehiculeConfig',
