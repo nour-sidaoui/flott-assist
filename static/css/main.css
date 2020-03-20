@@ -432,7 +432,11 @@ li.success{
 }
 
 .drop-lists{
-	height: 100%;
+	margin: auto; 
+	min-height: 10vh;
+	width: 100%;
+	border-bottom: 1px solid #b9b9b9;
+	border-radius: 8px;
 	margin: auto; 
 	display: flex;
 	justify-content: center;
@@ -534,4 +538,10 @@ li.success{
 	height: 23vh;
 }
 
+.marginauto {
+	margin: 25vh 0;
+}
 
+.textaligncenter {
+	text-align: center;
+}

@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/attribuer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/attribuer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/droplists/vehicules_dropdown_list_options.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/droplists/vehicules_dropdown_list_options.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gauche.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gauche.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584640430185</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="module réstituer (back-end) fonctionnel">
+      <created>1584717383024</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584717383024</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -87,25 +90,26 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="attribuer + première partie de réstituer ajoutées" />
-    <option name="LAST_COMMIT_MESSAGE" value="attribuer + première partie de réstituer ajoutées" />
+    <MESSAGE value="module réstituer (back-end) fonctionnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="module réstituer (back-end) fonctionnel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="365" y="38" key="CommitChangelistDialog2" timestamp="1584640429837">
+    <state x="365" y="38" key="CommitChangelistDialog2" timestamp="1584717382695">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1584640429837" />
+    <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1584717382695" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1584005412295">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1584005412295" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1584640451727">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1584717394914">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1584640451727" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1584717394914" />
     <state x="357" y="177" width="670" height="676" key="search.everywhere.popup" timestamp="1583622948714">
       <screen x="0" y="23" width="1440" height="830" />
     </state>

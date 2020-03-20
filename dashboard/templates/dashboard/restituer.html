@@ -4,7 +4,6 @@
 <h3 class="verticalmar">Réstituer véhicule</h3>
 
 <div class="contentbox scrollable">
-
       <form method="post" id="RestituerVehicule" vehicules_dropdown_url="{% url 'dashboard:ajax_charger_vehicules' %}" novalidate>
 
     {% csrf_token %}
@@ -34,17 +33,23 @@
 
     </form>
 
-    {% if restit_form %}
-        <form method="post" id="restituer_form">
-            {% csrf_token %}
 
-            {{ restit_form.as_p }}
+{% if restit_form %}
+    <form class="formulaire" method="post" id="restituer_form">
+        {% csrf_token %}
 
-            <div class="boutons">
-                <button class="ok" type="submit">Enregistrer restitution</button>
-            </div>
-        </form>
-    {% endif %}
+        {{ restit_form.as_p }}
+
+        <div class="boutons">
+            <button class="ok" type="submit">Enregistrer restitution</button>
+        </div>
+    </form>
+
+{% else %}
+    <p class="marginauto textaligncenter">
+        Veuillez sélectionner le conducteur et véhicule concernés.
+    </p>
+{% endif %}
 
 </div>
 

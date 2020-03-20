@@ -70,6 +70,7 @@ def restituer_veh(request):
             conduire = get_object_or_404(Conduire,
                                          id_employe=request.POST.get('recherche_cond'),
                                          id_vehicule=request.POST.get('recherche_veh'),
+                                         date_et_temps_de_restitution=None,
                                          km_restit=None)
             context['restit_form'] = AttribuerVehicule(instance=conduire)
 
@@ -83,8 +84,9 @@ def restituer_veh(request):
 
 def charger_vehicules(request):
     id_employe = request.GET.get('employe')
-    conduites = Conduire.objects.filter(id_employe=id_employe)
-
+    conduites = Conduire.objects.filter(id_employe=id_employe,
+                                        date_et_temps_de_restitution=None,
+                                        km_restit=None)
     return render(request=request,
                   template_name='droplists/vehicules_dropdown_list_options.html',
                   context={'conduites': conduites})
