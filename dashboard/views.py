@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse, HttpResponseRedirect
 
 from employe.models import Employe, Conduire, Amende
 from vehicule.models import Vehicule, Entretien
 
 from django.contrib import messages
 from employe.views import updated_context
-from .forms import AttribuerVehicule, RestituerVehicule
+from .forms import AttribuerVehicule, RestituerVehiculeRecherche, RestituerVehicule
+from django.db.models import Q
 
 
 @login_required
@@ -42,17 +43,49 @@ def attribuer_veh(request):
 
 @login_required
 def restituer_veh(request):
-
     context = updated_context()
-    context['restit_form'] = RestituerVehicule()
 
+    if request.POST:
+        # si le conducteur et vehicules on déjà étés selectionnés
+        if 'km_prise' in request.POST:
+            conduire = get_object_or_404(Conduire,
+                                         id_employe=request.POST.get('id_employe'),
+                                         id_vehicule=request.POST.get('id_vehicule'),
+                                         km_prise=request.POST.get('km_prise'))
+            restit_form = RestituerVehicule(request.POST, instance=conduire)
+
+            if restit_form.is_valid():
+                restit_form.save()
+
+                messages.success(request, 'Le véhicule à été réstitué avec succès.')
+                return redirect('dashboard:index')
+
+            # si le formulaire n'est pas valide
+            else:
+                messages.error(request, restit_form.errors)
+                return redirect('dashboard:restituer_vehicule')
+
+        # si le conducteur et véhicule n'ont pas encore étés selectionnés (requête GET)
+        else:
+            conduire = get_object_or_404(Conduire,
+                                         id_employe=request.POST.get('recherche_cond'),
+                                         id_vehicule=request.POST.get('recherche_veh'),
+                                         km_restit=None)
+            context['restit_form'] = AttribuerVehicule(instance=conduire)
+
+    context['restit_form_rechercher'] = RestituerVehiculeRecherche()
+    context['liste_conducteurs_en_mission'] = Conduire.objects.filter(date_et_temps_de_prise__isnull=False,
+                                                                      date_et_temps_de_restitution__isnull=True)
     return render(request=request,
                   template_name='dashboard/restituer.html',
                   context=context)
 
 
 def charger_vehicules(request):
-    id_employe = request.GET.get('employe')         # on crée un attribut 'employe' et on l'ajoute à la requête GET
+    id_employe = request.GET.get('employe')
     conduites = Conduire.objects.filter(id_employe=id_employe)
-    return render(request, 'droplists/vehicules_dropdown_list_options.html', {'conduites': conduites})
+
+    return render(request=request,
+                  template_name='droplists/vehicules_dropdown_list_options.html',
+                  context={'conduites': conduites})
 

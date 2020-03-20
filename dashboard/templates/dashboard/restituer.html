@@ -9,34 +9,62 @@
 
     {% csrf_token %}
 
-    <table>
-      {{ restit_form.as_table }}
-    </table>
+           <div class="drop-lists">
+                <select class="dropdown" id='id_employe' name='recherche_cond'>
+                    <option value='0'>Conducteur</option>
 
-    <button type="submit">Save</button>
+                    {% if liste_conducteurs_en_mission %}
+                        {% for conduire in liste_conducteurs_en_mission %}
 
-  </form>
+                            <option value='{{ conduire.id_employe.pk }}'>{{conduire.id_employe}}</option>
+
+                        {% endfor %}
+
+                    {% else %}
+                            <option value='0'>Aucun conducteur est actuellement en mission.</option>
+                    {% endif %}
+
+                </select>
+
+                <select class="dropdown" id='id_vehicule' name='recherche_veh' onchange='if(this.value != 0) { this.form.submit(); }'>
+                    <option value='0'>Véhicule</option>
+                </select>
+            </div>
+
+
+    </form>
+
+    {% if restit_form %}
+        <form method="post" id="restituer_form">
+            {% csrf_token %}
+
+            {{ restit_form.as_p }}
+
+            <div class="boutons">
+                <button class="ok" type="submit">Enregistrer restitution</button>
+            </div>
+        </form>
+    {% endif %}
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-    $("#id_id_employe").change(function () {
-    var url = $("#RestituerVehicule").attr("vehicules_dropdown_url");  // On récupère l'url de la view "charger_vehicules"
-    var idConducteur = $(this).val();                                  // On récupère l'id sélectionné  de l'input HTML
+<script>
+$("#id_employe").change(function () {
+var url = $("#RestituerVehicule").attr("vehicules_dropdown_url");  // On récupère l'url de la view "charger_vehicules"
+var idConducteur = $(this).val();                                  // On récupère l'id sélectionné  de l'input HTML
 
-    $.ajax({                                                           // On initialize une requête AJAX
-      url: url,                                                        // On défini l'url de la requête
-      data: {
-        'employe': idConducteur                                        // On ajoute le pk Conducteur aux paramètres GET
-        },
-      success: function (data) {                                       // `data` est le 'return' d'ajax_charger_vehicules
-        $("#id_id_vehicule").html(data);                               //  On replace le contenu de la dropdown avec les données reçues
-        }
-      });
+$.ajax({                                                           // On initialize une requête AJAX
+  url: url,                                                        // On défini l'url de la requête
+  data: {
+    'employe': idConducteur                                        // On ajoute le pk Conducteur aux paramètres GET
+    },
+  success: function (data) {                                       // 'data' est le 'return' d'ajax_charger_vehicules
+    $("#id_vehicule").html(data);                                  //  On replace le contenu avec les données reçues
+    }
+  });
+});
 
-    });
-  </script>
+</script>
 
 {% endblock content %}
 

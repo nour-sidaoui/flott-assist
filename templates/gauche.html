@@ -24,7 +24,7 @@
                     {% for vehicule in liste_vehicules_disponibles %}
                         <div class="content">
                             <div class="dropdown_line">
-                                <a href="fiche_vehicule/{{vehicule.id}}/">{{vehicule}}</a>
+                                <a href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}</a>
                             </div>
                         </div>
                     {% endfor %}
