@@ -1,6 +1,6 @@
 from django import forms
-from employe.models import Conduire
-from vehicule.models import Vehicule
+from employe.models import Amende, Conduire
+from vehicule.models import Vehicule, Entretien
 
 
 class AttribuerVehicule(forms.ModelForm):
@@ -31,6 +31,15 @@ class RestituerVehicule(forms.ModelForm):
         self.fields['km_restit'].required = True
 
 
+class AjouterAmende(forms.ModelForm):
+    class Meta:
+        model = Amende
+        fields = '__all__'
 
+
+class SaisirEntretien(forms.ModelForm):
+    class Meta:
+        model = Entretien
+        fields = '__all__'
 
 

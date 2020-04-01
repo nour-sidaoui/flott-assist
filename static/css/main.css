@@ -382,7 +382,7 @@ p.aucun{
 .messages {
 	width: 100%;
 	margin: 1vh 0 1vh 0; 
-	font-size: 1.2vw;
+	font-size: 1vw;
 	text-align: left;
 }
 
@@ -432,8 +432,7 @@ li.success{
 }
 
 .drop-lists{
-	margin: auto; 
-	min-height: 10vh;
+	height: 100%;
 	width: 100%;
 	border-bottom: 1px solid #b9b9b9;
 	border-radius: 8px;
@@ -447,6 +446,7 @@ li.success{
 	display: inline;
 	padding: 0 .2vw;
 	width: 49%;
+    margin: 2vh auto;
 }
 
 .resultats {
@@ -545,3 +545,121 @@ li.success{
 .textaligncenter {
 	text-align: center;
 }
+
+.fullwidth {
+	width: 100%;
+}
+
+a span {
+	text-align: right;
+}
+
+.general-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 1vw;
+	justify-content: space-between;
+}
+
+.general-info div {
+	margin-right: 1vw;
+	margin-bottom: 1vh;
+	font-size: .9vw;
+}
+
+.tables {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 2vh 1vw;
+	height: auto;
+	font-size: .9vw;
+}
+
+.tablebox {
+	height: 43vh;
+	border: 1px solid #b9b9b9;
+	border-radius: 8px;
+}
+
+.tabletitle {
+	border-bottom: 1px solid #b9b9b9;
+	padding-left: .4vw;
+	height: 1.3rem;
+	width: 100%;
+}
+
+.table {
+	width: 100%;
+	table-layout: fixed;
+	border-radius: 8px;
+}
+
+.table tr {
+	height: 1.2rem;
+	border-bottom: 1px solid #b9b9b9;
+}
+
+.table-cont-overflow {
+	overflow: auto;
+	height: calc(100% - 2.5rem);
+}
+
+td {
+	padding-left: .4vw;
+	vertical-align: middle;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.conducteur {
+	width: 49%;
+}
+
+.vehicule {
+	width: 32.4%;
+}
+
+.tiers {
+	width: 33.33%;
+	max-width: 33.33%;
+}
+
+.deuxtiers {
+	width: 66.66%;
+	max-width: 66.66%;
+}
+
+.rightborder{
+	border-right: 1px solid #b9b9b9;
+}
+
+.twenty {
+	width: 20%;
+	max-width: 20%;
+}
+
+.thirty {
+	width: 30%;
+	max-width: 30%;
+}
+
+.forty {
+	width: 40%;
+	max-width: 40%;
+}
+
+.sixty {
+	width: 60%;
+	max-width: 60%;
+}
+
+.right-align {
+	text-align: right;
+	padding-right: .4vw;
+}
+
+
+
+

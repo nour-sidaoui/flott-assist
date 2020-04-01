@@ -1,0 +1,153 @@
+
+
+<div class="general-info">
+
+    <div>
+        <p><b>Marque :&nbsp;</b> {{ veh_selectionne.marque|capfirst }}</p>
+    </div>
+
+    <div>
+        <p><b>Modèle :&nbsp;</b> {{ veh_selectionne.modele|capfirst }}</p>
+    </div>
+
+    <div>
+        <p><b>Année :&nbsp;</b> {{ veh_selectionne.annee }}</p>
+    </div>
+
+    <div>
+        <p><b>Prochain contrôle technique :&nbsp;</b> {{ veh_selectionne.prochain_controle_technique }}</p>
+    </div>
+
+    <div>
+        <p><b>Immatriculation :&nbsp;</b> {{ veh_selectionne.immat }}</p>
+    </div>
+
+    {% if total_amendes %}
+    <div>
+            <p><b>Total des Amendes :&nbsp;</b> {{ total_amendes }} €</p>
+        </div>
+    {% else %}
+        <div>
+            <p><b>Total des Amendes :&nbsp;</b> 0 € </p>
+        </div>
+    {% endif %}
+
+    {% if total_frais_d_entretien %}
+    <div>
+            <p><b>Total des frais d'entretien :&nbsp;</b> {{ total_frais_d_entretien }} €</p>
+        </div>
+    {% else %}
+        <div>
+            <p><b>Total des frais d'entretien : </b> 0 € </p>
+        </div>
+    {% endif %}
+
+    {% if dernier_entretien %}
+        <div>
+            <p><b>Dernier entretien :&nbsp;</b> {{ dernier_entretien.date }}</p>
+        </div>
+    {% endif %}
+
+</div>
+
+<div class="tables">
+
+    <div class="tablebox vehicule">
+        <div class="block_title">
+            Conducteurs
+        </div>
+
+        {% if conduites %}
+            <table class="tabletitle">
+                <tr>
+                    <td class="forty rightborder"><b>Date</b></td>
+                    <td class="sixty"><b>Conducteur</b></td>
+                </tr>
+            </table>
+
+            <div class="table-cont-overflow">
+                <table class="table ">
+                    {% for conduire in conduites %}
+                        <tr>
+                            <td class="forty rightborder">{{ conduire.date_et_temps_de_prise|date:"d/m/Y" }}</td>
+                            <td class="sixty">{{ conduire.id_employe }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {% else %}
+                <p class="centered"><br/>Aucune conduite enregistrée</p>
+
+        {% endif %}
+
+    </div>
+
+    <div class="tablebox vehicule">
+        <div class="block_title">
+            Entretiens
+        </div>
+
+        {% if entretiens %}
+            <table class="tabletitle">
+                <tr>
+                    <td class="thirty rightborder"><b>Km</b></td>
+                    <td class="forty rightborder"><b>Date</b></td>
+                    <td class="thirty"><b>Coût</b></td>
+                </tr>
+            </table>
+
+            <div class="table-cont-overflow">
+                <table class="table ">
+                    {% for entretien in entretiens %}
+                        <tr>
+                            <td class="thirty rightborder">{{ entretien.km}} </td>
+                            <td class="forty rightborder"> {{ entretien.date|date:"d/m/Y" }}</td>
+                            <td class="thirty right-align">{{ entretien.montant }} €</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {% else %}
+                <p class="centered"><br/>Aucun entretien saisi</p>
+
+        {% endif %}
+
+    </div>
+
+    <div class="tablebox vehicule">
+        <div class="block_title">
+            Historique des amendes
+        </div>
+
+        {% if amendes %}
+            <table class="tabletitle">
+                <tr>
+                    <td class="forty rightborder"><b>Date</b></td>
+                    <td class="thirty rightborder"><b>Cond.</b></td>
+                    <td class="thirty"><b>Infos</b></td>
+
+                </tr>
+            </table>
+
+            <div class="table-cont-overflow">
+                <table class="table ">
+                    {% for amende in amendes %}
+                        <tr>
+                            <td class="forty rightborder">{{amende.date|date:"d/m/Y"}}</td>
+                            <td class="thirty rightborder">{{amende.id_employe.user.first_name|capfirst}}<br/>
+                                                           {{amende.id_employe.user.last_name|upper}}</td>
+                            <td class="thirty right-align">{{amende.infraction}}<br/>
+                                               ({{amende.montant}}€)</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {% else %}
+                <p class="centered"><br/>Aucune amende enregistrée</p>
+
+        {% endif %}
+    </div>
+</div>

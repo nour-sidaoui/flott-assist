@@ -7,15 +7,21 @@ from vehicule.models import Vehicule, Entretien
 
 from django.contrib import messages
 from employe.views import updated_context
-from .forms import AttribuerVehicule, RestituerVehiculeRecherche, RestituerVehicule
+from .forms import AttribuerVehicule, RestituerVehiculeRecherche, RestituerVehicule, AjouterAmende, SaisirEntretien
 from django.db.models import Q
+import datetime
 
 
 @login_required
 def index(request):
+    upcoming_month = datetime.date.today() + datetime.timedelta(days=30)
+    liste_controles_tech = Vehicule.objects.filter(prochain_controle_technique__lte=upcoming_month)
+
+    context = updated_context()
+    context['liste_controles_tech'] = liste_controles_tech
     return render(request=request,
                   template_name='dashboard/index.html',
-                  context=updated_context())
+                  context=context)
 
 
 @login_required
@@ -65,7 +71,7 @@ def restituer_veh(request):
                 messages.error(request, restit_form.errors)
                 return redirect('dashboard:restituer_vehicule')
 
-        # si le conducteur et véhicule n'ont pas encore étés selectionnés (requête GET)
+        # si le conducteur et véhicule n'ont pas encore étés selectionnés (donc requête GET)
         else:
             conduire = get_object_or_404(Conduire,
                                          id_employe=request.POST.get('recherche_cond'),
@@ -91,3 +97,38 @@ def charger_vehicules(request):
                   template_name='droplists/vehicules_dropdown_list_options.html',
                   context={'conduites': conduites})
 
+
+@login_required
+def ajouter_amende(request):
+    if request.POST:
+        ajouter_amende = AjouterAmende(request.POST)
+        if ajouter_amende.is_valid():
+            ajouter_amende.save()
+
+            messages.success(request, "L'amende enregistrée avec succès.")
+            return redirect('dashboard:index')
+
+    context = updated_context()
+    context['ajouter_amende_form'] = AjouterAmende()
+
+    return render(request=request,
+                  template_name='dashboard/ajout_amende.html',
+                  context=context)
+
+
+@login_required
+def saisir_entretien(request):
+    if request.POST:
+        saisir_entretien = SaisirEntretien(request.POST)
+        if saisir_entretien.is_valid():
+            saisir_entretien.save()
+
+            messages.success(request, "L'entretien à été saisi avec succès.")
+            return redirect('dashboard:index')
+
+    context = updated_context()
+    context['saisir_entretien_form'] = SaisirEntretien()
+
+    return render(request=request,
+                  template_name='dashboard/saisir_entretien.html',
+                  context=context)

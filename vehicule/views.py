@@ -30,6 +30,9 @@ def page_vehicules(request):
 
 @login_required
 def ajouter_veh(request):
+    context = updated_context()
+    context['creer_veh_form'] = CreerVeh()
+
     if request.method == 'POST':
         creer_veh_form = CreerVeh(request.POST)
 
@@ -41,10 +44,9 @@ def ajouter_veh(request):
 
         else:
             messages.error(request, creer_veh_form.errors)
-            return redirect('vehicule:ajouter_vehicule')
-    else:
-        context = updated_context()
-        context['creer_veh_form'] = CreerVeh()
+
+            # reassign the sent form to context (including errors)
+            context['creer_veh_form'] = creer_veh_form
 
     return render(request=request,
                   template_name='vehicule/ajouter.html',
@@ -54,6 +56,10 @@ def ajouter_veh(request):
 @login_required
 def fiche_vehicule(request, pk):
     vehicule = get_object_or_404(Vehicule, id=pk)
+    veh_filled_form = ModifierVeh(instance=vehicule)
+
+    context = updated_context()
+    context['veh_form_modifier'] = veh_filled_form
 
     if request.POST:
         veh_filled_form = ModifierVeh(request.POST, instance=vehicule)
@@ -66,11 +72,9 @@ def fiche_vehicule(request, pk):
 
         else:
             messages.error(request, veh_filled_form.errors)
-    else:
-        veh_filled_form = ModifierVeh(instance=vehicule)
 
-    context = updated_context()
-    context['veh_form_modifier'] = veh_filled_form
+            # reassign the sent form to context (including errors)
+            context['veh_form_modifier'] = veh_filled_form
 
     return render(request=request,
                   template_name='vehicule/fiche.html',

@@ -29,21 +29,32 @@
             <div class="flexcenterwrap full scrollable">
                 <button class="button_gestionnaire" onclick="window.location.href = 'attribuer/';">Attribuer véhicule</button>
                 <button class="button_gestionnaire" onclick="window.location.href = 'restituer';">Réstituer véhicule</button>
-                <button class="button_gestionnaire" onclick="window.location.href = '#';">Ajouter amende</button>
-                <button class="button_gestionnaire" onclick="window.location.href = '#';">Saisir entretien</button>
+                <button class="button_gestionnaire" onclick="window.location.href = 'ajouter-amende/';">Ajouter amende</button>
+                <button class="button_gestionnaire" onclick="window.location.href = 'saisir-entretien/';">Saisir entretien</button>
             </div>
 
         </div>
 
         <div class="controles_tech">
             <div class="block_title">
-                <h6>Contrôles techniques</h6>
+                <h6>Contrôles techniques ce mois</h6>
             </div>
 
             <div class="full scrollable">
-
-                <!-- CONTENT HERE -->
-
+                    {% if liste_controles_tech %}
+                        {% for vehicule in liste_controles_tech %}
+                            <div class="content">
+                                <div class="dropdown_line">
+                                    <a class="fullwidth" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}&nbsp;&nbsp;
+                                        -&nbsp;&nbsp;&nbsp;{{vehicule.prochain_controle_technique}}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>
+                            Aucun contrôle technique à venir dans les 30 prochains jours
+                        </p>
+                    {% endif %}
             </div>
 
         </div>

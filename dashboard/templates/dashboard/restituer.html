@@ -4,7 +4,7 @@
 <h3 class="verticalmar">Réstituer véhicule</h3>
 
 <div class="contentbox scrollable">
-      <form method="post" id="RestituerVehicule" vehicules_dropdown_url="{% url 'dashboard:ajax_charger_vehicules' %}" novalidate>
+      <form method="post" id="RestituerVehicule" vehicules_dropdown_url="{% url 'dashboard:ajax_charger_vehicules' %}">
 
     {% csrf_token %}
 
@@ -20,7 +20,7 @@
                         {% endfor %}
 
                     {% else %}
-                            <option value='0'>Aucun conducteur est actuellement en mission.</option>
+                            <option value='0'>Aucun conducteur n'est actuellement en mission.</option>
                     {% endif %}
 
                 </select>
@@ -64,7 +64,7 @@ $.ajax({                                                           // On initial
     'employe': idConducteur                                        // On ajoute le pk Conducteur aux paramètres GET
     },
   success: function (data) {                                       // 'data' est le 'return' d'ajax_charger_vehicules
-    $("#id_vehicule").html(data);                                  //  On replace le contenu avec les données reçues
+    $("#id_vehicule").html(data);                                  // On replace le contenu avec les données reçues
     }
   });
 });

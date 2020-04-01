@@ -1,0 +1,102 @@
+<div class="general-info">
+
+    <div>
+        <p><b>Prénom :&nbsp;</b> {{ cond_selectionne.user.first_name|capfirst }}</p>
+    </div>
+
+    <div>
+        <p><b>Nom :&nbsp;</b> {{ cond_selectionne.user.last_name|upper }}</p>
+    </div>
+
+    <div>
+        <p><b>Date de début :&nbsp;</b> {{ cond_selectionne.date_de_debut }}</p>
+    </div>
+
+    {% if cond_selectionne.date_de_fin %}
+        <div>
+            <p><b>Date de fin :&nbsp;</b> {{ cond_selectionne.date_de_fin }}</p>
+        </div>
+    {% else %}
+        <div>
+            <p><b>Date de fin :&nbsp;</b> Employe en poste</p>
+        </div>
+    {% endif %}
+
+
+    {% if total_amendes %}
+        <div>
+            <p><b>Total des amendes :&nbsp;</b> {{ total_amendes }} €</p>
+        </div>
+    {% else %}
+        <div>
+            <p><b>Total des amendes :&nbsp;</b> 0 €</p>
+        </div>
+    {% endif %}
+
+</div>
+
+<div class="tables">
+
+    <div class="tablebox conducteur">
+        <div class="block_title">
+            Historique des véhicules
+        </div>
+
+        {% if conduites %}
+            <table class="tabletitle">
+                <tr>
+                    <td class="forty rightborder"><b>Date</b></td>
+                    <td class="sixty"><b>Véhicule</b></td>
+                </tr>
+            </table>
+
+            <div class="table-cont-overflow">
+                <table class="table ">
+                    {% for conduire in conduites %}
+                        <tr>
+                            <td class="forty rightborder">{{ conduire.date_et_temps_de_prise|date:"d/m/Y" }}</td>
+                            <td class="sixty">{{ conduire.id_vehicule }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {% else %}
+                <p class="centered"><br/>{{ cond_selectionne|capfirst }} n'a pas de véhicules conduits en historique</p>
+
+        {% endif %}
+
+    </div>
+
+    <div class="tablebox conducteur">
+        <div class="block_title">
+            Historique des amendes
+        </div>
+
+        {% if amendes %}
+            <table class="tabletitle">
+                <tr>
+                    <td class="tiers rightborder"><b>Date</b></td>
+                    <td class="tiers rightborder"><b>Infraction</b></td>
+                    <td class="tiers"><b>Montant</b></td>
+                </tr>
+            </table>
+
+            <div class="table-cont-overflow">
+                <table class="table ">
+                    {% for amende in amendes %}
+                        <tr>
+                            <td class="tiers rightborder">{{ amende.date|date:"d/m/Y" }}</td>
+                            <td class="tiers rightborder">{{ amende.infraction }}</td>
+                            <td class="tiers">{{amende.montant}}€</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+            {% else %}
+                <p class="centered"><br/>{{ cond_selectionne|capfirst }} n'a pas d'infractions en historique</p>
+
+        {% endif %}
+    </div>
+</div>

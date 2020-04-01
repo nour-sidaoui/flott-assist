@@ -53,15 +53,15 @@
 
     <div class="resultats">
 
+        {% if recherche_cond %}
+            {% include 'recherche_cond.html' %}
+        {% endif %}
+
+        {% if recherche_veh %}
+            {% include 'recherche_veh.html' %}
+        {% endif %}
+
     </div>
 </div>
-
-<!--<script>-->
-<!--    $('#cars').change( function(e){-->
-<!--            e.preventDefault();-->
-<!--            var OPTION_SELECTIONEE = $(this).val();-->
-<!--            console.log(OPTION_SELECTIONEE);-->
-<!--        });-->
-<!--</script>-->
 
 {% endblock content %}

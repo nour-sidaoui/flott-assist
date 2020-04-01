@@ -25,7 +25,7 @@ class Conduire(models.Model):
     id_employe = models.ForeignKey(Employe, on_delete=models.PROTECT)
     id_vehicule = models.ForeignKey('vehicule.Vehicule', on_delete=models.PROTECT)
     km_prise = models.IntegerField(null=False)
-    date_et_temps_de_prise = models.DateTimeField(null=False, blank=False, default=datetime.now())
+    date_et_temps_de_prise = models.DateTimeField(null=False, blank=False, default=datetime.now)  # no () to run in time
     km_restit = models.IntegerField(null=True, blank=True)
     date_et_temps_de_restitution = models.DateTimeField(null=True, blank=True)
 

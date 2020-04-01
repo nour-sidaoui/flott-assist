@@ -15,10 +15,11 @@ from datetime import datetime
 def updated_context():
     """Remets à jour le dictionnaire contexte et le 'return' """
 
-    liste_vehicules = Vehicule.objects.all()
+    liste_vehicules = Vehicule.objects.all().order_by('marque')
     liste_vehicules_disponibles = Vehicule.objects.filter(disponible=True)
-    liste_conducteurs = Employe.objects.all()
-    liste_conducteurs_presents = Employe.objects.filter(Q(date_de_fin__gt=datetime.now()) | Q(date_de_fin=None))
+    liste_conducteurs = sorted(Employe.objects.all(), key=lambda m: m.user.first_name.lower())
+    liste_conducteurs_presents = sorted(Employe.objects.filter(Q(date_de_fin__gt=datetime.now()) | Q(date_de_fin=None)),
+                                        key=lambda m: m.user.first_name.lower())
 
     context = {'liste_vehicules': liste_vehicules,
                'liste_vehicules_disponibles': liste_vehicules_disponibles,
@@ -43,6 +44,10 @@ def page_conducteurs(request):
 
 @login_required
 def ajouter(request):
+    context = updated_context()
+    context['creer_user_form'] = CreerUser()
+    context['creer_cond_form'] = CreerCond()
+
     if request.method == 'POST':
         creer_user_form = CreerUser(request.POST)
         creer_cond_form = CreerCond(request.POST)
@@ -59,11 +64,10 @@ def ajouter(request):
         else:
             messages.error(request, creer_user_form.errors)
             messages.error(request, creer_cond_form.errors)
-            return redirect('employe:ajouter_cond')
 
-    context = updated_context()
-    context['creer_user_form'] = CreerUser()
-    context['creer_cond_form'] = CreerCond()
+            # reassign the sent form to context (including errors)
+            context['creer_user_form'] = creer_user_form
+            context['creer_cond_form'] = creer_cond_form
 
     return render(request=request,
                   template_name='employe/ajouter.html',
@@ -73,6 +77,12 @@ def ajouter(request):
 @login_required
 def voir_profil(request, pk):
     conducteur = get_object_or_404(Employe, id=pk)
+    user_filled_form = ModifierUser(instance=conducteur.user)
+    cond_filled_form = ModifierCond(instance=conducteur)
+
+    context = updated_context()
+    context['user_form_modifier'] = user_filled_form
+    context['cond_form_modifier'] = cond_filled_form
 
     if request.POST:
         user_filled_form = ModifierUser(request.POST, instance=conducteur.user)
@@ -92,12 +102,9 @@ def voir_profil(request, pk):
             messages.error(request, user_filled_form.errors)
             messages.error(request, cond_filled_form.errors)
 
-    user_filled_form = ModifierUser(instance=conducteur.user)
-    cond_filled_form = ModifierCond(instance=conducteur)
-
-    context = updated_context()
-    context['user_form_modifier'] = user_filled_form
-    context['cond_form_modifier'] = cond_filled_form
+            # reassign the sent form to context (including errors)
+            context['user_form_modifier'] = user_filled_form
+            context['cond_form_modifier'] = cond_filled_form
 
     return render(request=request,
                   template_name='employe/profil.html',

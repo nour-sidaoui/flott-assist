@@ -15,6 +15,12 @@ class CreerUser(UserCreationForm):
                   'password2',
                   ]
 
+    def __init__(self, *args, **kwargs):
+        super(CreerUser, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+
 
 class ModifierUser(forms.ModelForm):
     class Meta:

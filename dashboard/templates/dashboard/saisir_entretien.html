@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="verticalmar">Saisir Entretien</h3>
+
+<div class="contentbox scrollable">
+    <form class="formulaire" method="post">
+
+        {% csrf_token %}
+
+        {{ saisir_entretien_form.as_p }}
+
+        <div class="boutons">
+            <button class="ok" type="submit">Enregistrer entretien</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
