@@ -1,32 +1,13 @@
 from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 
 from django.shortcuts import render, redirect, get_object_or_404
+from dashboard.views import updated_context, is_admin
 
-from .models import Employe
-from vehicule.models import Vehicule
-from django.db.models import Q
+from .models import Employe, Photo
 
-from .forms import CreerUser, CreerCond, ModifierUser, ModifierCond
-from datetime import datetime
-
-
-def updated_context():
-    """Remets à jour le dictionnaire contexte et le 'return' """
-
-    liste_vehicules = Vehicule.objects.all().order_by('marque')
-    liste_vehicules_disponibles = Vehicule.objects.filter(disponible=True)
-    liste_conducteurs = sorted(Employe.objects.all(), key=lambda m: m.user.first_name.lower())
-    liste_conducteurs_presents = sorted(Employe.objects.filter(Q(date_de_fin__gt=datetime.now()) | Q(date_de_fin=None)),
-                                        key=lambda m: m.user.first_name.lower())
-
-    context = {'liste_vehicules': liste_vehicules,
-               'liste_vehicules_disponibles': liste_vehicules_disponibles,
-               'liste_conducteurs': liste_conducteurs,
-               'liste_conducteurs_presents': liste_conducteurs_presents,
-               }
-    return context
+from .forms import CreerUser, ModifierUser, CondForm, PhotoForm
 
 
 def logout_request(request):
@@ -36,6 +17,7 @@ def logout_request(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def page_conducteurs(request):
     return render(request=request,
                   template_name='employe/conducteurs.html',
@@ -43,24 +25,44 @@ def page_conducteurs(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def ajouter(request):
+    # setting general template context
     context = updated_context()
     context['creer_user_form'] = CreerUser()
-    context['creer_cond_form'] = CreerCond()
+    context['creer_cond_form'] = CondForm()
+    context['photo_form'] = PhotoForm()
 
     if request.method == 'POST':
         creer_user_form = CreerUser(request.POST)
-        creer_cond_form = CreerCond(request.POST)
+        creer_cond_form = CondForm(request.POST)
 
         if creer_user_form.is_valid() and creer_cond_form.is_valid():
             created_user_form = creer_user_form.save()
             created_cond_form = creer_cond_form.save(commit=False)
             created_cond_form.user = created_user_form
-            created_cond_form.save()
 
+            # if picture file has been selected
+            if len(request.FILES):
+                photo_form = PhotoForm(request.POST, request.FILES)
+
+                if photo_form.is_valid():
+                    temp_photo_form = photo_form.save(commit=False)
+                    created_cond_form.id_photo = temp_photo_form
+                    photo_form.crop_and_save()
+
+            created_cond_form.save()
             messages.success(request, 'Conducteur ajouté avec succès.')
+
+            # adding picture messages "AFTER" main form messages
+            if len(request.FILES):
+                messages.success(request, 'Une photo de profil a également été ajoutée')
+            else:
+                messages.info(request, "Aucune photo n'a été ajoutée")
+
             return redirect('employe:page_conducteurs')
 
+        # if errors in user_form and/or cond_form
         else:
             messages.error(request, creer_user_form.errors)
             messages.error(request, creer_cond_form.errors)
@@ -75,29 +77,64 @@ def ajouter(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def voir_profil(request, pk):
     conducteur = get_object_or_404(Employe, id=pk)
     user_filled_form = ModifierUser(instance=conducteur.user)
-    cond_filled_form = ModifierCond(instance=conducteur)
+    cond_filled_form = CondForm(instance=conducteur)
 
     context = updated_context()
     context['user_form_modifier'] = user_filled_form
     context['cond_form_modifier'] = cond_filled_form
+    context['photo_form'] = PhotoForm()
+    context['conducteur'] = conducteur
 
     if request.POST:
         user_filled_form = ModifierUser(request.POST, instance=conducteur.user)
-        cond_filled_form = ModifierCond(request.POST, instance=conducteur)
+        cond_filled_form = CondForm(request.POST, instance=conducteur)
 
         if user_filled_form.is_valid() and cond_filled_form.is_valid():
-            user = user_filled_form.save(commit=False)
-            cond = cond_filled_form.save()
+            user = user_filled_form.save()
+            cond = cond_filled_form.save(commit=False)
             cond.user = user
-            user.save()
+
+            # if picture file has been selected
+            if len(request.FILES):
+
+                # we find the old profile to delete it later (after new picture is saved)
+                try:
+                    old_profil_pic_id = conducteur.id_photo
+                    old_profil_pic = Photo.objects.get(id=old_profil_pic_id.id)
+
+                # do nothing in case there is no old picture
+                except Photo.DoesNotExist:
+                    pass
+
+                # retrieving the submitted form
+                photo_form = PhotoForm(request.POST, request.FILES, instance=conducteur.id_photo)
+
+                if photo_form.is_valid():
+                    temp_photo_form = photo_form.save(commit=False)
+                    cond.id_photo = temp_photo_form
+                    photo_form.crop_and_save()
+
+                    # once new picture is saved, we delete the old picture
+                    if old_profil_pic:
+                        old_profil_pic.picture.delete(save=False)
+
             cond.save()
 
             messages.success(request, 'Conducteur modifié avec succès.')
-            return redirect('employe:voir_profil', pk=pk)
 
+            # adding picture messages "AFTER" main form messages
+            if len(request.FILES):
+                messages.success(request, 'La photo de profil a été mise à jour')
+            else:
+                messages.info(request, "Aucune modification n'a été enregistrée sur la photo")
+
+            return redirect('employe:page_conducteurs')
+
+        # if errors in user_filled_form and/or cond_filled_form
         else:
             messages.error(request, user_filled_form.errors)
             messages.error(request, cond_filled_form.errors)

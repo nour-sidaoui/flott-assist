@@ -8,8 +8,8 @@
                 {% if liste_conducteurs_presents %}
                     {% for conducteur in liste_conducteurs_presents %}
                         <div class="content">
-                            <div class="dropdown_line">
-                                <a href="{% url 'employe:voir_profil' conducteur.id %}">{{conducteur}}</a>
+                            <div class="dropdown_line line">
+                                <a class="line" href="{% url 'employe:voir_profil' conducteur.id %}">{{conducteur}}</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -23,8 +23,8 @@
                 {% if liste_vehicules_disponibles %}
                     {% for vehicule in liste_vehicules_disponibles %}
                         <div class="content">
-                            <div class="dropdown_line">
-                                <a href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule.immat}}</a>
+                            <div class="dropdown_line line">
+                                <a class="line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule.immat}}</a>
                             </div>
                         </div>
                     {% endfor %}
@@ -34,23 +34,5 @@
         </div>
     </div>
 </div>
-
-<script>
-
-(function($){
-
-    $( document ).ready(function() {
-
-        $('.listline .collapsible').on('click', function(){
-
-            $(this).parent().children('.content').slideToggle(200);
-
-        });
-
-    });
-
-}(window.jQuery || window.$));
-
-</script>
 
 {% endif %}

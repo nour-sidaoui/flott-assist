@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Tableau de bord - Conducteur</h3>
+
+
+<div class="content_accueil_cond margin_zero_auto">
+
+    <div class="bloc_button">
+        <a href="{% url 'conducteur:km_in' %}">
+            <img src="/media/km_in.png" alt="Kilometrage entrée">
+        </a>
+
+        <p class="centered margin-top">Km entrée</p>
+    </div>
+
+    <div class="bloc_button">
+        <a href="{% url 'conducteur:km_out' %}">
+            <img src="/media/km_out.png" alt="Kilometrage réstitution">
+        </a>
+
+        <p class="centered margin-top">Km réstitution</p>
+    </div>
+
+    <div class="bloc_button">
+        <a href="{% url 'conducteur:declarer_prob' %}">
+            <img src="/media/probleme.png" alt="Déclarer un problème">
+        </a>
+
+        <p class="centered margin-top">Déclarer un problème</p>
+    </div>
+
+    <div class="bloc_button">
+        <a href="{% url 'conducteur:contact_assist' %}">
+            <img src="/media/assistance.png" alt="Contacter l'assistance">
+        </a>
+
+        <p class="centered margin-top">Contacter l'assistance</p>
+    </div>
+
+
+</div>
+
+{% endblock content %}

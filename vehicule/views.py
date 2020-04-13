@@ -1,27 +1,16 @@
-
-from django.contrib.auth.decorators import login_required
-
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
-from .models import Vehicule
-from employe.models import Employe, Amende, Conduire
-
-from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 from django.shortcuts import render, redirect, get_object_or_404
 
+from dashboard.views import updated_context, is_admin
 from .models import Vehicule
-from employe.views import updated_context
-from django.db.models import Q
 
 from .forms import CreerVeh, ModifierVeh
-from datetime import datetime
 
 
 @login_required
+@user_passes_test(is_admin)
 def page_vehicules(request):
     return render(request=request,
                   template_name='vehicule/vehicules.html',
@@ -29,6 +18,7 @@ def page_vehicules(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def ajouter_veh(request):
     context = updated_context()
     context['creer_veh_form'] = CreerVeh()
@@ -54,6 +44,7 @@ def ajouter_veh(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def fiche_vehicule(request, pk):
     vehicule = get_object_or_404(Vehicule, id=pk)
     veh_filled_form = ModifierVeh(instance=vehicule)

@@ -1,7 +1,7 @@
-from django.shortcuts import render, HttpResponse
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required, user_passes_test
 
-from employe.views import updated_context
+from dashboard.views import updated_context, is_admin
 from employe.models import Employe, Conduire, Amende
 from vehicule.models import Vehicule, Entretien
 
@@ -9,6 +9,7 @@ from django.db.models import Sum
 
 
 @login_required
+@user_passes_test(is_admin)
 def page_recherche(request):
     context = updated_context()
 

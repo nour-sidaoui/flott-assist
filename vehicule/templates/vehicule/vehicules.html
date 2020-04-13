@@ -5,12 +5,12 @@
 
 <br>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable hundred_height">
     {% if liste_vehicules %}
         {% for vehicule in liste_vehicules %}
 
             <div class="content">
-                <p class="elem">{{vehicule}}</p>
+                <p class="elem"><a href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}</a></p>
                 <a class="profil" href="{% url 'vehicule:fiche_veh' vehicule.id %}">voir fiche</a>
             </div>
 

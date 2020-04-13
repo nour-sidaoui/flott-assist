@@ -1,9 +1,56 @@
 {% if user.is_authenticated %}
 
 <div class="section_droite">
+    <div class="listmenu scrollable">
 
-    <p>test droite</p>
+        <div class="static_title ">
+            <p>Notifications
 
+                {% if liste_messages_non_lus %}
+                    ( {{ liste_messages_non_lus | length }} )
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="listline">
+             {% if liste_messages_non_lus %}
+                    {% for message_non_lu in liste_messages_non_lus %}
+                        <div class="content">
+                            <div class="dropdown_line vertical_align">
+
+                                <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
+                                    <b class="line">
+                                        Problème signalé par {{ message_non_lu.id_employe.user.first_name | capfirst }}
+                                    </b>
+                                </a>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="aucun centered">Aucun message non-lu <br>à afficher.</p>
+                {% endif %}
+        </div>
+
+        <div class="listline not_first">
+            <button type="button" class="collapsible" id="collapsed">Messages lus</button>
+             {% if liste_messages_lus %}
+                    {% for message_lu in liste_messages_lus %}
+                        <div class="content">
+                            <div class="dropdown_line vertical_align">
+
+                                <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                                    Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
+                                </a>
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="aucun centered">Aucun message lu à afficher.</p>
+                {% endif %}
+        </div>
+    </div>
 </div>
 
 {% endif %}

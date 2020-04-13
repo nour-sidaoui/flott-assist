@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="verticalmar">Voir message</h3>
+
+<div id="msg"></div>
+
+<div class="contentbox scrollable margin-top">
+
+    <div class="general-info margin-top">
+
+        <p> <b>Reçu le : </b> {{ message.sent_at }} </p>
+
+        <p> <b>De : </b> {{ message.id_employe }} </p>
+
+        <p> <b>Véhicule : </b> {{ message.id_vehicule }} </p>
+
+    </div>
+
+    <div class="bloc-sujet">
+        {{ message.sujet }}
+    </div>
+
+    <div class="bloc-msg">
+        {{ message.text }}
+    </div>
+
+
+    <form class="mini_form" method="post">
+        {% csrf_token %}
+
+        <div>
+            <p>Problème traîté :</p>
+            <input type="checkbox"
+                   id="traite"
+                   name="traite"
+                   {% if message.solved %}checked='checked' {% endif %}>
+        </div>
+
+
+        <br/>
+
+        <div class="boutons">
+            <button class="ok" type="reset" onclick="window.location.href = '{% url 'dashboard:msg' %}';" value="Ajouter">
+                < Retour
+            </button>
+
+            <button class="ok" type="submit">Enregistrer modifications</button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock content %}
+

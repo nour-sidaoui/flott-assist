@@ -5,5 +5,5 @@ __pycache__
 .idea
 .git
 .gitignore
-node_modules/
+static/node_modules/
 package-lock.json

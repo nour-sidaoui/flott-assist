@@ -1,19 +1,64 @@
 {% extends "base.html" %}
+
+{% load static %}
+
+
+{% block script %}
+    <link  href="{% static '/scripts/css/jquery.Jcrop.css' %}" rel="stylesheet" type="text/css" />
+    <script src="{% static '/scripts/js/jquery.Jcrop.min.js' %}"></script>
+    <script src="{% static '/scripts/js/modalscript.js' %}"></script>
+{% endblock script %}
+
+
 {% block content %}
 
 <h3 class="verticalmar">Profil conducteur</h3>
 
 <div class="contentbox scrollable">
-    <form class="formulaire" method="POST">
+    <form class="formulaire" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
-        {{user_form_modifier.as_p}}
-        {{cond_form_modifier.as_p}}
+        <div class="flexrow">
+            <div class="seventy-five">
+                {{user_form_modifier.as_p}}
+                {{cond_form_modifier.as_p}}
+            </div>
+
+            <div class="twenty-five">
+                <div class="full-width flex-col-center">
+                    <img id="profile-picture"
+                         class="profilpic"
+                         src="{{ conducteur.id_photo.picture.url | default:'/media/default.png' }}"
+                         onerror="this.src='/media/default.png'"
+                         alt="photo de profil"/>
+                </div>
+
+                {{ photo_form }}
+            </div>
+        </div>
 
         <div class="boutons">
             <button class="ok" type="submit" value="Ajouter">Sauvegarder modifications</button>
         </div>
     </form>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div id="cropbox">
+            <img src="" id="target">
+        </div>
+
+        <div class="boutons">
+            <button type="button" id="couper" class="button">Couper et continuer</button>
+        </div>
+
+    </div>
 </div>
 
 {% endblock content %}

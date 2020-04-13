@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load dashboard_extras %}
 
 <h3>Tableau de bord</h3>
 
@@ -13,7 +14,53 @@
                 <h6>Véhicules en circulation</h6>
             </div>
 
-            <div class="flexcenterwrap full scrollable">
+            <div class="flexstartwrap full scrollable five-percent-padding">
+
+                {% for conduire in conduites %}
+
+                    <div class="block-conduite">
+
+                        <div class="flex_row align_center">
+
+                            <img class="profilpic_thumbnail"
+                                 src="{{  conduire.id_employe.id_photo.picture.url | default:'/media/default.png' }}"
+                                 alt="photo du conducteur"
+                                 onerror="this.src='/media/default.png'"/>
+
+                            <p class="margin_zero_auto">
+                                {{ conduire.id_employe.user.first_name | capfirst }}
+                            </p>
+
+                        </div>
+
+                        <br/>
+
+                        <p class="centered">{{ conduire.id_employe.tel | numero}}</p>
+
+                        <hr/>
+
+                        <p class="centered">
+                            {% if issues %}
+                                {% for issue in issues %}
+                                    {% if issue.id_vehicule == conduire.id_vehicule %}
+                                        <br/>
+                                        <b> {{ issue.sujet }}</b>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </p>
+
+                        <br/>
+                        <p class="centered">{{ conduire.id_vehicule.km }} Km</p>
+
+                        <br/>
+                        <p><b>{{ conduire.id_vehicule.immat }}</b></p>
+
+                        <img class="van" src='/media/van.png' alt="Van image">
+
+                    </div>
+
+                {% endfor %}
 
             </div>
         </div>
@@ -27,10 +74,26 @@
             </div>
 
             <div class="flexcenterwrap full scrollable">
-                <button class="button_gestionnaire" onclick="window.location.href = 'attribuer/';">Attribuer véhicule</button>
-                <button class="button_gestionnaire" onclick="window.location.href = 'restituer';">Réstituer véhicule</button>
-                <button class="button_gestionnaire" onclick="window.location.href = 'ajouter-amende/';">Ajouter amende</button>
-                <button class="button_gestionnaire" onclick="window.location.href = 'saisir-entretien/';">Saisir entretien</button>
+
+                <button class="button_gestionnaire"
+                        onclick="window.location.href = '{% url 'dashboard:attribuer_vehicule' %}';"> Attribuer véhicule
+                </button>
+
+
+                <button class="button_gestionnaire"
+                        onclick="window.location.href = '{% url 'dashboard:restituer_vehicule' %}';">Réstituer véhicule
+                </button>
+
+
+                <button class="button_gestionnaire"
+                        onclick="window.location.href = '{% url 'dashboard:ajouter_amende' %}';">Ajouter amende
+                </button>
+
+
+                <button class="button_gestionnaire"
+                        onclick="window.location.href = '{% url 'dashboard:saisir_entretien' %}';">Saisir entretien
+                </button>
+
             </div>
 
         </div>
@@ -44,15 +107,15 @@
                     {% if liste_controles_tech %}
                         {% for vehicule in liste_controles_tech %}
                             <div class="content">
-                                <div class="dropdown_line">
-                                    <a class="fullwidth" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}&nbsp;&nbsp;
+                                <div class="dropdown_line line">
+                                    <a class="fullwidth line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}&nbsp;&nbsp;
                                         -&nbsp;&nbsp;&nbsp;{{vehicule.prochain_controle_technique}}</a>
                                 </div>
                             </div>
                         {% endfor %}
                     {% else %}
-                        <p>
-                            Aucun contrôle technique à venir dans les 30 prochains jours
+                        <p class="centered">
+                            <br/>Aucun contrôle technique à venir dans les 30 prochains jours
                         </p>
                     {% endif %}
             </div>
@@ -66,7 +129,23 @@
 
             <div class="full scrollable">
 
-                <!-- CONTENT HERE -->
+                {% if msgs %}
+                    {% for msg in msgs %}
+                        <div class="content">
+                            <div class="dropdown_line line">
+                                <a class="fullwidth line" href="{% url 'dashboard:voir_msg' msg.id %}">
+                                    {{ msg.sujet }}
+                                </a>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                {% else %}
+                    <p class="centered">
+                        <br/> Aucun problème n'a été signalé
+                    </p>
+                {% endif %}
 
             </div>
 

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="verticalmar">Messages</h3>
+
+<div id="msg"></div>
+
+<div class="contentbox scrollable hundred_height">
+
+
+     {% if liste_messages_non_lus %}
+        <div class="msgs">
+            <p class="date"><b>Date</b></p>
+            <p class="sender"><b>Employe</b></p>
+            <p class="veh"><b>Véhicule</b></p>
+            <p class="voir"> </p>
+        </div>
+        {% for message_non_lu in liste_messages_non_lus %}
+
+            <div class="msgs">
+                <p class="date">{{ message_non_lu.sent_at }}</p>
+
+                <a class="sender" href="{% url 'employe:voir_profil' message_non_lu.id_employe.id %}">
+                    {{ message_non_lu.id_employe }}
+                </a>
+
+                <a class="veh" href="{% url 'vehicule:fiche_veh' message_non_lu.id_vehicule.id %}">
+                    {{ message_non_lu.id_vehicule.immat }}
+                </a>
+
+                <a class="voir" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
+                    afficher message
+                </a>
+
+            </div>
+
+        {% endfor %}
+     {% endif %}
+
+     {% if liste_messages_lus %}
+        {% for message_lu in liste_messages_lus %}
+
+            <div class="msgs">
+                <p class="date">{{ message_lu.sent_at }}</p>
+
+                <a class="sender" href="{% url 'employe:voir_profil' message_lu.id_employe.id %}">
+                    {{ message_lu.id_employe }}
+                </a>
+
+                <a class="veh" href="{% url 'vehicule:fiche_veh' message_lu.id_vehicule.id %}">
+                    {{ message_lu.id_vehicule.immat }}
+                </a>
+
+                <a class="voir" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                    afficher message
+                </a>
+
+            </div>
+
+        {% endfor %}
+     {% endif %}
+
+
+    {% if not liste_messages_non_lus %}
+        {% if not liste_messages_lus %}
+            <p class="aucun centered">Aucun message à afficher.</p>
+        {% endif %}
+    {% endif %}
+
+</div>
+
+{% endblock content %}
+

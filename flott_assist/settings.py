@@ -25,7 +25,11 @@ SECRET_KEY = '6)$fc)m8crei*l8m!8vo1sppq5(bu$s6u_#0=h(cqkt-67!6ji'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.11',
+                 'localhost',
+                 '127.0.0.1',
+                 ]
+
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -33,6 +37,7 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    'conducteur.apps.ConducteurConfig',
     'dashboard.apps.DashboardConfig',
     'historique.apps.HistoriqueConfig',
     'employe.apps.EmployeConfig',
@@ -126,14 +131,20 @@ USE_L10N = True
 
 USE_TZ = False
 
+USE_THOUSAND_SEPARATOR = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, 'static')
 ]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+

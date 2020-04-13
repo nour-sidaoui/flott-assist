@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load dashboard_extras %}
+
+
+<div class="contentbox two_vmin_paddings opacity">
+
+    <h4>Déclarer un problème</h4>
+
+    <br/>
+
+    <h5 class="margin-top centered"> {{ conduite.id_vehicule.immat }} </h5>
+    <br/>
+
+    <div class="margincenter">
+        <form class="formulaire_cond margin_zero_auto" method="post">
+
+            {% csrf_token %}
+
+            {{ form_message.as_p }}
+
+            <div class="boutons_cond">
+                <button class="bouton_cond" type="reset" onclick="window.location.href = '/';">Retour</button>
+                <button class="bouton_cond" type="submit">Envoyer</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

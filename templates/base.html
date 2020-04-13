@@ -4,11 +4,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/normalize.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <title>flott'assist</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap">
+    <link rel="stylesheet" href="{% static '/css/normalize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css">
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="{% static '/scripts/js/side_toggles.js' %}"></script>
+
+    {% block script %}
+    {% endblock script %}
+
 </head>
 
 <body style="background-image:url({% static '/images/cropped.png' %})">
@@ -26,7 +32,7 @@
 
 
         <nav class="navbar">
-        {% if user.is_authenticated %}
+        {% if user.is_superuser %}
 
             <div class="gauche">
                 <div class="tab">
@@ -44,24 +50,28 @@
                 <div class="tab">
                     <a href="{% url 'historique:page_recherche' %}">Historique</a>
                 </div>
+
+                <div class="tab">
+                    <a href="{% url 'dashboard:msg' %}">Messages</a>
+                </div>
+
             </div>
 
         {% endif %}
             <div class="droite rightmargin">
                 {% if user.is_authenticated %}
-                    <p class="rightmargin"> Vous êtes connecté en tant que : {{ request.user|capfirst }}</p>
+                    <p class="rightmargin small_top_mar"> Vous êtes connecté en tant que : {{ request.user }}</p>
+                    <a class="small_top_mar" href="{% url 'logout' %}">Fermer session</a>
                 {% endif %}
-
-                <a href="{% url 'logout' %}">Fermer session</a>
             </div>
         </nav>
-
-
     </header>
 
         <section class="espace_principal">
 
-            {% include 'gauche.html' %}
+            {% if user.is_superuser %}
+                {% include 'gauche.html' %}
+            {% endif %}
 
             <div class="main_div">
                 {% if messages %}
@@ -73,10 +83,12 @@
                 {% endif %}
 
                 {% block content %}
-                {% endblock %}
+                {% endblock content%}
             </div>
 
-            {% include 'droite.html' %}
+            {% if request.user.is_superuser %}
+                {% include 'droite.html' %}
+            {% endif %}
 
         </section>
 
