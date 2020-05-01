@@ -8,28 +8,33 @@
 <div class="contentbox scrollable hundred_height">
 
 
-     {% if liste_messages_non_lus %}
+     {% if liste_messages_non_lus or liste_messages_lus %}
         <div class="msgs">
             <p class="date"><b>Date</b></p>
-            <p class="sender"><b>Employe</b></p>
-            <p class="veh"><b>Véhicule</b></p>
-            <p class="voir"> </p>
+            <p class="sender"><b>Reçu de</b></p>
+            <p class="suj"><b>Sujet</b></p>
+            <p class="voir">
+                {% if liste_messages_non_lus %}
+                    {{ liste_messages_non_lus | length }} non-lu(s)
+                {% endif %}
+
+            </p>
         </div>
         {% for message_non_lu in liste_messages_non_lus %}
 
             <div class="msgs">
-                <p class="date">{{ message_non_lu.sent_at }}</p>
+                <p class="date"><b>{{ message_non_lu.sent_at }}</b></p>
 
-                <a class="sender" href="{% url 'employe:voir_profil' message_non_lu.id_employe.id %}">
-                    {{ message_non_lu.id_employe }}
-                </a>
+                {% if message_non_lu.id_employe.id %}
+                    <b class="sender"> {{ message_non_lu.id_employe }} </b>
+                {% else %}
+                    <b> flott'assist </b>
+                {% endif %}
 
-                <a class="veh" href="{% url 'vehicule:fiche_veh' message_non_lu.id_vehicule.id %}">
-                    {{ message_non_lu.id_vehicule.immat }}
-                </a>
+                <b class="suj">{{ message_non_lu.sujet }} </b>
 
                 <a class="voir" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
-                    afficher message
+                    <b> afficher message </b>
                 </a>
 
             </div>
@@ -43,13 +48,13 @@
             <div class="msgs">
                 <p class="date">{{ message_lu.sent_at }}</p>
 
-                <a class="sender" href="{% url 'employe:voir_profil' message_lu.id_employe.id %}">
-                    {{ message_lu.id_employe }}
-                </a>
+                {% if message_lu.id_employe.id %}
+                    <p class="sender"> {{ message_lu.id_employe }} </p>
+                {% else %}
+                    <p> flott'assist </p>
+                {% endif %}
 
-                <a class="veh" href="{% url 'vehicule:fiche_veh' message_lu.id_vehicule.id %}">
-                    {{ message_lu.id_vehicule.immat }}
-                </a>
+                <p class="suj">{{ message_lu.sujet }}</p>
 
                 <a class="voir" href="{% url 'dashboard:voir_msg' message_lu.id %}">
                     afficher message
@@ -66,6 +71,14 @@
             <p class="aucun centered">Aucun message à afficher.</p>
         {% endif %}
     {% endif %}
+
+</div>
+
+<div class="boutons">
+
+    <button class="ok_sans_cadre"
+            onclick="window.location.href = '{% url 'dashboard:index' %}';"
+            value="Ajouter">Retour</button>
 
 </div>
 

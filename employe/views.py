@@ -6,8 +6,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from dashboard.views import updated_context, is_admin
 
 from .models import Employe, Photo
+from rest_framework.authtoken.models import Token
 
-from .forms import CreerUser, ModifierUser, CondForm, PhotoForm
+from .forms import (CreerUser,
+                    ModifierUser,
+                    CondForm,
+                    PhotoForm
+                    )
 
 
 def logout_request(request):
@@ -42,6 +47,9 @@ def ajouter(request):
             created_cond_form = creer_cond_form.save(commit=False)
             created_cond_form.user = created_user_form
 
+            # Creating token for added user
+            Token.objects.create(user=created_user_form)
+
             # if picture file has been selected
             if len(request.FILES):
                 photo_form = PhotoForm(request.POST, request.FILES)
@@ -50,6 +58,8 @@ def ajouter(request):
                     temp_photo_form = photo_form.save(commit=False)
                     created_cond_form.id_photo = temp_photo_form
                     photo_form.crop_and_save()
+
+
 
             created_cond_form.save()
             messages.success(request, 'Conducteur ajouté avec succès.')
@@ -146,3 +156,13 @@ def voir_profil(request, pk):
     return render(request=request,
                   template_name='employe/profil.html',
                   context=context)
+
+
+# create token for shell created superuser
+
+#   >>> from rest_framework.authtoken.models import Token
+#   >>> from django.contrib.auth.models import User
+#
+#   >>> usr = User.objects.get(username='admin')
+#   >>> Token.objects.create(user=usr)
+

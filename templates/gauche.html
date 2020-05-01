@@ -1,36 +1,40 @@
 {% if user.is_authenticated %}
 
-<div class="section_gauche">
-    <div class="listmenu scrollable">
+<div class="section_gauche scrollable no_mobile opacity">
+    <div class="listmenu">
 
-        <div class="listline ">
+        <div class="list_section scrollable halfheight_minus_rem border_radius_six_px">
             <button type="button" class="collapsible">Conducteurs</button>
-                {% if liste_conducteurs_presents %}
-                    {% for conducteur in liste_conducteurs_presents %}
-                        <div class="content">
-                            <div class="dropdown_line line">
-                                <a class="line" href="{% url 'employe:voir_profil' conducteur.id %}">{{conducteur}}</a>
-                            </div>
+
+            {% if liste_conducteurs_presents %}
+                {% for conducteur in liste_conducteurs_presents %}
+                    <div class="content">
+                        <div class="dropdown_line line">
+                            <a class="line" href="{% url 'employe:voir_profil' conducteur.id %}">{{conducteur}}</a>
                         </div>
-                    {% endfor %}
-                {% else %}
-                    <p class="aucun">Aucun conducteur à afficher</p>
-                {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="aucun">Aucun conducteur à afficher</p>
+            {% endif %}
+
         </div>
 
-        <div class="listline not_first">
-            <button type="button" class="collapsible">Véhicules</button>
-                {% if liste_vehicules_disponibles %}
-                    {% for vehicule in liste_vehicules_disponibles %}
-                        <div class="content">
-                            <div class="dropdown_line line">
-                                <a class="line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule.immat}}</a>
-                            </div>
+        <div class="list_section scrollable border_radius_six_px">
+            <button type="button" class="collapsible not_first collapsed">Véhicules</button>
+
+            {% if liste_vehicules_disponibles %}
+                {% for vehicule in liste_vehicules_disponibles %}
+                    <div class="content">
+                        <div class="dropdown_line line">
+                            <a class="line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule.immat}}</a>
                         </div>
-                    {% endfor %}
-                {% else %}
-                    <p class="aucun">Aucun véhicule à afficher</p>
-                {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="aucun">Aucun véhicule à afficher</p>
+            {% endif %}
+
         </div>
     </div>
 </div>

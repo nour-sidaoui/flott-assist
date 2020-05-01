@@ -3,7 +3,7 @@
 
 <h3 class="verticalmar">Saisir Entretien</h3>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable opacity">
     <form class="formulaire" method="post">
 
         {% csrf_token %}
@@ -11,6 +11,12 @@
         {{ saisir_entretien_form.as_p }}
 
         <div class="boutons">
+
+            <button class="ok"
+                type="reset"
+                onclick="window.location.href = '{% url 'dashboard:index' %}';"
+                value="Ajouter">Retour</button>
+
             <button class="ok" type="submit">Enregistrer entretien</button>
         </div>
     </form>

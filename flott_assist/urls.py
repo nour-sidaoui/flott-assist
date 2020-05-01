@@ -11,8 +11,15 @@ urlpatterns = [
     path('vehicules/', include('vehicule.urls')),
     path('conducteurs/', include('employe.urls')),
     path('historique/', include('historique.urls')),
+
+    # DJANGO URLS (ADMIN)
     path('accounts/', include('django.contrib.auth.urls'), name='logout'),
+
+    # ADMIN URLS
     path('admin/', admin.site.urls),
+
+    # REST FRAMEWORK URLS
+    path('api/', include('conducteur.api.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

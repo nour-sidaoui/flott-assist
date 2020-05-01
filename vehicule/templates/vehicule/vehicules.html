@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="verticalmar">Page Véhicules</h3>
+<h3 class="verticalmar">Véhicules</h3>
 
 <br>
 
-<div class="contentbox scrollable hundred_height">
+<div class="contentbox scrollable hundred_height opacity">
     {% if liste_vehicules %}
         {% for vehicule in liste_vehicules %}
 
@@ -21,9 +21,16 @@
 </div>
 
 <div class="boutons">
-    <div id="ajouter">
-        <a href="{% url 'vehicule:ajouter_vehicule' %}">Ajouter véhicule</a>
-    </div>
+
+
+    <button class="ok_sans_cadre"
+            onclick="window.location.href = '{% url 'dashboard:index' %}';"
+            value="Ajouter">Retour</button>
+
+    <button class="ok_sans_cadre"
+            onclick="window.location.href = '{% url 'vehicule:ajouter_vehicule' %}';"
+            value="Ajouter">Ajouter véhicule</button>
+
 </div>
 
 

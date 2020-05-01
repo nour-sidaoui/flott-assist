@@ -22,6 +22,25 @@
         <p><b>Immatriculation :&nbsp;</b> {{ veh_selectionne.immat }}</p>
     </div>
 
+    {% if veh_selectionne.prochain_entretien_date or veh_selectionne.prochain_entretien_km %}
+        <div>
+            <p><b>Prochain entretien :&nbsp;</b>
+                {% if veh_selectionne.prochain_entretien_date %}
+                    {{ veh_selectionne.prochain_entretien_date }}
+                {% endif%}
+
+                {% if veh_selectionne.prochain_entretien_date and veh_selectionne.prochain_entretien_km %}
+                    /
+                {% endif %}
+
+                {% if veh_selectionne.prochain_entretien_km %}
+                    {{ veh_selectionne.prochain_entretien_km }} Km
+                {% endif%}
+
+                </p>
+        </div>
+    {% endif %}
+
     {% if total_amendes %}
     <div>
             <p><b>Total des Amendes :&nbsp;</b> {{ total_amendes }} €</p>
@@ -150,4 +169,10 @@
 
         {% endif %}
     </div>
+</div>
+
+<div class="boutons">
+    <button class="ok"
+            onclick="window.location.href = '{% url 'dashboard:index' %}';"
+            value="Ajouter">Retour</button>
 </div>

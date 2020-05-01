@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="{% static '/css/main.css' %}" type="text/css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="{% static '/scripts/js/side_toggles.js' %}"></script>
-
-    {% block script %}
-    {% endblock script %}
 
 </head>
 
@@ -21,50 +17,91 @@
 
     <header>
         <div class="objets_header" style="background-image:url({% static '/images/pattern.png' %})">
-            <div>
-                <h1 class="gros_titre">LA POSTE - VELIZY</h1>
+            <div class="gros_titre">
+                <a href="{% url 'dashboard:index' %}">
+                    <h1>LA POSTE - VELIZY</h1>
+                </a>
             </div>
 
             <figure class="logo">
-                <img src="{% static '/images/logo.png' %}" alt="Logo flott'assist" />
+                <a href="{% url 'dashboard:index' %}">
+                    <img src="{% static '/images/logo.png' %}" alt="Logo flott'assist" />
+                </a>
             </figure>
         </div>
 
-
-        <nav class="navbar">
         {% if user.is_superuser %}
 
-            <div class="gauche">
-                <div class="tab">
-                    <a href="{% url 'dashboard:index' %}">Tableau de Bord</a>
+            <div class="opacity" id="menu-toggle">
+                <div id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
 
-                <div class="tab">
+                <div id="cross">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div id="mobile_menu" class="opacity mobile off">
+
+                <div class="menu_item">
+                      <a href="{% url 'dashboard:index' %}">Tableau de Bord</a>
+                </div>
+
+                <div class="menu_item">
                     <a href="{% url 'employe:page_conducteurs' %}">Conducteurs</a>
                 </div>
 
-                <div class="tab">
-                    <a href="{% url 'vehicule:page_vehicules' %}">Véhicules</a>
+                <div class="menu_item">
+                      <a href="{% url 'vehicule:page_vehicules' %}">Véhicules</a>
                 </div>
 
-                <div class="tab">
-                    <a href="{% url 'historique:page_recherche' %}">Historique</a>
+                <div class="menu_item">
+                      <a href="{% url 'historique:page_recherche' %}">Historique</a>
                 </div>
 
-                <div class="tab">
-                    <a href="{% url 'dashboard:msg' %}">Messages</a>
+                <div class="menu_item">
+                      <a href="{% url 'dashboard:msg' %}">Messages</a>
                 </div>
 
             </div>
 
+            <nav class="navbar no_mobile">
+                <div class="gauche">
+
+                    <div class="tab">
+                        <a href="{% url 'dashboard:index' %}">Tableau de Bord</a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="{% url 'employe:page_conducteurs' %}">Conducteurs</a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="{% url 'vehicule:page_vehicules' %}">Véhicules</a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="{% url 'historique:page_recherche' %}">Historique</a>
+                    </div>
+
+                    <div class="tab">
+                        <a href="{% url 'dashboard:msg' %}">Messages</a>
+                    </div>
+
+                </div>
+            </nav>
         {% endif %}
-            <div class="droite rightmargin">
-                {% if user.is_authenticated %}
-                    <p class="rightmargin small_top_mar"> Vous êtes connecté en tant que : {{ request.user }}</p>
-                    <a class="small_top_mar" href="{% url 'logout' %}">Fermer session</a>
-                {% endif %}
-            </div>
-        </nav>
+
+        <div id="status" class="droite rightmargin">
+            {% if user.is_authenticated %}
+                <p class="rightmargin small_top_mar"> Session : {{ request.user }}</p>
+                <a class="small_top_mar" href="{% url 'logout' %}">Fermer session</a>
+            {% endif %}
+        </div>
     </header>
 
         <section class="espace_principal">
@@ -96,5 +133,21 @@
         © Copyright Nour SIDAOUI
     </footer>
 </body>
+
+<script src="{% static '/scripts/js/side_toggles.js' %}"></script>
+
+{% block script %}
+{% endblock script %}
+
+<script>
+// burger menu script
+
+    $('#menu-toggle').click(function(){
+        $(this).toggleClass('open');
+        $('#mobile_menu').toggleClass('on');
+        $('#mobile_menu').toggleClass('off');
+      })
+</script>
+
 </html>
 

@@ -3,13 +3,19 @@
 
 <h3 class="verticalmar">Profil conducteur</h3>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable opacity">
     <form class="formulaire" method="POST">
         {% csrf_token %}
 
         {{veh_form_modifier.as_p}}
 
         <div class="boutons">
+
+            <button class="ok"
+                    type="reset"
+                    onclick="window.location.href = '{% url 'vehicule:page_vehicules' %}';"
+                    value="Ajouter">Retour</button>
+
             <button class="ok" type="submit" value="Ajouter">Sauvegarder modifications</button>
         </div>
     </form>

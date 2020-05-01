@@ -3,7 +3,7 @@
 
 <h3 class="verticalmar">Réstituer véhicule</h3>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable opacity">
       <form method="post" id="RestituerVehicule" vehicules_dropdown_url="{% url 'dashboard:ajax_charger_vehicules' %}">
 
     {% csrf_token %}
@@ -41,6 +41,12 @@
         {{ restit_form.as_p }}
 
         <div class="boutons">
+
+            <button class="ok"
+                type="reset"
+                onclick="window.location.href = '{% url 'dashboard:index' %}';"
+                value="Ajouter">Retour</button>
+
             <button class="ok" type="submit">Enregistrer restitution</button>
         </div>
     </form>
@@ -56,7 +62,7 @@
 <script>
 $("#id_employe").change(function () {
 var url = $("#RestituerVehicule").attr("vehicules_dropdown_url");  // On récupère l'url de la view "charger_vehicules"
-var idConducteur = $(this).val();                                  // On récupère l'id sélectionné  de l'input HTML
+var idConducteur = $(this).val();                                  // On récupère l'id sélectionné de l'input HTML
 
 $.ajax({                                                           // On initialize une requête AJAX
   url: url,                                                        // On défini l'url de la requête

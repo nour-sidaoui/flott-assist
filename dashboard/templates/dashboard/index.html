@@ -8,7 +8,7 @@
 <div class="content_accueil">
 
     <div class="col1">
-        <div class="circulation">
+        <div class="circulation opacity">
 
             <div class="block_title">
                 <h6>Véhicules en circulation</h6>
@@ -16,58 +16,72 @@
 
             <div class="flexstartwrap full scrollable five-percent-padding">
 
-                {% for conduire in conduites %}
+                {% if conduites %}
+                    {% for conduire in conduites %}
 
-                    <div class="block-conduite">
+                        <div class="block-conduite opacity">
 
-                        <div class="flex_row align_center">
+                            <div class="flex_row align_center">
 
-                            <img class="profilpic_thumbnail"
-                                 src="{{  conduire.id_employe.id_photo.picture.url | default:'/media/default.png' }}"
-                                 alt="photo du conducteur"
-                                 onerror="this.src='/media/default.png'"/>
+                                <img class="profilpic_thumbnail"
+                                     src="{{ conduire.id_employe.id_photo.picture.url | default:'/media/default.png' }}"
+                                     alt="photo du conducteur"
+                                     onerror="this.src='/media/default.png'"/>
 
-                            <p class="margin_zero_auto">
-                                {{ conduire.id_employe.user.first_name | capfirst }}
+                                <p class="margin_zero_auto">
+                                    <a href="{% url 'employe:voir_profil' conduire.id_employe.id %}">
+                                        {{ conduire.id_employe.user.first_name | capfirst }}
+                                    </a>
+                                </p>
+
+                            </div>
+
+                            <br/>
+
+                            <p class="centered">{{ conduire.id_employe.tel | numero}}</p>
+
+                            <hr/>
+
+                            <p class="centered">
+                                {% if issues %}
+                                    {% for issue in issues %}
+                                        {% if issue.id_vehicule == conduire.id_vehicule %}
+                                            <br/>
+                                            <b> {{ issue.sujet }}</b>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
                             </p>
+
+                            <br/>
+                            <p class="centered">{{ conduire.id_vehicule.km }} Km</p>
+
+                            <br/>
+                            <p>
+                                <a href="{% url 'vehicule:fiche_veh' conduire.id_vehicule.id %}">
+                                    <b>{{ conduire.id_vehicule.immat }}</b>
+                                </a>
+                            </p>
+                            <div class="van_div">
+                                <img class="van" src='/media/van.png' alt="Van image">
+                            </div>
 
                         </div>
 
-                        <br/>
+                    {% endfor %}
 
-                        <p class="centered">{{ conduire.id_employe.tel | numero}}</p>
-
-                        <hr/>
-
-                        <p class="centered">
-                            {% if issues %}
-                                {% for issue in issues %}
-                                    {% if issue.id_vehicule == conduire.id_vehicule %}
-                                        <br/>
-                                        <b> {{ issue.sujet }}</b>
-                                    {% endif %}
-                                {% endfor %}
-                            {% endif %}
-                        </p>
-
-                        <br/>
-                        <p class="centered">{{ conduire.id_vehicule.km }} Km</p>
-
-                        <br/>
-                        <p><b>{{ conduire.id_vehicule.immat }}</b></p>
-
-                        <img class="van" src='/media/van.png' alt="Van image">
-
-                    </div>
-
-                {% endfor %}
+                {% else %}
+                    <p class="centered fullwidth">
+                        <br/> Aucun véhicule en circulation
+                    </p>
+                {% endif %}
 
             </div>
         </div>
     </div>
 
     <div class="col2">
-        <div class="gestionnaire_box">
+        <div class="gestionnaire_box opacity">
 
             <div class="block_title">
                 <h6>Gestionnaire</h6>
@@ -76,12 +90,12 @@
             <div class="flexcenterwrap full scrollable">
 
                 <button class="button_gestionnaire"
-                        onclick="window.location.href = '{% url 'dashboard:attribuer_vehicule' %}';"> Attribuer véhicule
+                        onclick="window.location.href = '{% url 'dashboard:attribuer_vehicule' %}';"> Attribuer véh.
                 </button>
 
 
                 <button class="button_gestionnaire"
-                        onclick="window.location.href = '{% url 'dashboard:restituer_vehicule' %}';">Réstituer véhicule
+                        onclick="window.location.href = '{% url 'dashboard:restituer_vehicule' %}';">Réstituer véh.
                 </button>
 
 
@@ -98,18 +112,18 @@
 
         </div>
 
-        <div class="controles_tech">
+        <div class="controles_tech opacity">
             <div class="block_title">
-                <h6>Contrôles techniques ce mois</h6>
+                <h6>Evènements à venir</h6>
             </div>
 
             <div class="full scrollable">
-                    {% if liste_controles_tech %}
-                        {% for vehicule in liste_controles_tech %}
+                    {% if sorted_events %}
+                        {% for vehicule in sorted_events %}
                             <div class="content">
                                 <div class="dropdown_line line">
-                                    <a class="fullwidth line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">{{vehicule}}&nbsp;&nbsp;
-                                        -&nbsp;&nbsp;&nbsp;{{vehicule.prochain_controle_technique}}</a>
+                                    <a class="fullwidth line" href="{% url 'vehicule:fiche_veh' vehicule.id %}">
+                                        {{vehicule}}</a>
                                 </div>
                             </div>
                         {% endfor %}
@@ -122,19 +136,22 @@
 
         </div>
 
-        <div class="problemes">
+        <div class="problemes opacity">
             <div class="block_title">
                 <h6>Problèmes signalés</h6>
             </div>
 
             <div class="full scrollable">
 
-                {% if msgs %}
-                    {% for msg in msgs %}
+                {% if unresolved_msgs %}
+                    {% for msg in unresolved_msgs %}
                         <div class="content">
                             <div class="dropdown_line line">
                                 <a class="fullwidth line" href="{% url 'dashboard:voir_msg' msg.id %}">
-                                    {{ msg.sujet }}
+                                    {{ msg.id_vehicule.marque | capfirst }}
+                                    {{ msg.id_vehicule.modele | capfirst }}
+                                    {{ msg.id_vehicule.immat | upper }}
+                                    &nbsp;&nbsp;-&nbsp;&nbsp;{{ msg.sujet }}
                                 </a>
                             </div>
                         </div>
@@ -150,10 +167,7 @@
             </div>
 
         </div>
-
-
     </div>
-
 </div>
 
 {% endblock content %}

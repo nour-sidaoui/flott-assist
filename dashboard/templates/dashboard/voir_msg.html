@@ -22,7 +22,7 @@
     </div>
 
     <div class="bloc-msg">
-        {{ message.text }}
+        {{ message.text |linebreaks }}
     </div>
 
 
@@ -31,19 +31,23 @@
 
         <div>
             <p>Problème traîté :</p>
+
             <input type="checkbox"
                    id="traite"
                    name="traite"
-                   {% if message.solved %}checked='checked' {% endif %}>
+                   {% if message.solved %}checked='checked' {% endif %}
+            >
+
         </div>
 
 
         <br/>
 
         <div class="boutons">
-            <button class="ok" type="reset" onclick="window.location.href = '{% url 'dashboard:msg' %}';" value="Ajouter">
-                < Retour
-            </button>
+            <button class="ok"
+                    type="reset"
+                    onclick="window.location.href = '{% url 'dashboard:msg' %}';"
+                    value="Ajouter">Retour</button>
 
             <button class="ok" type="submit">Enregistrer modifications</button>
         </div>

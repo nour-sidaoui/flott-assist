@@ -14,7 +14,7 @@
 
 <h3 class="verticalmar">Profil conducteur</h3>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable opacity">
     <form class="formulaire" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
@@ -24,7 +24,7 @@
                 {{cond_form_modifier.as_p}}
             </div>
 
-            <div class="twenty-five">
+            <div class="twenty-five no_mobile hide_in_landscape">
                 <div class="full-width flex-col-center">
                     <img id="profile-picture"
                          class="profilpic"
@@ -38,6 +38,12 @@
         </div>
 
         <div class="boutons">
+
+            <button class="ok"
+                    type="reset"
+                    onclick="window.location.href = '{% url 'employe:page_conducteurs' %}';"
+                    value="Ajouter">Retour</button>
+
             <button class="ok" type="submit" value="Ajouter">Sauvegarder modifications</button>
         </div>
     </form>

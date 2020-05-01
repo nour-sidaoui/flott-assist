@@ -8,8 +8,10 @@ class Vehicule(models.Model):
     immat = models.CharField(max_length=9)
     couleur = models.CharField(max_length=255)
     km = models.IntegerField()
-    prochain_controle_technique = models.DateField()
+    prochain_entretien_date = models.DateField(null=True, blank=True)
+    prochain_entretien_km = models.IntegerField(null=True, blank=True)
     validite_assurance = models.DateField()
+    prochain_controle_technique = models.DateField(null=True, blank=True)
     disponible = models.BooleanField()
 
     def __str__(self):

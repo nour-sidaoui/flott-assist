@@ -1,54 +1,81 @@
 {% if user.is_authenticated %}
 
-<div class="section_droite">
+<div class="section_droite no_mobile opacity">
     <div class="listmenu scrollable">
 
         <div class="static_title ">
             <p>Notifications
 
-                {% if liste_messages_non_lus %}
-                    ( {{ liste_messages_non_lus | length }} )
+                {% if notifications %}
+                    ( {{ notifications | length }} )
                 {% endif %}
             </p>
         </div>
 
-        <div class="listline">
-             {% if liste_messages_non_lus %}
-                    {% for message_non_lu in liste_messages_non_lus %}
-                        <div class="content">
-                            <div class="dropdown_line vertical_align">
+        <div class="list_section">
+             {% if notifications or liste_messages_non_lus %}
 
+                {% for message_non_lu in liste_messages_non_lus %}
+                    <div class="content">
+                        <div class="dropdown_line vertical_align">
+
+                            {% if message_non_lu.id_employe %}
                                 <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
                                     <b class="line">
                                         Problème signalé par {{ message_non_lu.id_employe.user.first_name | capfirst }}
                                     </b>
                                 </a>
+                            {% else %}
+                                <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
+                                    <b class="line">
+                                        Différence de Km détectée
+                                    </b>
+                                </a>
 
-                            </div>
+                            {% endif %}
+
                         </div>
-                    {% endfor %}
+                    </div>
+                {% endfor %}
+
+                {% for notification in notifications %}
+                    <div class="content">
+                        <div class="dropdown_line vertical_align">
+
+                            <a class="non_lu line" href="{% url 'vehicule:fiche_veh' notification.id_vehicule.id %}">
+                                <b class="line">
+                                    {{ notification }}
+                                </b>
+                            </a>
+
+                        </div>
+                    </div>
+                {% endfor %}
+
                 {% else %}
-                    <p class="aucun centered">Aucun message non-lu <br>à afficher.</p>
+                    <p class="aucun centered">Aucune notification <br>à afficher.</p>
                 {% endif %}
         </div>
 
-        <div class="listline not_first">
-            <button type="button" class="collapsible" id="collapsed">Messages lus</button>
-             {% if liste_messages_lus %}
-                    {% for message_lu in liste_messages_lus %}
-                        <div class="content">
-                            <div class="dropdown_line vertical_align">
+        <div class="list_section not_first">
+            <button type="button" class="collapsible collapsed">Messages lus</button>
 
-                                <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
-                                    Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
-                                </a>
+            {% if liste_messages_lus %}
+                {% for message_lu in liste_messages_lus %}
+                    <div class="content">
+                        <div class="dropdown_line vertical_align">
 
-                            </div>
+                            <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                                Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
+                            </a>
+
                         </div>
-                    {% endfor %}
-                {% else %}
-                    <p class="aucun centered">Aucun message lu à afficher.</p>
-                {% endif %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="aucun centered">Aucun message lu à afficher.</p>
+            {% endif %}
+
         </div>
     </div>
 </div>

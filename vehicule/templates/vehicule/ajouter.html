@@ -3,13 +3,19 @@
 
 <h3 class="verticalmar">Ajouter nouveau véhicule</h3>
 
-<div class="contentbox scrollable">
+<div class="contentbox scrollable opacity">
     <form class="formulaire" method="POST">
         {% csrf_token %}
 
         {{ creer_veh_form.as_p }}
 
         <div class="boutons">
+
+            <button class="ok"
+                    type="reset"
+                    onclick="window.location.href = '{% url 'vehicule:page_vehicules' %}';"
+                    value="Ajouter">Retour</button>
+
             <button class="ok" type="submit" value="Ajouter">Ajouter</button>
         </div>
 

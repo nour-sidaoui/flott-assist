@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from dashboard.views import report_difference
 from employe.models import Conduire
 from vehicule.models import Vehicule
 
@@ -43,7 +45,13 @@ def page_km_in(request):
             # vehicule.km = form_conduite.cleaned_data['km_prise']
             # vehicule.save()
 
-            # raise a notification in case of discrepancy
+            # raising a notification in case of discrepancy
+            if form_conduite.cleaned_data['km_prise'] != conduite.id_vehicule.km:
+
+                difference = form_conduite.cleaned_data['km_prise']
+
+                # calling the function that raises a notification
+                report_difference(conduite.id_employe, conduite.id_vehicule, difference)
 
             form_conduite.save()
             messages.success(request, 'Km de prise a été enregistré avec succès')
