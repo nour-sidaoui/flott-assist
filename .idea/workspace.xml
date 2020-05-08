@@ -2,64 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/conducteur/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conducteur/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conducteur/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conducteur/migrations/0006_auto_20200428_1855.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0002_auto_20200415_1535.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0003_auto_20200415_1540.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0004_auto_20200415_1646.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0005_auto_20200415_1822.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0006_auto_20200415_1829.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0007_auto_20200415_1831.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0008_auto_20200415_1837.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0009_remove_notification_id_message.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0010_auto_20200415_2044.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0011_auto_20200415_2132.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0012_auto_20200428_1816.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0013_remove_notification_diff.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/0014_remove_notification_is_diff.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profils/new_pic_1YhIy4n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vehicule/migrations/0002_auto_20200414_2025.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vehicule/migrations/0003_auto_20200414_2026.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vehicule/migrations/0004_auto_20200414_2126.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conducteur/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conducteur/templates/conducteur/km_in.html" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/templates/conducteur/km_in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conducteur/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conducteur/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/ajout_amende.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/ajout_amende.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/attribuer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/attribuer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/msg.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/msg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/saisir_entretien.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/saisir_entretien.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/voir_msg.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/voir_msg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/templates/employe/ajouter.html" beforeDir="false" afterPath="$PROJECT_DIR$/employe/templates/employe/ajouter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/templates/employe/conducteurs.html" beforeDir="false" afterPath="$PROJECT_DIR$/employe/templates/employe/conducteurs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/templates/employe/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/employe/templates/employe/profil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historique/templates/historique/page_recherche.html" beforeDir="false" afterPath="$PROJECT_DIR$/historique/templates/historique/page_recherche.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historique/templates/historique/recherche_cond.html" beforeDir="false" afterPath="$PROJECT_DIR$/historique/templates/historique/recherche_cond.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/historique/templates/historique/recherche_veh.html" beforeDir="false" afterPath="$PROJECT_DIR$/historique/templates/historique/recherche_veh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/js/side_toggles.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/js/side_toggles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/droite.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/droite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gauche.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gauche.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/templates/vehicule/ajouter.html" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/templates/vehicule/ajouter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/templates/vehicule/fiche.html" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/templates/vehicule/fiche.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/templates/vehicule/vehicules.html" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/templates/vehicule/vehicules.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586806336811</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="api rest + tokens ajoutés, tests effectués">
+      <created>1588336875361</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588336875361</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -182,25 +137,28 @@
     <MESSAGE value="module réstituer (back-end) fonctionnel tests et réajustements terminés" />
     <MESSAGE value="app historique fonctionnelle - tests et réajustements terminés" />
     <MESSAGE value="app message fonctionnelle et testée dashboard pret" />
-    <option name="LAST_COMMIT_MESSAGE" value="app message fonctionnelle et testée dashboard pret" />
+    <MESSAGE value="api rest + tokens ajoutés, tests effectués" />
+    <option name="LAST_COMMIT_MESSAGE" value="api rest + tokens ajoutés, tests effectués" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="365" y="38" key="CommitChangelistDialog2" timestamp="1586806336112">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="365" y="38" key="CommitChangelistDialog2" timestamp="1588336874782">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586806336112" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1584005412295">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1584005412295" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1586806350095">
-      <screen x="0" y="23" width="1440" height="830" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1588336906820">
+      <screen x="0" y="23" width="1440" height="829" />
     </state>
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586806350095" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
