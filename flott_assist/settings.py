@@ -14,6 +14,7 @@ SECRET_KEY = '6)$fc)m8crei*l8m!8vo1sppq5(bu$s6u_#0=h(cqkt-67!6ji'
 DEBUG = False
 
 ALLOWED_HOSTS = ['192.168.1.11',
+                 'sidaoui.pythonanywhere.com'
                  'localhost',
                  '127.0.0.1',
                  ]
