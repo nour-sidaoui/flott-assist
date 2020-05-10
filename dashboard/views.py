@@ -2,8 +2,6 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 
 from django.shortcuts import render, redirect, get_object_or_404
-
-from .forms import AttribuerVehicule, RestituerVehiculeRecherche, RestituerVehicule, AjouterAmende, SaisirEntretien
 from django.db.models import Q, F
 
 from .models import Notification
@@ -12,6 +10,13 @@ from employe.models import Employe, Conduire
 from conducteur.models import MessageProbleme
 
 import datetime
+
+from .forms import (AttribuerVehicule,
+                    RestituerVehiculeRecherche,
+                    RestituerVehicule,
+                    AjouterAmende,
+                    SaisirEntretien,
+                    )
 
 
 def notification_factory():

@@ -27,6 +27,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     # my apps
+    'updater.apps.UpdaterConfig',
     'conducteur.apps.ConducteurConfig',
     'dashboard.apps.DashboardConfig',
     'historique.apps.HistoriqueConfig',

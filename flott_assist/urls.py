@@ -6,6 +6,8 @@ from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
+
+    # MAIN APPS
     path('', include('dashboard.urls')),
     path('conducteur/', include('conducteur.urls')),
     path('vehicules/', include('vehicule.urls')),
@@ -20,6 +22,9 @@ urlpatterns = [
 
     # REST FRAMEWORK URLS
     path('api/', include('conducteur.api.urls')),
+
+    # UPDATE URL
+    path('update_server/', include('updater.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
