@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from git import Repo
@@ -13,7 +12,7 @@ def update(request):
         Here the name of my directory is "test.pythonanywhere.com"
         '''
 
-        repo = Repo("sidaoui.pythonanywhere.com/")
+        repo = Repo("flott-assist/")
         origin = repo.remotes.origin
 
         origin.pull()
