@@ -1,16 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-import git
+from git import Repo
 
 
 @csrf_exempt
 def update(request):
-    import sys
-    print('*' * 400)
-    print('\n'.join(sys.path))
-    print('*' * 400)
-
     if request.method == "POST":
         '''
         pass the path of the diectory where your project will be 
@@ -18,7 +13,7 @@ def update(request):
         Here the name of my directory is "test.pythonanywhere.com"
         '''
 
-        repo = git.Repo("sidaoui.pythonanywhere.com/")
+        repo = Repo("sidaoui.pythonanywhere.com/")
         origin = repo.remotes.origin
 
         origin.pull()
