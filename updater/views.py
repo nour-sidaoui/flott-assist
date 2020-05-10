@@ -7,7 +7,9 @@ import git
 @csrf_exempt
 def update(request):
     import sys
+    print('*' * 400)
     print('\n'.join(sys.path))
+    print('*' * 400)
 
     if request.method == "POST":
         '''
