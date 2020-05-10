@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589114255529</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added &quot;/flott-assist/&quot; git.Repo views.py">
+      <created>1589114674010</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1589114674010</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -230,28 +237,29 @@
     <MESSAGE value="git.Repo updated in views.py again" />
     <MESSAGE value="added 'https://' to git.Repo views.py" />
     <MESSAGE value="removed 'https://' to git.Repo views.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed 'https://' to git.Repo views.py" />
+    <MESSAGE value="added &quot;/flott-assist/&quot; git.Repo views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="added &quot;/flott-assist/&quot; git.Repo views.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="112" y="26" key="CommitChangelistDialog2" timestamp="1589114651303">
+    <state x="112" y="26" key="CommitChangelistDialog2" timestamp="1589114673826">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="112" y="26" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589114651303" />
+    <state x="112" y="26" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589114673826" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589114256937">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589114678078">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589114256937" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589114678078" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
