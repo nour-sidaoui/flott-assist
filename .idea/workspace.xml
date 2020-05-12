@@ -302,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589130068949</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="correction l119 conducteur.views">
+      <created>1589287081642</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1589287081642</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -311,7 +318,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="app message fonctionnelle et testée dashboard pret" />
     <MESSAGE value="api rest + tokens ajoutés, tests effectués" />
     <MESSAGE value="API auth ajouté" />
     <MESSAGE value="requirements.txt updated" />
@@ -336,28 +342,29 @@
     <MESSAGE value="comments removed from updater" />
     <MESSAGE value="test H1 added" />
     <MESSAGE value="test H1 removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="test H1 removed" />
+    <MESSAGE value="correction l119 conducteur.views" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction l119 conducteur.views" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="295" y="23" key="CommitChangelistDialog2" timestamp="1589130068798">
+    <state x="302" y="23" key="CommitChangelistDialog2" timestamp="1589287081140">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="295" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589130068798" />
+    <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589287081140" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589130072620">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589287084326">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589130072620" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589287084326" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
     </state>

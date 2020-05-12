@@ -116,7 +116,7 @@ def declarer_prob(request):
 
     if request.POST:
         filled_form_message = FormMessage(request.POST, instance=MessageProbleme(
-            id_employe=request.user.employe.id,
+            id_employe=request.user.employe,
             id_vehicule=conduite.id_vehicule
         ))
 
