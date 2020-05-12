@@ -102,7 +102,8 @@ def page_km_out(request):
 
 def declarer_prob(request):
     try:
-        conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
+        conduite = Conduire.objects.get(id_employe=request.user.employe.id,
+                                        km_restit=None)
 
     except Conduire.DoesNotExist:
         messages.error(request, "Un véhicule doit vous être attribué pour déclarer un problème.")
@@ -115,7 +116,7 @@ def declarer_prob(request):
 
     if request.POST:
         filled_form_message = FormMessage(request.POST, instance=MessageProbleme(
-            id_employe=request.user.employe,
+            id_employe=request.user.employe.id,
             id_vehicule=conduite.id_vehicule
         ))
 

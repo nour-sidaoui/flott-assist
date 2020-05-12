@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +281,28 @@
       <option name="project" value="LOCAL" />
       <updated>1589129424351</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="test H1 removed">
+      <created>1589129970482</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1589129970482</updated>
+    </task>
+    <task id="LOCAL-00031" summary="test H1 removed">
+      <created>1589130024583</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1589130024583</updated>
+    </task>
+    <task id="LOCAL-00032" summary="test H1 removed">
+      <created>1589130068948</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1589130068949</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -290,7 +311,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="app historique fonctionnelle - tests et réajustements terminés" />
     <MESSAGE value="app message fonctionnelle et testée dashboard pret" />
     <MESSAGE value="api rest + tokens ajoutés, tests effectués" />
     <MESSAGE value="API auth ajouté" />
@@ -315,28 +335,29 @@
     <MESSAGE value="corrected repo = Repo(&quot;flott-assist/&quot;) in views.py" />
     <MESSAGE value="comments removed from updater" />
     <MESSAGE value="test H1 added" />
-    <option name="LAST_COMMIT_MESSAGE" value="test H1 added" />
+    <MESSAGE value="test H1 removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="test H1 removed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="295" y="23" key="CommitChangelistDialog2" timestamp="1589130024426">
+    <state x="295" y="23" key="CommitChangelistDialog2" timestamp="1589130068798">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="295" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589130024426" />
+    <state x="295" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589130068798" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589130034824">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589130072620">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589130034824" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589130072620" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
