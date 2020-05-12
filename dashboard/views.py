@@ -124,9 +124,6 @@ def index(request):
     if not request.user.is_superuser:
         return redirect("conducteur:index")
 
-    conduites = Conduire.objects.filter(Q(date_et_temps_de_prise__isnull=False) and
-                                        Q(date_et_temps_de_restitution__isnull=True))
-
     # retrieving and filtering events in the next 30 days or 1000km and merging them in sorted events
     upcoming_month = datetime.date.today() + datetime.timedelta(days=30)
     liste_controles_tech = Vehicule.objects.filter(prochain_controle_technique__lte=upcoming_month)
@@ -143,10 +140,14 @@ def index(request):
     unresolved_msgs = sorted(MessageProbleme.objects.filter(solved=False), key=lambda m: m.sent_at, reverse=True)
 
     # gathering vehicles' issues
+    conduites = Conduire.objects.filter(date_et_temps_de_restitution__isnull=True)
+
     issues = []
     for conduite in conduites:
         issue = MessageProbleme.objects.filter(id_vehicule=conduite.id_vehicule,
                                                solved=False)
+
+        # picking the latest issue if several issues exist
         if len(issue) > 1:
             issues.append(issue.latest('sent_at'))
         else:
