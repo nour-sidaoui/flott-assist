@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589735485663</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="api_km_prise - query attributes changed">
+      <created>1589738993193</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1589738993193</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -339,7 +346,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added pythonanywhere as allowed host" />
     <MESSAGE value="deployement settings added" />
     <MESSAGE value="favicon added" />
     <MESSAGE value="favicon added as ico" />
@@ -364,29 +370,30 @@
     <MESSAGE value="correction retirée l119 conducteur.views" />
     <MESSAGE value="correction l143 dashboard.views (Km_prise=null retiré de la requête)" />
     <MESSAGE value="&quot;django-cors-headers&quot; installed and configured" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;django-cors-headers&quot; installed and configured" />
+    <MESSAGE value="api_km_prise - query attributes changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="api_km_prise - query attributes changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="504" y="23" key="CommitChangelistDialog2" timestamp="1589735484879">
+    <state x="504" y="23" key="CommitChangelistDialog2" timestamp="1589738992827">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="504" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589735484879" />
+    <state x="504" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589738992827" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589735490164">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589738994919">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589735490164" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589738994919" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
