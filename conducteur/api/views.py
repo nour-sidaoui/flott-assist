@@ -28,7 +28,7 @@ def retrieve_employe(request):
     return Employe.objects.get(user_id=token.user_id)               # return sender's Employe object
 
 
-@api_view(['POST',])
+@api_view(['POST', 'GET'])
 @permission_classes((IsAuthenticated,))
 def api_km_prise(request):
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
@@ -42,7 +42,7 @@ def api_km_prise(request):
         debug_print('conduire does not exist')  # <=============================== debug
         return Response(status=status.HTTP_404_NOT_FOUND)
 
-    if request.POST:
+    if request.method == 'POST':
 
         debug_print('if request.POST')   # <=============================== debug
 
