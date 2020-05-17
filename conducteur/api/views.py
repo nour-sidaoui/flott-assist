@@ -35,7 +35,6 @@ def api_km_prise(request):
 
     try:
         conduite = Conduire.objects.get(id_employe=conducteur,
-                                        km_prise=None,
                                         km_restit=None)
     except Conduire.DoesNotExist:
         debug_print('conduire does not exist')
