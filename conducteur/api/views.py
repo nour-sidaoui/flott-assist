@@ -43,13 +43,23 @@ def api_km_prise(request):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.POST:
+
+        debug_print('if request.POST')
+
         serializer = KmInSerializer(conduite, data=request.data)
 
         if serializer.is_valid():
+
+            debug_print('if serializer.is_valid()')
+
             vehicule = conduite.id_vehicule
+
+            debug_print(vehicule)
 
             # creating notification and message if Km does not match
             if vehicule.km != serializer.validated_data['km_prise']:
+
+                debug_print("vehicule.km != serializer.validated_data['km_prise']")
 
                 difference = serializer.validated_data['km_prise']
 
@@ -59,12 +69,19 @@ def api_km_prise(request):
                 vehicule.km = serializer.validated_data['km_prise']
                 vehicule.save()
 
+                debug_print("vehicule.save()")
+
             serializer.save()
+            debug_print("serializer.save()")
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+        debug_print("return line 79")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # else if request is GET
+
+    debug_print("# else if request is GET")
+
     serializer = KmInSerializer(conduite)
     return Response(serializer.data)
 
