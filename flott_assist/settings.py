@@ -26,6 +26,9 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
+    # CORS
+    'corsheaders',
+
     # my apps
     'updater.apps.UpdaterConfig',
     'conducteur.apps.ConducteurConfig',
@@ -56,6 +59,11 @@ REST_FRAMEWORK = {
 
 
 MIDDLEWARE = [
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
+    # DJANGO MIDDLEWARE
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,6 +71,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8100",
+    "http://127.0.0.1:8100"
 ]
 
 ROOT_URLCONF = 'flott_assist.urls'
