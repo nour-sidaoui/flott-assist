@@ -36,10 +36,10 @@ def api_km_prise(request):
     try:
         conduite = Conduire.objects.get(id_employe=conducteur,
                                         km_restit=None)
-        debug_print('conduire found')
+        debug_print('conduire found')  # <=============================== debug
 
     except Conduire.DoesNotExist:
-        debug_print('conduire does not exist')
+        debug_print('conduire does not exist')  # <=============================== debug
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.POST:

@@ -13,6 +13,7 @@ app_name = 'api_conducteur'
 urlpatterns = [
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
     path('km_in/', api_km_prise, name='km_in'),
+    path('km_in', api_km_prise, name='km_in'),
     path('km_out/', api_km_restit, name='km_out'),
     path('voir_probleme/', api_voir_prob, name='voir_probleme'),
     path('declarer_probleme/', api_declarer_prob, name='declarer_probleme'),

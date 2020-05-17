@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="POST  only for Km Prise">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conducteur/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589742318542</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="POST  only for Km Prise">
+      <created>1589747240960</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1589747240960</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -360,7 +369,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="favicon added as ico" />
     <MESSAGE value="updater app added" />
     <MESSAGE value="git.Repo updated in views.py" />
     <MESSAGE value="git.Repo updated in views.py again" />
@@ -385,29 +393,30 @@
     <MESSAGE value="api_km_prise - query attributes changed" />
     <MESSAGE value="debug print l39 added" />
     <MESSAGE value="debug prints in km_prise" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug prints in km_prise" />
+    <MESSAGE value="POST  only for Km Prise" />
+    <option name="LAST_COMMIT_MESSAGE" value="POST  only for Km Prise" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="504" y="23" key="CommitChangelistDialog2" timestamp="1589742318169">
+    <state x="504" y="23" key="CommitChangelistDialog2" timestamp="1589749798745">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="504" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589742318169" />
+    <state x="504" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589749798745" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1585766766927" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589742324632">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1589747242477">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589742324632" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589747242477" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
