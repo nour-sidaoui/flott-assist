@@ -36,30 +36,18 @@ def api_km_prise(request):
     try:
         conduite = Conduire.objects.get(id_employe=conducteur,
                                         km_restit=None)
-        debug_print('conduire found')  # <=============================== debug
 
     except Conduire.DoesNotExist:
-        debug_print('conduire does not exist')  # <=============================== debug
         return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'POST':
-
-        debug_print('if request.POST')   # <=============================== debug
-
         serializer = KmInSerializer(conduite, data=request.data)
 
         if serializer.is_valid():
-
-            debug_print('if serializer.is_valid()')# <=============================== debug
-
             vehicule = conduite.id_vehicule
-
-            debug_print(vehicule) # <=============================== debug
 
             # creating notification and message if Km does not match
             if vehicule.km != serializer.validated_data['km_prise']:
-
-                debug_print("vehicule.km != serializer.validated_data['km_prise']")# <======== debug
 
                 difference = serializer.validated_data['km_prise']
 
@@ -69,18 +57,12 @@ def api_km_prise(request):
                 vehicule.km = serializer.validated_data['km_prise']
                 vehicule.save()
 
-                debug_print("vehicule.save()")   # <=============================== debug
-
             serializer.save()
-            debug_print("serializer.save()") # <=============================== debug
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-        debug_print("return line 79") # <=============================== debug
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # else if request is GET
-
-    debug_print("# else if request is GET") # <=============================== debug
 
     serializer = KmInSerializer(conduite)
     return Response(serializer.data)
