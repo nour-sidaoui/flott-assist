@@ -19,17 +19,17 @@
                     <div class="content">
                         <div class="dropdown_line vertical_align">
 
-                            {% if message_non_lu.id_employe %}
-                                <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
-                                    <b class="line">
-                                        Problème signalé par {{ message_non_lu.id_employe.user.first_name | capfirst }}
-                                    </b>
-                                </a>
-
-                            {% if message_non_lu.sujet == 'Coord. GPS partagées' %}
+                            {% if message_non_lu.id_employe and message_non_lu.sujet == 'Coord. GPS partagées' %}
                                 <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
                                     <b class="line">
                                         Coord. GPS partagées par {{ message_non_lu.id_employe.user.first_name | capfirst }}
+                                    </b>
+                                </a>
+
+                            {% elif message_non_lu.id_employe and message_non_lu.sujet != 'Coord. GPS partagées' %}
+                                <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
+                                    <b class="line">
+                                        Problème signalé par {{ message_non_lu.id_employe.user.first_name | capfirst }}
                                     </b>
                                 </a>
 
@@ -40,7 +40,6 @@
                                     </b>
                                 </a>
 
-                            {% endif %}
                             {% endif %}
 
                         </div>

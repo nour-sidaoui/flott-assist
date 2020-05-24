@@ -393,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590347554098</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Coord. GPS partagées et notif droite ajoutée">
+      <created>1590348037468</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1590348037468</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -434,24 +441,24 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1590347553519">
+    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1590348037210">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
     <state x="504" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1589828146510" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
-    <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590347553519" />
+    <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590348037210" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1590347556969">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1590348042191">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1589828148555" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590347556969" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590348042191" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
