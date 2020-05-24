@@ -21,9 +21,19 @@
         {{ message.sujet }}
     </div>
 
-    <div class="bloc-msg">
-        {{ message.text |linebreaks }}
-    </div>
+    {% if message.sujet == 'Coord. GPS partagées' %}
+
+        <div class="bloc-msg">
+            {{ message.text | safe }}
+        </div>
+
+    {% else %}
+
+        <div class="bloc-msg">
+            {{ message.text | linebreaks }}
+        </div>
+
+    {% endif %}
 
 
     <form class="mini_form" method="post">
