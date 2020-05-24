@@ -27,3 +27,11 @@ class MessageProblemeSerializer(serializers.ModelSerializer):
                   'sujet',
                   'text',
                   ]
+
+
+class GpsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MessageProbleme
+        fields = ['sent_at',
+                  'text',
+                  ]

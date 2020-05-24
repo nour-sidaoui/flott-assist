@@ -242,10 +242,6 @@ def charger_vehicules(request):
                                         date_et_temps_de_restitution=None,
                                         km_restit=None)
 
-    print('\n\n\n\n\n\n')
-    print(conduites)
-    print('\n\n\n\n\n\n')
-
     return render(request=request,
                   template_name='droplists/vehicules_dropdown_list_options.html',
                   context={'conduites': conduites})

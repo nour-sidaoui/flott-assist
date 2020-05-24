@@ -12,7 +12,8 @@ from datetime import datetime
 
 from conducteur.api.serializers import (KmInSerializer,
                                         KmOutSerializer,
-                                        MessageProblemeSerializer)
+                                        MessageProblemeSerializer,
+                                        GpsSerializer)
 
 
 def debug_print(m):
@@ -130,6 +131,31 @@ def api_declarer_prob(request):
                           id_vehicule=conduite.id_vehicule)
 
     serializer = MessageProblemeSerializer(msg, data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST', ])
+@permission_classes((IsAuthenticated,))
+def api_gps(request):
+    conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
+
+    try:
+        conduite = Conduire.objects.get(id_employe=conducteur,
+                                        km_restit=None)
+
+    except Conduire.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    msg = MessageProbleme(id_employe=conducteur,
+                          id_vehicule=conduite.id_vehicule,
+                          sujet='Coordonnées GPS partagées')
+
+    serializer = GpsSerializer(msg, data=request.data)
 
     if serializer.is_valid():
         serializer.save()
