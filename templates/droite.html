@@ -25,6 +25,14 @@
                                         Problème signalé par {{ message_non_lu.id_employe.user.first_name | capfirst }}
                                     </b>
                                 </a>
+
+                            {% if message_non_lu.sujet == 'Coord. GPS partagées' %}
+                                <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
+                                    <b class="line">
+                                        Coord. GPS partagées par {{ message_non_lu.id_employe.user.first_name | capfirst }}
+                                    </b>
+                                </a>
+
                             {% else %}
                                 <a class="non_lu line" href="{% url 'dashboard:voir_msg' message_non_lu.id %}">
                                     <b class="line">

@@ -153,7 +153,7 @@ def api_gps(request):
 
     msg = MessageProbleme(id_employe=conducteur,
                           id_vehicule=conduite.id_vehicule,
-                          sujet='Coordonnées GPS partagées')
+                          sujet='Coord. GPS partagées')
 
     serializer = GpsSerializer(msg, data=request.data)
 
