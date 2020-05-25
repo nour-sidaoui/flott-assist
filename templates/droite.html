@@ -73,9 +73,25 @@
                     <div class="content">
                         <div class="dropdown_line vertical_align">
 
-                            <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
-                                Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
-                            </a>
+                            {% if message_lu.id_employe and message_non_lu.sujet == 'Coord. GPS partagées' %}
+
+                                <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                                    Coord. GPS partagées par {{ message_lu.id_employe.user.first_name | capfirst }}
+                                </a>
+
+                            {% elif message_lu.id_employe and message_non_lu.sujet != 'Coord. GPS partagées' %}
+
+                                <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                                    Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
+                                </a>
+
+                            {% else %}
+
+                                <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
+                                    Différence de Km détectée
+                                </a>
+
+                            {% endif %}
 
                         </div>
                     </div>
