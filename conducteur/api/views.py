@@ -108,7 +108,7 @@ def api_voir_prob(request):
 
         msg = MessageProbleme.objects.filter(id_employe=conducteur,
                                              id_vehicule=conduite.id_vehicule,
-                                             solved=False).latest('sent_at')
+                                             solved=False).exclude(sujet='Coord. GPS partagées').latest('sent_at')
 
     except (Conduire.DoesNotExist, MessageProbleme.DoesNotExist):
         return Response(status=status.HTTP_404_NOT_FOUND)
