@@ -10,6 +10,7 @@ from employe.models import Employe, Conduire
 from dashboard.views import report_difference
 from datetime import datetime
 
+from django.http import JsonResponse
 from conducteur.api.serializers import (KmInSerializer,
                                         KmOutSerializer,
                                         MessageProblemeSerializer,
@@ -114,6 +115,23 @@ def api_voir_prob(request):
 
     serializer = MessageProblemeSerializer(msg)
     return Response(serializer.data)
+
+
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated,))
+def api_get_veh(request):
+    conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
+
+    try:
+        conduite = Conduire.objects.get(id_employe=conducteur,
+                                        km_restit=None)
+
+    except Conduire.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    data = {'veh_immat': conduite.id_vehicule.immat}
+
+    return JsonResponse(data)
 
 
 @api_view(['POST', ])
