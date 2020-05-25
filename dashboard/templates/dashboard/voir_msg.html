@@ -30,7 +30,9 @@
     {% else %}
 
         <div class="bloc-msg">
-            {{ message.text | linebreaks }}
+            {% if message.text %}
+                {{ message.text | linebreaks }}
+            {% endif %}
         </div>
 
     {% endif %}
