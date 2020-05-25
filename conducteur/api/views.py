@@ -106,7 +106,8 @@ def api_voir_prob(request):
                                         km_restit=None)
 
         msg = MessageProbleme.objects.filter(id_employe=conducteur,
-                                             id_vehicule=conduite.id_vehicule).latest('sent_at')
+                                             id_vehicule=conduite.id_vehicule,
+                                             solved=False).latest('sent_at')
 
     except (Conduire.DoesNotExist, MessageProbleme.DoesNotExist):
         return Response(status=status.HTTP_404_NOT_FOUND)

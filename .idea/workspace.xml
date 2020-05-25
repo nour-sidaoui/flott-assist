@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/voir_msg.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/voir_msg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conducteur/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,27 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00002" summary="module réstituer (back-end) fonctionnel">
-      <created>1584717383024</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1584717383024</updated>
-    </task>
-    <task id="LOCAL-00003" summary="module réstituer (back-end) fonctionnel tests et réajustements terminés">
-      <created>1584720149325</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1584720149325</updated>
-    </task>
-    <task id="LOCAL-00004" summary="app historique fonctionnelle - tests et réajustements terminés">
-      <created>1585766767502</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1585766767502</updated>
     </task>
     <task id="LOCAL-00005" summary="app message fonctionnelle et testée dashboard pret">
       <created>1586806336811</created>
@@ -421,7 +400,28 @@
       <option name="project" value="LOCAL" />
       <updated>1590398382117</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="{% if message.text %}">
+      <created>1590399008969</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1590399008972</updated>
+    </task>
+    <task id="LOCAL-00052" summary="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist">
+      <created>1590399168825</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1590399168825</updated>
+    </task>
+    <task id="LOCAL-00053" summary="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}">
+      <created>1590399228615</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1590399228615</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,9 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="sys.path added for debug (views.py)" />
-    <MESSAGE value="moving-up sys.path added for debug (views.py)" />
-    <MESSAGE value="print('*' * 400) added for debug (views.py)" />
     <MESSAGE value="from git import Repo (views.py)" />
     <MESSAGE value="corrected repo = Repo(&quot;flott-assist/&quot;) in views.py" />
     <MESSAGE value="comments removed from updater" />
@@ -455,29 +452,32 @@
     <MESSAGE value="{{ message.text | safe }} added for GPS msg display" />
     <MESSAGE value="{% for message_lu in liste_messages_lus %} filtered by subject" />
     <MESSAGE value="{% if message_lu.id_employe and message_lu.sujet == 'Coord. GPS partagées' %} corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="{% if message_lu.id_employe and message_lu.sujet == 'Coord. GPS partagées' %} corrected" />
+    <MESSAGE value="{% if message.text %}" />
+    <MESSAGE value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist" />
+    <MESSAGE value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}" />
+    <option name="LAST_COMMIT_MESSAGE" value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="333" y="23" key="CommitChangelistDialog2" timestamp="1590399168561">
+    <state x="333" y="23" key="CommitChangelistDialog2" timestamp="1590399228411">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="333" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590399168561" />
+    <state x="333" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590399228411" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590399170236">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590399230039">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590399170236" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590399230039" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
