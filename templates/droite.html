@@ -73,13 +73,13 @@
                     <div class="content">
                         <div class="dropdown_line vertical_align">
 
-                            {% if message_lu.id_employe and message_non_lu.sujet == 'Coord. GPS partagées' %}
+                            {% if message_lu.id_employe and message_lu.sujet == 'Coord. GPS partagées' %}
 
                                 <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
                                     Coord. GPS partagées par {{ message_lu.id_employe.user.first_name | capfirst }}
                                 </a>
 
-                            {% elif message_lu.id_employe and message_non_lu.sujet != 'Coord. GPS partagées' %}
+                            {% elif message_lu.id_employe and message_lu.sujet != 'Coord. GPS partagées' %}
 
                                 <a class="line" href="{% url 'dashboard:voir_msg' message_lu.id %}">
                                     Problème signalé par {{ message_lu.id_employe.user.first_name | capfirst }}
