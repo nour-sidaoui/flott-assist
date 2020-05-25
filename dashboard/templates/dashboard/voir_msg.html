@@ -11,7 +11,7 @@
 
         <p> <b>Reçu le : </b> {{ message.sent_at }} </p>
 
-        <p> <b>De : </b> {{ message.id_employe }} </p>
+        <p> <b>De : </b> {% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist </p>
 
         <p> <b>Véhicule : </b> {{ message.id_vehicule }} </p>
 
