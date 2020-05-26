@@ -76,7 +76,8 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8100",
-    "http://127.0.0.1:8100"
+    "http://127.0.0.1:8100",
+    "81.249.202.21"
 ]
 
 CORS_ALLOW_METHODS = [
