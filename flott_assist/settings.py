@@ -79,6 +79,12 @@ CORS_ORIGIN_WHITELIST = [
     "http://127.0.0.1:8100"
 ]
 
+CORS_ALLOW_METHODS = [
+    'GET',
+    'OPTIONS',
+    'POST',
+]
+
 ROOT_URLCONF = 'flott_assist.urls'
 
 TEMPLATES = [
