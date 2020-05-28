@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/droite.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/droite.html" afterDir="false" />
-    </list>
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,27 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00012" summary="favicon added">
-      <created>1589044788677</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1589044788677</updated>
-    </task>
-    <task id="LOCAL-00013" summary="favicon added as ico">
-      <created>1589046073402</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1589046073402</updated>
-    </task>
-    <task id="LOCAL-00014" summary="updater app added">
-      <created>1589111251557</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1589111251557</updated>
     </task>
     <task id="LOCAL-00015" summary="git.Repo updated in views.py">
       <created>1589113746777</created>
@@ -421,7 +397,28 @@
       <option name="project" value="LOCAL" />
       <updated>1590676810178</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="changed to 3 separate ifs">
+      <created>1590677150874</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677150874</updated>
+    </task>
+    <task id="LOCAL-00062" summary="changed to 3 separate ifs 2">
+      <created>1590677223418</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677223418</updated>
+    </task>
+    <task id="LOCAL-00063" summary="notifications.count">
+      <created>1590677311255</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677311255</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,9 +427,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="correction l143 dashboard.views (Km_prise=null retiré de la requête)" />
-    <MESSAGE value="&quot;django-cors-headers&quot; installed and configured" />
-    <MESSAGE value="api_km_prise - query attributes changed" />
     <MESSAGE value="debug print l39 added" />
     <MESSAGE value="debug prints in km_prise" />
     <MESSAGE value="POST  only for Km Prise" />
@@ -455,29 +449,32 @@
     <MESSAGE value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
     <MESSAGE value="{% if notifications and liste_messages_non_lus %}" />
     <MESSAGE value="( {{ notifications.count | add: liste_messages_non_lus.count }} )" />
-    <option name="LAST_COMMIT_MESSAGE" value="( {{ notifications.count | add: liste_messages_non_lus.count }} )" />
+    <MESSAGE value="changed to 3 separate ifs" />
+    <MESSAGE value="changed to 3 separate ifs 2" />
+    <MESSAGE value="notifications.count" />
+    <option name="LAST_COMMIT_MESSAGE" value="notifications.count" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590677223220">
+    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590677311063">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590677223220" />
+    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590677311063" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590677225316">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590677312664">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590677225316" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590677312664" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
