@@ -11,11 +11,11 @@
                 {% endif %}
 
                 {% if notifications and not liste_messages_non_lus %}
-                    ( {{ notifications.count }} %}
+                    ( {{ notifications.count }} )
                 {% endif %}
 
                 {% if liste_messages_non_lus and not notifications %}
-                    ( {{ liste_messages_non_lus.count }} %}
+                    ( {{ liste_messages_non_lus.count }} )
                 {% endif %}
             </p>
         </div>
