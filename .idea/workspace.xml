@@ -78,13 +78,6 @@
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
     </task>
-    <task id="LOCAL-00011" summary="deployement settings added">
-      <created>1589034803728</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1589034803728</updated>
-    </task>
     <task id="LOCAL-00012" summary="favicon added">
       <created>1589044788677</created>
       <option name="number" value="00012" />
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590676509111</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="( {{ notifications.count | add: liste_messages_non_lus.count }} )">
+      <created>1590676810178</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1590676810178</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="correction retirée l119 conducteur.views" />
     <MESSAGE value="correction l143 dashboard.views (Km_prise=null retiré de la requête)" />
     <MESSAGE value="&quot;django-cors-headers&quot; installed and configured" />
     <MESSAGE value="api_km_prise - query attributes changed" />
@@ -455,29 +454,30 @@
     <MESSAGE value="CORS_ALLOW_METHODS added" />
     <MESSAGE value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
     <MESSAGE value="{% if notifications and liste_messages_non_lus %}" />
-    <option name="LAST_COMMIT_MESSAGE" value="{% if notifications and liste_messages_non_lus %}" />
+    <MESSAGE value="( {{ notifications.count | add: liste_messages_non_lus.count }} )" />
+    <option name="LAST_COMMIT_MESSAGE" value="( {{ notifications.count | add: liste_messages_non_lus.count }} )" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590676508728">
+    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590676809956">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590676508728" />
+    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590676809956" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590676513113">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590676812441">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590676513113" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590676812441" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">

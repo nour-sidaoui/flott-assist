@@ -8,9 +8,13 @@
 
                 {% if notifications and liste_messages_non_lus %}
                     ( {{ notifications.count | add: liste_messages_non_lus.count }} )
-                {% elif notifications and not liste_messages_non_lus %}
+                {% endif %}
+
+                {% if notifications and not liste_messages_non_lus %}
                     ( {{ notifications | length %}
-                {% elif liste_messages_non_lus and not notifications %}
+                {% endif %}
+
+                {% if liste_messages_non_lus and not notifications %}
                     ( {{ liste_messages_non_lus | length %}
                 {% endif %}
             </p>
