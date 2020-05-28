@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/droite.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/droite.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00009" summary="added pythonanywhere as allowed host">
-      <created>1589027645837</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1589027645837</updated>
     </task>
     <task id="LOCAL-00010" summary="deployement settings added">
       <created>1589034770802</created>
@@ -420,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590483713305</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST">
+      <created>1590484005372</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1590484005372</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -429,7 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test H1 removed" />
     <MESSAGE value="correction l119 conducteur.views" />
     <MESSAGE value="correction retirée l119 conducteur.views" />
     <MESSAGE value="correction l143 dashboard.views (Km_prise=null retiré de la requête)" />
@@ -454,29 +455,30 @@
     <MESSAGE value="api_get_veh added to get vehicule's number plate" />
     <MESSAGE value=".exclude(sujet='Coord. GPS partagées') in api voir prob" />
     <MESSAGE value="CORS_ALLOW_METHODS added" />
-    <option name="LAST_COMMIT_MESSAGE" value="CORS_ALLOW_METHODS added" />
+    <MESSAGE value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590483712929">
+    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590484005112">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590483712929" />
+    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590484005112" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590483715927">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590484006841">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590483715927" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590484006841" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">

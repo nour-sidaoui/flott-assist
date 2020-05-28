@@ -6,8 +6,12 @@
         <div class="static_title ">
             <p>Notifications
 
-                {% if notifications %}
-                    ( {{ notifications | length }} )
+                {% if notifications and liste_messages_non_lus %}
+                    ( {{ notifications | length | add: liste_messages_non_lus | length }} )
+                {% elif notifications and not liste_messages_non_lus %}
+                    ( {{ notifications | length %}
+                {% else %}
+                    {{ liste_messages_non_lus | length %}
                 {% endif %}
             </p>
         </div>
