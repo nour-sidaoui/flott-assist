@@ -236,6 +236,7 @@ def restituer_veh(request):
 
 
 @login_required
+@user_passes_test(is_admin)
 def charger_vehicules(request):
     id_employe = request.GET.get('employe')
     conduites = Conduire.objects.filter(id_employe=id_employe,

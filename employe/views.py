@@ -42,7 +42,7 @@ def ajouter(request):
         creer_user_form = CreerUser(request.POST)
         creer_cond_form = CondForm(request.POST)
 
-        # Checking id bith forms are valid
+        # Checking if both forms are valid
         if creer_user_form.is_valid() and creer_cond_form.is_valid():
             created_user_form = creer_user_form.save()
             created_cond_form = creer_cond_form.save(commit=False)
@@ -59,8 +59,6 @@ def ajouter(request):
                     temp_photo_form = photo_form.save(commit=False)
                     created_cond_form.id_photo = temp_photo_form
                     photo_form.crop_and_save()
-
-
 
             created_cond_form.save()
             messages.success(request, 'Conducteur ajouté avec succès.')
