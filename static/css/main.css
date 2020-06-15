@@ -1238,7 +1238,7 @@ td {
 		    height: 70vmin;
 		    width: 85vmin;
 		    background-color: #fffffffa;
-	    	border: 3px solid #b9b9b9;
+	    	border: 2px solid #b9b9b9;
 			border-radius: 20px;
 		    z-index: 10;
 			transition: .5s cubic-bezier(0.22, 0.61, 0.36, 1);
