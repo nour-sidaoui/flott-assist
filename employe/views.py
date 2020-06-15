@@ -16,6 +16,7 @@ from .forms import (CreerUser,
 
 
 def logout_request(request):
+    """logs out an authenticated user"""
     logout(request)
     messages.info(request, "Logged out successfully!")
     return redirect("login/")
@@ -32,6 +33,7 @@ def page_conducteurs(request):
 @login_required
 @user_passes_test(is_admin)
 def ajouter(request):
+    """create a new driver account and credentials with picture (optional)"""
     # setting general template context
     context = updated_context()
     context['creer_user_form'] = CreerUser()
@@ -88,6 +90,7 @@ def ajouter(request):
 @login_required
 @user_passes_test(is_admin)
 def voir_profil(request, pk):
+    """access driver's profile information"""
     conducteur = get_object_or_404(Employe, id=pk)
     user_filled_form = ModifierUser(instance=conducteur.user)
     cond_filled_form = CondForm(instance=conducteur)
@@ -156,13 +159,3 @@ def voir_profil(request, pk):
     return render(request=request,
                   template_name='employe/profil.html',
                   context=context)
-
-
-# create token for shell created superuser
-
-#   >>> from rest_framework.authtoken.models import Token
-#   >>> from django.contrib.auth.models import User
-#
-#   >>> usr = User.objects.get(username='admin')
-#   >>> Token.objects.create(user=usr)
-

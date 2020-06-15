@@ -20,6 +20,7 @@ from .forms import (AttribuerVehicule,
 
 
 def notification_factory():
+    """generates notifications excluding unread messages"""
     upcoming_month = datetime.date.today() + datetime.timedelta(days=30)
     two_weeks_expiry = datetime.date.today() + datetime.timedelta(days=14)
 
@@ -68,11 +69,13 @@ def notification_factory():
 
 
 def get_notifications():
+    """calls notifications_factory then then returns ordered unseen ones"""
     notification_factory()
     return Notification.objects.filter(seen=False).order_by('-created_on')
 
 
 def report_difference(driver, vehicle, reported_km):
+    """generate difference message and create its instance"""
     sujet = "Diff. de km détectée"
     text = f"Une différence de {reported_km - vehicle.km} Km à été détectée." \
            f"\n\nDernier Km de restitution : {vehicle.km} Km." \
@@ -85,7 +88,7 @@ def report_difference(driver, vehicle, reported_km):
 
 
 def updated_context():
-    """Remets à jour le dictionnaire contexte et le 'return' """
+    """Updates context (dictionary) and returns it """
     notifications = get_notifications()
 
     liste_messages_non_lus = MessageProbleme.objects.filter(seen=False).order_by('-sent_at')
@@ -114,12 +117,13 @@ def updated_context():
 
 
 def is_admin(user):
-    """vérifie que le user est un superuser (admin)"""
+    """checks if admin is superuser"""
     return user.is_superuser
 
 
 @login_required
 def index(request):
+    """homepage with redirection for non-admin users"""
     # redirecting non-admins to conducteur's index
     if not request.user.is_superuser:
         return redirect("conducteur:index")
@@ -167,6 +171,7 @@ def index(request):
 @login_required
 @user_passes_test(is_admin)
 def attribuer_veh(request):
+    """assign vehicle to a driver"""
     if request.method == 'POST':
         attribuer_form = AttribuerVehicule(request.POST)
 
@@ -191,6 +196,7 @@ def attribuer_veh(request):
 @login_required
 @user_passes_test(is_admin)
 def restituer_veh(request):
+    """check back-in vehicle to a driver"""
     context = updated_context()
 
     if request.POST:
@@ -238,6 +244,7 @@ def restituer_veh(request):
 @login_required
 @user_passes_test(is_admin)
 def charger_vehicules(request):
+    """generate list of non-retrieved vehicles for AJAX request"""
     id_employe = request.GET.get('employe')
     conduites = Conduire.objects.filter(id_employe=id_employe,
                                         date_et_temps_de_restitution=None,
@@ -251,6 +258,7 @@ def charger_vehicules(request):
 @login_required
 @user_passes_test(is_admin)
 def ajouter_amende(request):
+    """assign traffic fine to a driver"""
     if request.POST:
         ajouter_amende = AjouterAmende(request.POST)
         if ajouter_amende.is_valid():
@@ -270,10 +278,11 @@ def ajouter_amende(request):
 @login_required
 @user_passes_test(is_admin)
 def saisir_entretien(request):
+    """add maintenance cost to a vehicle"""
     if request.POST:
-        saisir_entretien = SaisirEntretien(request.POST)
-        if saisir_entretien.is_valid():
-            saisir_entretien.save()
+        saisir_ent = SaisirEntretien(request.POST)
+        if saisir_ent.is_valid():
+            saisir_ent.save()
 
             messages.success(request, "L'entretien à été saisi avec succès.")
             return redirect('dashboard:index')
@@ -289,6 +298,7 @@ def saisir_entretien(request):
 @login_required
 @user_passes_test(is_admin)
 def msg(request):
+    """lists all messages received - admin"""
     return render(request=request,
                   template_name='dashboard/msg.html',
                   context=updated_context())
@@ -297,6 +307,7 @@ def msg(request):
 @login_required
 @user_passes_test(is_admin)
 def voir_msg(request, pk):
+    """single message view"""
     mess = MessageProbleme.objects.get(pk=pk)
 
     if mess.seen is False:

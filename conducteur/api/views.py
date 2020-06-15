@@ -33,6 +33,7 @@ def retrieve_employe(request):
 @api_view(['POST', 'GET'])
 @permission_classes((IsAuthenticated,))
 def api_km_prise(request):
+    """POST saved entered Km and GET returns Km and date_de_prise """
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:
@@ -73,6 +74,7 @@ def api_km_prise(request):
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
 def api_km_restit(request):
+    """receives and saves km_de_restit and adds actual time"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:
@@ -120,6 +122,7 @@ def api_voir_prob(request):
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated,))
 def api_get_veh(request):
+    """returns assigned vehicle's plate number"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:
@@ -137,6 +140,7 @@ def api_get_veh(request):
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
 def api_declarer_prob(request):
+    """receives a declared problem to conduite instance"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:
@@ -161,6 +165,7 @@ def api_declarer_prob(request):
 @api_view(['POST', ])
 @permission_classes((IsAuthenticated,))
 def api_gps(request):
+    """receives GPS coordinates from mobile app"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:
@@ -186,6 +191,7 @@ def api_gps(request):
 @api_view(['PUT', ])
 @permission_classes((IsAuthenticated,))
 def api_modifer_prob(request):
+    """modifies last message"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
     try:

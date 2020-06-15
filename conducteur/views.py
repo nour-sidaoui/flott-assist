@@ -11,12 +11,14 @@ from django.contrib import messages
 
 
 def index(request):
+    """homescreen conducteur"""
     return render(request=request,
                   template_name='conducteur/index.html',
                   context=None)
 
 
 def page_km_in(request):
+    """Km in submission page"""
     try:
         conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
 
@@ -41,9 +43,6 @@ def page_km_in(request):
         form_conduite = FormConduirePrise(request.POST, instance=conduite)
 
         if form_conduite.is_valid():
-            # vehicule = Vehicule.objects.get(id=conduite.id_vehicule.id)
-            # vehicule.km = form_conduite.cleaned_data['km_prise']
-            # vehicule.save()
 
             # raising a notification in case of discrepancy
             if form_conduite.cleaned_data['km_prise'] != conduite.id_vehicule.km:
@@ -67,6 +66,7 @@ def page_km_in(request):
 
 
 def page_km_out(request):
+    """Km out submission page"""
     try:
         conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
 
@@ -101,6 +101,7 @@ def page_km_out(request):
 
 
 def declarer_prob(request):
+    """Declare a problem submission page"""
     try:
         conduite = Conduire.objects.get(id_employe=request.user.employe.id,
                                         km_restit=None)
@@ -136,6 +137,7 @@ def declarer_prob(request):
 
 
 def contacter_assist(request):
+    """static page with assistance contact information"""
     return render(request=request,
                   template_name='conducteur/contacter_assist.html',
                   context=None)

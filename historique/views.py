@@ -11,6 +11,7 @@ from django.db.models import Sum
 @login_required
 @user_passes_test(is_admin)
 def page_recherche(request):
+    """search by driver or vehicle and get relevant history"""
     context = updated_context()
 
     if request.POST:
@@ -39,7 +40,6 @@ def page_recherche(request):
             # retrieve selected vehicule and add it to context
             vehicule_selectionne = Vehicule.objects.get(pk=request.POST.get('recherche_veh'))
             context['veh_selectionne'] = vehicule_selectionne
-
 
             # retrieve the sum of amendes
             amendes = Amende.objects.filter(id_vehicule=vehicule_selectionne)
@@ -70,5 +70,3 @@ def page_recherche(request):
     return render(request=request,
                   template_name='historique/page_recherche.html',
                   context=context)
-
-

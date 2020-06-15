@@ -16,6 +16,7 @@ from django.db.models import Q
 @login_required
 @user_passes_test(is_admin)
 def page_vehicules(request):
+    """lists all vehicles (including non-available ones)"""
     return render(request=request,
                   template_name='vehicule/vehicules.html',
                   context=updated_context())
@@ -24,6 +25,7 @@ def page_vehicules(request):
 @login_required
 @user_passes_test(is_admin)
 def ajouter_veh(request):
+    """creates a new vehicle"""
     context = updated_context()
     context['creer_veh_form'] = CreerVeh()
 
@@ -50,6 +52,7 @@ def ajouter_veh(request):
 @login_required
 @user_passes_test(is_admin)
 def fiche_vehicule(request, pk):
+    """displays vehicle's info"""
     vehicule = get_object_or_404(Vehicule, id=pk)
     veh_filled_form = ModifierVeh(instance=vehicule)
 
