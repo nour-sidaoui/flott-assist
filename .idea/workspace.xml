@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00015" summary="git.Repo updated in views.py">
-      <created>1589113746777</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1589113746777</updated>
-    </task>
-    <task id="LOCAL-00016" summary="git.Repo updated in views.py again">
-      <created>1589113860641</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1589113860641</updated>
     </task>
     <task id="LOCAL-00017" summary="added 'https://' to git.Repo views.py">
       <created>1589114127894</created>
@@ -418,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590677311255</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="notifications.count }}">
+      <created>1590677388784</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677388784</updated>
+    </task>
+    <task id="LOCAL-00065" summary=".count }} )">
+      <created>1590677446549</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677446549</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -427,8 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="debug print l39 added" />
-    <MESSAGE value="debug prints in km_prise" />
     <MESSAGE value="POST  only for Km Prise" />
     <MESSAGE value="&quot;/&quot; added for km-in url" />
     <MESSAGE value="if request.method == 'POST':" />
@@ -452,29 +453,31 @@
     <MESSAGE value="changed to 3 separate ifs" />
     <MESSAGE value="changed to 3 separate ifs 2" />
     <MESSAGE value="notifications.count" />
-    <option name="LAST_COMMIT_MESSAGE" value="notifications.count" />
+    <MESSAGE value="notifications.count }}" />
+    <MESSAGE value=".count }} )" />
+    <option name="LAST_COMMIT_MESSAGE" value=".count }} )" />
   </component>
   <component name="WindowStateProjectService">
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1583338156013">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="356" y="124" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.830@0.23.1440.830" timestamp="1583338156013" />
-    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590677388615">
+    <state x="410" y="23" key="CommitChangelistDialog2" timestamp="1590677446351">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
-    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590677388615" />
+    <state x="410" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1590677446351" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590677391362">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1590677448321">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590677391362" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1590677448321" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">

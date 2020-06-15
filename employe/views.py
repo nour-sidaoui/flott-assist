@@ -42,6 +42,7 @@ def ajouter(request):
         creer_user_form = CreerUser(request.POST)
         creer_cond_form = CondForm(request.POST)
 
+        # Checking id bith forms are valid
         if creer_user_form.is_valid() and creer_cond_form.is_valid():
             created_user_form = creer_user_form.save()
             created_cond_form = creer_cond_form.save(commit=False)
@@ -153,6 +154,7 @@ def voir_profil(request, pk):
             context['user_form_modifier'] = user_filled_form
             context['cond_form_modifier'] = cond_filled_form
 
+    # else if GET request
     return render(request=request,
                   template_name='employe/profil.html',
                   context=context)
