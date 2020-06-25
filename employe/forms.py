@@ -114,3 +114,29 @@ class PhotoForm(forms.ModelForm):
 
         return photo
 
+# Get a centered crop
+
+
+# def crop_and_save(self):
+#     photo = super(PhotoForm, self).save()
+#     image = Image.open(photo.picture)
+#
+#     # cropping on the smallest size (width based)
+#     if image.width < image.height:
+#         cropped_image = image.crop((0, (image.height//2 - image.width//2), image.width, image.width))
+#
+#     # cropping on the smallest size (height based)
+#     elif image.width > image.height:
+#         cropped_image = image.crop(((image.width//2 - image.height//2), 0, image.height, image.height))
+#
+#     # if image is already 1/1 aspect ratio
+#     elif image.width == image.height:
+#         cropped_image = image
+#
+#     else:
+#         raise IOError
+#
+#     resized_image = cropped_image.resize((200, 200), Image.ANTIALIAS)
+#     resized_image.save(photo.picture.path)
+#
+#     return photo
