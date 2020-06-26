@@ -5,6 +5,9 @@ from . import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+admin.site.site_header = "flott'assist - Page administrateur"
+admin.site.site_title = "flott'assist - Admin"
+
 urlpatterns = [
 
     # MAIN APPS
