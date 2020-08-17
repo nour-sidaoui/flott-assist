@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +39,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static/scripts/js" />
-      <recent name="$PROJECT_DIR$/dashboard/templates/dashboard" />
-      <recent name="$PROJECT_DIR$/conducteur/templates/conducteur" />
-      <recent name="$PROJECT_DIR$/media" />
-      <recent name="$PROJECT_DIR$/static/scripts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/conducteur/templates" />
       <recent name="$PROJECT_DIR$/dashboard" />
       <recent name="$PROJECT_DIR$/media/profils" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/static/scripts/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/scripts/js" />
+      <recent name="$PROJECT_DIR$/dashboard/templates/dashboard" />
+      <recent name="$PROJECT_DIR$/conducteur/templates/conducteur" />
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$/static/scripts" />
     </key>
   </component>
   <component name="ServiceViewManager">
