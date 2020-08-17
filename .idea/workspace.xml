@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00022" summary="repo = git.Repo(&quot;sidaoui.pythonanywhere.com/&quot;) (views.py)">
-      <created>1589120412473</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1589120412473</updated>
     </task>
     <task id="LOCAL-00023" summary="sys.path added for debug (views.py)">
       <created>1589120844068</created>
@@ -421,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597668115581</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="commented jQuery removed &amp; &#10;aria-labelledBy added to historique">
+      <created>1597682594839</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1597682594840</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +427,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="api_gps added" />
     <MESSAGE value="Coord. GPS partagées et notif droite ajoutée" />
     <MESSAGE value="elif ... and message_non_lu.sujet != 'Coord. GPS partagées'" />
     <MESSAGE value="{{ message.text | safe }} added for GPS msg display" />
@@ -455,37 +451,33 @@
     <MESSAGE value="docstrings added" />
     <MESSAGE value="admin.site.site_header changed" />
     <MESSAGE value="updated to jQuery 3.5.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated to jQuery 3.5.1" />
+    <MESSAGE value="commented jQuery removed &amp; &#10;aria-labelledBy added to historique" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented jQuery removed &amp; &#10;aria-labelledBy added to historique" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1597668115360">
+    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1597682594639">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1597668115360" />
+    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1597682594639" />
     <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1593160864408">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
-    <state x="229" y="69" key="SettingsEditor" timestamp="1589025487075">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1597668121695">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1597682598828">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1597668121695" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1597682598828" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593160851532">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
-    <state x="525" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.830@0.23.1440.830" timestamp="1589036130181" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.996@0.23.1920.996" timestamp="1593160851532" />
   </component>
 </project>
