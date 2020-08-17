@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00021" summary="adding &quot;flott-assist/&quot; ONLY to git.Repo (views.py)">
-      <created>1589119666249</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1589119666249</updated>
     </task>
     <task id="LOCAL-00022" summary="repo = git.Repo(&quot;sidaoui.pythonanywhere.com/&quot;) (views.py)">
       <created>1589120412473</created>
@@ -420,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593160875821</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="updated to jQuery 3.5.1">
+      <created>1597668115580</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1597668115581</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -429,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="debug prints removed" />
     <MESSAGE value="api_gps added" />
     <MESSAGE value="Coord. GPS partagées et notif droite ajoutée" />
     <MESSAGE value="elif ... and message_non_lu.sujet != 'Coord. GPS partagées'" />
@@ -454,17 +454,18 @@
     <MESSAGE value="corrections and user_passes_test added to charger vehicules" />
     <MESSAGE value="docstrings added" />
     <MESSAGE value="admin.site.site_header changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin.site.site_header changed" />
+    <MESSAGE value="updated to jQuery 3.5.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated to jQuery 3.5.1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1593160875712">
-      <screen x="0" y="23" width="1920" height="996" />
+    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1597668115360">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
-    <state x="365" y="38" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1588336874782" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="302" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1589287410505" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
+    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1597668115360" />
     <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1593160864408">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
@@ -473,40 +474,18 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="229" y="69" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1589025487075" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1593160877061">
-      <screen x="0" y="23" width="1920" height="996" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1597668121695">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1588336906820" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1589287412431" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587993585759">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="287" y="51" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.830@0.23.1440.830" timestamp="1587993585759" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1597668121695" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593160851532">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
     <state x="525" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.830@0.23.1440.830" timestamp="1589036130181" />
-    <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1585652023111" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.996@0.23.1920.996" timestamp="1593160851532" />
-    <state x="264" y="196" width="782" height="552" key="find.popup" timestamp="1587986146490">
-      <screen x="0" y="23" width="1440" height="832" />
-    </state>
-    <state x="308" y="95" width="782" height="550" key="find.popup/0.23.1440.815@0.23.1440.815" timestamp="1587149734441" />
-    <state x="264" y="196" width="782" height="550" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1587582555553" />
-    <state x="264" y="196" width="782" height="552" key="find.popup/0.23.1440.832@0.23.1440.832" timestamp="1587986146490" />
-    <state x="329" y="163" width="782" height="550" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1587566522482" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1588080198957">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="600" height="424" key="javadoc.popup/0.23.1440.830@0.23.1440.830" timestamp="1588080198957" />
-    <state x="357" y="174" width="670" height="664" key="search.everywhere.popup" timestamp="1586683267940">
-      <screen x="0" y="23" width="1440" height="815" />
-    </state>
-    <state x="357" y="174" width="670" height="664" key="search.everywhere.popup/0.23.1440.815@0.23.1440.815" timestamp="1586683267940" />
-    <state x="357" y="177" width="670" height="676" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1586199171508" />
-    <state x="357" y="186" width="670" height="715" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1585688000910" />
   </component>
 </project>
