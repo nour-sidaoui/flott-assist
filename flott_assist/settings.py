@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+
+    # django extensions
+    'django_extensions',
+
 ]
 
 REST_FRAMEWORK = {
@@ -77,7 +81,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8100",
     "http://127.0.0.1:8100",
-    "81.249.202.21"         # <-- Xcode simulator
+    # "81.249.202.21"         # <-- Xcode simulator
 ]
 
 CORS_ALLOW_METHODS = [
@@ -109,29 +113,27 @@ TEMPLATES = [
 WSGI_APPLICATION = 'flott_assist.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sidaoui$bdd',
-        'USER': 'sidaoui',
-        'PASSWORD': 'python_flott_assist',
-        'HOST': 'sidaoui.mysql.pythonanywhere-services.com'
-    }
-}
-# # local db
+# # deployed db
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bdd',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'HOST': 'localhost',
-#         'PORT': '8889'
+#         'NAME': 'sidaoui$bdd',
+#         'USER': 'sidaoui',
+#         'PASSWORD': 'python_flott_assist',
+#         'HOST': 'sidaoui.mysql.pythonanywhere-services.com'
 #     }
 # }
+# local db
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bdd',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
+        'PORT': '8889'
+    }
+}
 
 # Socket	/Applications/MAMP/tmp/mysql/mysql.sock
 
@@ -175,7 +177,7 @@ USE_THOUSAND_SEPARATOR = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 MEDIA_URL = '/media/'
