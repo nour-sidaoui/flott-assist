@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/myapp_models.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myapp_models.textClipping" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehicule/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00025" summary="print('*' * 400) added for debug (views.py)">
-      <created>1589121528442</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1589121528442</updated>
     </task>
     <task id="LOCAL-00026" summary="from git import Repo (views.py)">
       <created>1589122149113</created>
@@ -426,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597682846322</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Employe &amp; vehicule tests added">
+      <created>1597966657399</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1597966657399</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -435,7 +429,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="elif ... and message_non_lu.sujet != 'Coord. GPS partagées'" />
     <MESSAGE value="{{ message.text | safe }} added for GPS msg display" />
     <MESSAGE value="{% for message_lu in liste_messages_lus %} filtered by subject" />
     <MESSAGE value="{% if message_lu.id_employe and message_lu.sujet == 'Coord. GPS partagées' %} corrected" />
@@ -460,27 +453,28 @@
     <MESSAGE value="updated to jQuery 3.5.1" />
     <MESSAGE value="commented jQuery removed &amp; &#10;aria-labelledBy added to historique" />
     <MESSAGE value="aria-labelledBy removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="aria-labelledBy removed" />
+    <MESSAGE value="Employe &amp; vehicule tests added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Employe &amp; vehicule tests added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1597682846203">
+    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1597966657195">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1597682846203" />
+    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1597966657195" />
     <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1593160864408">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1597682790462">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1597966661876">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1597682790462" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1597966661876" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593160851532">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
