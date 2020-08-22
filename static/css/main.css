@@ -1104,6 +1104,10 @@ td {
 /*	 used for jquery */
 }
 
+@media screen and (min-width: 1600px) {
+  body {
+     font-size: 16px;
+  }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -1119,7 +1123,6 @@ td {
 		    min-width: auto;
 		    min-height: auto;
 		}
-
 	}
 
 /* Portrait */
