@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00030" summary="test H1 removed">
-      <created>1589129970482</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1589129970482</updated>
     </task>
     <task id="LOCAL-00031" summary="test H1 removed">
       <created>1589130024583</created>
@@ -422,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598123440302</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG">
+      <created>1598125176544</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1598125176544</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -431,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="{% if message.text %}" />
     <MESSAGE value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist" />
     <MESSAGE value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}" />
     <MESSAGE value="MessageProbleme queryset &quot;solved=False&quot; added" />
@@ -456,27 +454,28 @@
     <MESSAGE value="switching to deployed settings" />
     <MESSAGE value="switching to deployed settings1" />
     <MESSAGE value="Notifications unit tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notifications unit tests added" />
+    <MESSAGE value="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1598123440119">
+    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1598125176397">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598123440119" />
+    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598125176397" />
     <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1593160864408">
       <screen x="0" y="23" width="1920" height="996" />
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598123443181">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598125177805">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598123443181" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598125177805" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593160851532">
       <screen x="0" y="23" width="1920" height="996" />
     </state>

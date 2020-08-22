@@ -1104,10 +1104,15 @@ td {
 /*	 used for jquery */
 }
 
+/* Big Screens */
 @media screen and (min-width: 1600px) {
   body {
-     font-size: 16px;
-  }
+    font-size: 16px;
+  	}
+
+  .block_title {
+  	height: 1.3rem;
+	}
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
