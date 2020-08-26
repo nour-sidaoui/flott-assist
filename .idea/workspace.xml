@@ -78,13 +78,6 @@
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
     </task>
-    <task id="LOCAL-00035" summary="correction l143 dashboard.views (Km_prise=null retiré de la requête)">
-      <created>1589288252572</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1589288252573</updated>
-    </task>
     <task id="LOCAL-00036" summary="&quot;django-cors-headers&quot; installed and configured">
       <created>1589735485663</created>
       <option name="number" value="00036" />
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598446683710</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="base.py min version commented out">
+      <created>1598447112564</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1598447112564</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="api_get_veh added to get vehicule's number plate" />
     <MESSAGE value=".exclude(sujet='Coord. GPS partagées') in api voir prob" />
     <MESSAGE value="CORS_ALLOW_METHODS added" />
     <MESSAGE value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
@@ -455,16 +454,17 @@
     <MESSAGE value="Big screen: .block_title (height) limited" />
     <MESSAGE value="added DEPLOYED to settings.py and if statements to ease switching between dev_mode and deployed_mode" />
     <MESSAGE value="base.py min version commented" />
-    <option name="LAST_COMMIT_MESSAGE" value="base.py min version commented" />
+    <MESSAGE value="base.py min version commented out" />
+    <option name="LAST_COMMIT_MESSAGE" value="base.py min version commented out" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598446683482">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598447112408">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598446683482" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598447112408" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -474,13 +474,13 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598446685466">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598447114820">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598446685466" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598447114820" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
