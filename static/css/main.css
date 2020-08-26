@@ -1148,16 +1148,16 @@ td {
 		}
 
 		#menu-toggle {
-			width: 100px;
-			height: 100px;
-			margin: 50px 0;
+			width: 40px;
+			height: 40px;
+			margin: 23px 0;
 			position: absolute;
 			cursor: pointer;
-			border-radius: 20px;
+			border-radius: 10px;
 			transition: .25s ease-in-out;
 			box-sizing: border-box;
-		    top: 16vmax;
-		    right: 1vmax;
+			top: 16vmax;
+			right: 3vmax;
 		}
 
 		#menu-toggle #hamburger {
@@ -1167,12 +1167,10 @@ td {
 		}
 
 		#menu-toggle #hamburger span {
-			width: 60px;
+			width: 40px;
 			height: 4px;
 			position: relative;
-			top: 24px;
-			left: 20px;
-			margin: 10px 0;
+			margin: 7px 0;
 		}
 
 		#menu-toggle #hamburger span:nth-child(1) {
@@ -1198,8 +1196,8 @@ td {
 			height: 0%;
 			width: 4px;
 			position: absolute;
-			top: 10%;
-			left: 48px;
+			top: 5%;
+			left: 23px;
 			transition-delay: 0s;
 		}
 
@@ -1207,8 +1205,8 @@ td {
 			width: 0%;
 			height: 4px;
 			position: absolute;
-			left: 10%;
-			top: 48px;
+			left: 22%;
+			top: 17px;
 			transition-delay: 0.25s;
 		}
 
@@ -1311,6 +1309,11 @@ td {
 		    font-size: 2vmax;
 		}
 
+		.verticalmar {
+		    margin-top: 1.5vh;
+		    margin-bottom: 3.5vh;
+		}
+
 		.objets_header {
 		    height: 13vmax;
 		}
@@ -1384,29 +1387,31 @@ td {
 		}
 
 		.gestionnaire_box {
-			border-radius: 20px;
-			height: 25vmin;
+			border-radius: 10px;
+			height: 35vmin;
 			margin-bottom: 2vmin;
 		}
 
 		.content {
-    		height: 1.5rem;
+			height: 44px;
     		border-radius: 10px;
 	    }
 
 		.button_gestionnaire {
 			width: 47%;
-			height: 7vmin;
-			margin: 1vmin; 
+			height: 44px;
+			margin: 1vmin;
+			border-radius: 10px;
 		}
 
 	    .controles_tech {
 			border-radius: 12px;
 			margin-bottom: 2vmin;
+		    height: 30vh;
 	    }
 
 	    .problemes {
-	    	border-radius: 20px;
+	    	border-radius: 10px;
 	    	margin-bottom: 5vh;
 	    }
 
@@ -1420,14 +1425,19 @@ td {
 		}
 
 		.ok {
-    		height: 2rem;
-    		border-radius: 10px;
+    		height: 44px;
+			min-width: 25vw;
+    		border-radius: 12px;
 		}
 
 		.contentbox {
-			border-radius: 20px;
+			border-radius: 11px;
 			width: 95%;
 			min-height: 50vmax;
+		}
+
+		.form_rechercher {
+			height: calc(100% - 1.7rem);
 		}
 
 		.messages {
@@ -1441,9 +1451,14 @@ td {
 			margin-right: auto; 
 		}
 
+		.formulaire p select {
+		    width: calc(100% - 2vh);
+		}
+
 		.ok_sans_cadre {
-		    height: 4rem;
-		    border-radius: 20px;
+    		height: 44px;
+			min-width: 25vw;
+    		border-radius: 14px;
 		}
 
 		.seventy-five {
@@ -1461,8 +1476,13 @@ td {
 		}
 
 		.drop-lists {
-	    	height: calc(100% - 4rem);
+	    	height: calc(100% - 1.7rem);
 	    }
+
+	    .dropdown {
+			height: 40px;
+			margin-top: 3.5vh;
+		}
 
 	    .resultats {
 	    	border-radius: 20px;
@@ -1497,11 +1517,11 @@ td {
 		}
 
 		.tabletitle {
-		    height: 4rem;
+			height: 2rem;
 		}
 
 		.table tr {
-	    	height: 4rem;
+	    	height: 2rem;
 	    }
 
 		.tables {
@@ -1530,7 +1550,7 @@ td {
 		}
 
 		.msgs p, a {
-			line-height: 4rem;
+			line-height: 1.5rem;
 		}
 
 		.bloc-sujet {
@@ -1549,7 +1569,7 @@ td {
 		}
 
 		.contentbox input:not([type=checkbox]) {
-			width: 87%;
+			width: calc(100% - 3.8vh);
 		}
 
 		.bouton_cond {
