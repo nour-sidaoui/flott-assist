@@ -78,13 +78,6 @@
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
     </task>
-    <task id="LOCAL-00044" summary="api_gps added">
-      <created>1590344703820</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1590344703820</updated>
-    </task>
     <task id="LOCAL-00045" summary="Coord. GPS partagées et notif droite ajoutée">
       <created>1590347554097</created>
       <option name="number" value="00045" />
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598477099305</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="W3C validated CSS...">
+      <created>1598477827624</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1598477827624</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="notifications.count }}" />
     <MESSAGE value=".count }} )" />
     <MESSAGE value="corrections and user_passes_test added to charger vehicules" />
     <MESSAGE value="docstrings added" />
@@ -455,16 +454,17 @@
     <MESSAGE value="W3C validated CSS" />
     <MESSAGE value="W3C validated CSS." />
     <MESSAGE value="W3C validated CSS.." />
-    <option name="LAST_COMMIT_MESSAGE" value="W3C validated CSS.." />
+    <MESSAGE value="W3C validated CSS..." />
+    <option name="LAST_COMMIT_MESSAGE" value="W3C validated CSS..." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598477099181">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598477827496">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598477099181" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598477827496" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -474,13 +474,13 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598477100666">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598477829145">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598477100666" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598477829145" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>

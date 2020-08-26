@@ -1366,7 +1366,6 @@ td {
 			width: 35vmax;
 			float: right;
 			right: 0;
-			font-size: 1.5rem;
 		}
 
 		.small_top_mar {
@@ -1421,8 +1420,8 @@ td {
 		}
 
 		.ok {
-		    height: 4rem;
-		    border-radius: 20px;
+    		height: 2rem;
+    		border-radius: 10px;
 		}
 
 		.contentbox {
@@ -1540,12 +1539,12 @@ td {
 		}
 
 		input {
-			height: 3rem;
+			height: 1.5rem;
 			width: 3rem;
 		}
 
 		label {
-			font-size: 1.8rem;
+			font-size: 3.3vw;
 			line-height: 1.8;
 		}
 
