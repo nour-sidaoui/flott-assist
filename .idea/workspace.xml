@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,13 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00032" summary="test H1 removed">
-      <created>1589130068948</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1589130068949</updated>
     </task>
     <task id="LOCAL-00033" summary="correction l119 conducteur.views">
       <created>1589287081642</created>
@@ -421,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598125702335</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="added DEPLOYED to settings.py and if statements to ease switching between dev_mode and deployed_mode">
+      <created>1598444487501</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1598444487501</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +427,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}" />
     <MESSAGE value="MessageProbleme queryset &quot;solved=False&quot; added" />
     <MESSAGE value="api_get_veh added to get vehicule's number plate" />
     <MESSAGE value=".exclude(sujet='Coord. GPS partagées') in api voir prob" />
@@ -455,31 +451,38 @@
     <MESSAGE value="Notifications unit tests added" />
     <MESSAGE value="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG" />
     <MESSAGE value="Big screen: .block_title (height) limited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big screen: .block_title (height) limited" />
+    <MESSAGE value="added DEPLOYED to settings.py and if statements to ease switching between dev_mode and deployed_mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="added DEPLOYED to settings.py and if statements to ease switching between dev_mode and deployed_mode" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" key="CommitChangelistDialog2" timestamp="1598125702187">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598444673346">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598125702187" />
-    <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1593160864408">
-      <screen x="0" y="23" width="1920" height="996" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598444673346" />
+    <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
+      <screen x="0" y="23" width="1920" height="997" />
+    </state>
+    <state x="230" y="114" key="MergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444523886" />
+    <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1598444526780">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598125703656">
+    <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598444489961">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598125703656" />
-    <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593160851532">
-      <screen x="0" y="23" width="1920" height="996" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598444489961" />
+    <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.996@0.23.1920.996" timestamp="1593160851532" />
+    <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.997@0.23.1920.997" timestamp="1598444685955" />
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1597964294028">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
