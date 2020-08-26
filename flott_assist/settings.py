@@ -79,6 +79,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+    # Content Security Policy (CSP)
+    'csp.middleware.CSPMiddleware',
+
 ]
 
 CORS_ORIGIN_WHITELIST = [
