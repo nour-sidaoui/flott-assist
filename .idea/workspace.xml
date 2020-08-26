@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00038" summary="debug print l39 added">
-      <created>1589741980303</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1589741980304</updated>
     </task>
     <task id="LOCAL-00039" summary="debug prints in km_prise">
       <created>1589742318542</created>
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598468250398</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Content Security Policy (CSP) removed">
+      <created>1598468527745</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1598468527745</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&quot;81.249.202.21&quot; added to CORS_ORIGIN_WHITELIST" />
     <MESSAGE value="{% if notifications and liste_messages_non_lus %}" />
     <MESSAGE value="( {{ notifications.count | add: liste_messages_non_lus.count }} )" />
     <MESSAGE value="changed to 3 separate ifs" />
@@ -455,16 +454,17 @@
     <MESSAGE value="base.py min version commented out" />
     <MESSAGE value="DEPLOYED commented in settings.py" />
     <MESSAGE value="Content Security Policy (CSP) added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Content Security Policy (CSP) added" />
+    <MESSAGE value="Content Security Policy (CSP) removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Content Security Policy (CSP) removed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598468250242">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598468527621">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598468250242" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598468527621" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -474,13 +474,13 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598468252595">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598468529116">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598468252595" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598468529116" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
