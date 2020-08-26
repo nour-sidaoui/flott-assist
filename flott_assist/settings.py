@@ -11,7 +11,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6)$fc)m8crei*l8m!8vo1sppq5(bu$s6u_#0=h(cqkt-67!6ji'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+DEPLOYED = True
 
 ALLOWED_HOSTS = ['192.168.1.11',
                  'sidaoui.pythonanywhere.com',
@@ -81,8 +82,10 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8100",
     "http://127.0.0.1:8100",
-    "81.249.202.21"         # <-- Xcode simulator
 ]
+
+if DEPLOYED:
+    CORS_ORIGIN_WHITELIST += "81.249.202.21"         # <-- adding Xcode simulator ip
 
 CORS_ALLOW_METHODS = [
     'GET',
@@ -113,27 +116,30 @@ TEMPLATES = [
 WSGI_APPLICATION = 'flott_assist.wsgi.application'
 
 
-# deployed db
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sidaoui$bdd',
-        'USER': 'sidaoui',
-        'PASSWORD': 'python_flott_assist',
-        'HOST': 'sidaoui.mysql.pythonanywhere-services.com'
+if DEPLOYED:
+    # deployed db
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'sidaoui$bdd',
+            'USER': 'sidaoui',
+            'PASSWORD': 'python_flott_assist',
+            'HOST': 'sidaoui.mysql.pythonanywhere-services.com'
+        }
     }
-}
-# # local db
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bdd',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#         'HOST': 'localhost',
-#         'PORT': '8889'
-#     }
-# }
+
+else:
+    # local db
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'bdd',
+            'USER': 'root',
+            'PASSWORD': 'root',
+            'HOST': 'localhost',
+            'PORT': '8889'
+        }
+    }
 
 # Socket	/Applications/MAMP/tmp/mysql/mysql.sock
 
@@ -180,14 +186,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 
-if DEBUG:
+if DEPLOYED:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+else:
     STATICFILES_DIRS = [
         os.path.join(BASE_DIR, 'static')
     ]
-
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #
