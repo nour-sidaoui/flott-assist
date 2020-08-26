@@ -1348,12 +1348,8 @@ td {
 		}
 
 		.block_title {
-			height: 4rem;
-	    	border-radius: 20px;
-		}
-
-		.block-conduite {
-		    max-height: 75%;
+			height: 1.7rem;
+	    	border-radius: 10px;
 		}
 
 		.profilpic_thumbnail {
@@ -1395,8 +1391,8 @@ td {
 		}
 
 		.content {
-			height: 4rem;
-			border-radius: 20px;
+    		height: 1.5rem;
+    		border-radius: 10px;
 	    }
 
 		.button_gestionnaire {
@@ -1406,8 +1402,8 @@ td {
 		}
 
 	    .controles_tech {
-	    	border-radius: 20px;
-	    	margin-bottom: 2vmin;
+			border-radius: 12px;
+			margin-bottom: 2vmin;
 	    }
 
 	    .problemes {
@@ -1416,8 +1412,8 @@ td {
 	    }
 
 	    footer {
-		    height: 3.5rem;
-	    	border-radius: 20px;
+		    height: 1.5rem;
+	    	border-radius: 10px;
 	    }
 
 	   	.line {
