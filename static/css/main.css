@@ -383,12 +383,12 @@ p.aucun{
 
 .formulaire p input{
 	float: right;
-	padding: : .5vh 1vw;
+	padding: .5vh 1vw;
 	grid-area: input;
 }
 
 .formulaire p select{
-	padding: : 10px 1vw;
+	padding: 10px 1vw;
 	float: right;
 	grid-area: input;
 	margin: 1.5vh 1.5%;
@@ -1283,12 +1283,11 @@ td {
 	/*  BURGER MENU ITEMS END */
 
 		header {
-			height: 15vmax;;
+			height: 15vmax;
 		}
 
 		body {
 			font-size: 2vmax;
-
 		}
 
 		h1 {
@@ -1366,7 +1365,7 @@ td {
 
 		#status {
 			display: inline;
-		    position: absolute;
+			position: absolute;
 			text-align: right;
 			width: 35vmax;
 			float: right;
@@ -1375,13 +1374,13 @@ td {
 		}
 
 		.small_top_mar {
-		    margin-top: .5vh;
-		    margin-right: 1.5vw;
+			margin-top: .5vh;
+			margin-right: 1.5vw;
 		}
 
 		.circulation {
-	    	height: 50vh; 
-	    	border-radius: 20px;
+			height: 50vh; 
+			border-radius: 20px;
 		}
 		
 		.full {
@@ -1390,21 +1389,21 @@ td {
 		}
 
 		.gestionnaire_box {
-		    border-radius: 20px;
-		    height: 25vmin;
-		    margin-bottom: 2vmin;
+			border-radius: 20px;
+			height: 25vmin;
+			margin-bottom: 2vmin;
 		}
 
-		.button_gestionnaire {
-	    	width: 47%;
-	    	height: 7vmin;
-	    	margin: 1vmin; 
+		.content {
+			height: 4rem;
+			border-radius: 20px;
 	    }
 
-	    .content {
-	    	height: 4rem;
-	    	border-radius: 20px;
-	    }
+		.button_gestionnaire {
+			width: 47%;
+			height: 7vmin;
+			margin: 1vmin; 
+		}
 
 	    .controles_tech {
 	    	border-radius: 20px;
@@ -1574,8 +1573,6 @@ td {
 			margin-top: 2vh;
 			font-size: inherit;
 		}
-
-
 }
 
 /* Landscape */
@@ -1641,5 +1638,4 @@ td {
     	.recherche {
 		    height: 10vh;
 		}
-
-}
+	}
