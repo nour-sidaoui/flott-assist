@@ -25,6 +25,7 @@ def logout_request(request):
 @login_required
 @user_passes_test(is_admin)
 def page_conducteurs(request):
+    """generates webpage conducteurs"""
     return render(request=request,
                   template_name='employe/conducteurs.html',
                   context=updated_context())
