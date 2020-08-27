@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     # django extensions
     'django_extensions',
 
+    # Cookie-law
+    'cookielaw',
+
 ]
 
 REST_FRAMEWORK = {

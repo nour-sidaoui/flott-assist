@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cookielaw_tags %}
 
 <html lang="fr">
 <head>
@@ -33,6 +34,8 @@
         </div>
 
         {% if user.is_superuser %}
+
+<!--        menu burger          -->
 
             <div class="opacity" id="menu-toggle">
                 <div id="hamburger">
@@ -71,6 +74,10 @@
 
             </div>
 
+<!--        fin menu burger         -->
+
+<!--        NAVBAR                  -->
+
             <nav class="navbar no_mobile">
                 <div class="gauche">
 
@@ -98,6 +105,8 @@
             </nav>
         {% endif %}
 
+<!--        etat de session       -->
+
         <div id="status" class="droite rightmargin">
             {% if user.is_authenticated %}
                 <p class="rightmargin small_top_mar"> Session : {{ request.user }}</p>
@@ -108,6 +117,7 @@
 
         <section class="espace_principal">
 
+<!--            menu gauche - conducteurs et vehicules            -->
             {% if user.is_superuser %}
                 {% include 'gauche.html' %}
             {% endif %}
@@ -125,11 +135,21 @@
                 {% endblock content%}
             </div>
 
+<!--            menu droit - notifications et messages            -->
+
             {% if request.user.is_superuser %}
                 {% include 'droite.html' %}
             {% endif %}
 
         </section>
+
+<!--    Cookies banner     -->
+    <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+
+    {% cookielaw_banner %}
+
+<!--  End Cookies banner   -->
+
 
     <footer>
         <p>© Copyright Nour SIDAOUI</p>

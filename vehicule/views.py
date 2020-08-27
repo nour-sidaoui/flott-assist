@@ -63,6 +63,7 @@ def fiche_vehicule(request, pk):
                                                          seen=False,
                                                          )
 
+    # marking eventual notifications as "seen"
     for possible_notification in possible_notifications:
         possible_notification.seen = True
         possible_notification.save()
@@ -79,6 +80,7 @@ def fiche_vehicule(request, pk):
             messages.success(request, 'Véhicule modifié avec succès.')
             return redirect('vehicule:page_vehicules')
 
+        # in case of errors
         else:
             messages.error(request, veh_filled_form.errors)
 
