@@ -1148,6 +1148,14 @@ td {
 	}
 }
 
+/* Tab Screens */
+@media screen 
+and (max-width: 700px) {
+  h6 {
+    font-size: 1.4vw;
+  	}
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
