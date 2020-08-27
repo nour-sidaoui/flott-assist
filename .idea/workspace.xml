@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cookielaw/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cookielaw/banner.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00051" summary="{% if message.text %}">
-      <created>1590399008969</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1590399008972</updated>
-    </task>
-    <task id="LOCAL-00052" summary="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist">
-      <created>1590399168825</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1590399168825</updated>
     </task>
     <task id="LOCAL-00053" summary="{% if message.id_employe %} {{ message.id_employe }} {% else %} flott'assist {% endif %}">
       <created>1590399228615</created>
@@ -421,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598559093088</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="h6 media query added for tab screens">
+      <created>1598559333485</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1598559333485</updated>
+    </task>
+    <task id="LOCAL-00101" summary="cookie banner position fixed">
+      <created>1598559440911</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1598559440911</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,8 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="aria-labelledBy removed" />
-    <MESSAGE value="Employe &amp; vehicule tests added" />
     <MESSAGE value="switching to deployed settings" />
     <MESSAGE value="switching to deployed settings1" />
     <MESSAGE value="Notifications unit tests added" />
@@ -455,13 +453,15 @@
     <MESSAGE value="CookieLaw added and set" />
     <MESSAGE value="2nd puch after collectstatic" />
     <MESSAGE value="h6 fontsize restored" />
-    <option name="LAST_COMMIT_MESSAGE" value="h6 fontsize restored" />
+    <MESSAGE value="h6 media query added for tab screens" />
+    <MESSAGE value="cookie banner position fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookie banner position fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="1" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598559333377">
+    <state x="439" y="1" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598559440808">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559333377" />
+    <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559440808" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
@@ -475,10 +475,10 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="201" key="Vcs.Push.Dialog.v2" timestamp="1598559334917">
+    <state x="427" y="201" key="Vcs.Push.Dialog.v2" timestamp="1598559442008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559334917" />
+    <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559442008" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
