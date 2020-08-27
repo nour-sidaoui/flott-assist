@@ -208,7 +208,7 @@ img{
 }
 
 #cookiebannerdiv {
-	position: absolute;
+	position: fixed;
 	width: 100vw;
 /*	padding: 3vmax;*/
 	margin: 0 auto;
