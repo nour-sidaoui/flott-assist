@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,13 +76,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00049" summary="{% for message_lu in liste_messages_lus %} filtered by subject">
-      <created>1590398242097</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1590398242097</updated>
     </task>
     <task id="LOCAL-00050" summary="{% if message_lu.id_employe and message_lu.sujet == 'Coord. GPS partagées' %} corrected">
       <created>1590398382115</created>
@@ -418,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598557494340</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="2nd puch after collectstatic">
+      <created>1598557690152</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1598557690153</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -427,7 +429,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="updated to jQuery 3.5.1" />
     <MESSAGE value="commented jQuery removed &amp; &#10;aria-labelledBy added to historique" />
     <MESSAGE value="aria-labelledBy removed" />
     <MESSAGE value="Employe &amp; vehicule tests added" />
@@ -452,13 +453,14 @@
     <MESSAGE value="W3C validated CSS + mobile version readapted" />
     <MESSAGE value="DEPLOYED active" />
     <MESSAGE value="CookieLaw added and set" />
-    <option name="LAST_COMMIT_MESSAGE" value="CookieLaw added and set" />
+    <MESSAGE value="2nd puch after collectstatic" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd puch after collectstatic" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="1" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598557493966">
+    <state x="439" y="1" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598557690033">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598557493966" />
+    <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598557690033" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
@@ -472,10 +474,10 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="201" key="Vcs.Push.Dialog.v2" timestamp="1598557498317">
+    <state x="427" y="201" key="Vcs.Push.Dialog.v2" timestamp="1598557694260">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598557498317" />
+    <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598557694260" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
