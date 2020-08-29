@@ -1630,10 +1630,10 @@ and (max-width: 700px) {
 		}
 
 		.bouton_cond {
-		    font-size: 1.8rem;
-		    height: 3rem;
-		    line-height: 1.5;
-		    border-radius: 20px;
+			font-size: 1rem;
+			height: 44px;
+			line-height: 1.5;
+			border-radius: 10px;
 		}
 
 		.formulaire_cond textarea {

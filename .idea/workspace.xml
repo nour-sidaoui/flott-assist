@@ -78,13 +78,6 @@
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
     </task>
-    <task id="LOCAL-00056" summary=".exclude(sujet='Coord. GPS partagées') in api voir prob">
-      <created>1590409535228</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1590409535229</updated>
-    </task>
     <task id="LOCAL-00057" summary="CORS_ALLOW_METHODS added">
       <created>1590483713304</created>
       <option name="number" value="00057" />
@@ -421,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598736768017</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="css accueil cond horizontal tuning">
+      <created>1598737894857</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1598737894858</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG" />
     <MESSAGE value="Big screen: .block_title (height) limited" />
     <MESSAGE value="added DEPLOYED to settings.py and if statements to ease switching between dev_mode and deployed_mode" />
     <MESSAGE value="base.py min version commented" />
@@ -455,17 +454,18 @@
     <MESSAGE value="texte cookiebanner corrigé" />
     <MESSAGE value="trigger added for superuser Token" />
     <MESSAGE value="msgs css corrected for portrait" />
-    <option name="LAST_COMMIT_MESSAGE" value="msgs css corrected for portrait" />
+    <MESSAGE value="css accueil cond horizontal tuning" />
+    <option name="LAST_COMMIT_MESSAGE" value="css accueil cond horizontal tuning" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598736767739">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598737894736">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559649370" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598736767739" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598737894736" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -475,14 +475,14 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598736769630">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598737896687">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559650842" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598736769630" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598737896687" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
