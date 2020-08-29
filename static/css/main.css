@@ -1626,7 +1626,7 @@ and (max-width: 700px) {
 		}
 
 		.contentbox input:not([type=checkbox]) {
-			width: calc(100% - 3.8vh);
+			width: calc(100% - 12vh);
 		}
 
 		.bouton_cond {
