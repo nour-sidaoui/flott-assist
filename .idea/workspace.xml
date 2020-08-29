@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/msg.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/msg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00054" summary="MessageProbleme queryset &quot;solved=False&quot; added">
-      <created>1590401019371</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1590401019372</updated>
     </task>
     <task id="LOCAL-00055" summary="api_get_veh added to get vehicule's number plate">
       <created>1590404346326</created>
@@ -424,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598559649476</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="trigger added for superuser Token">
+      <created>1598703776680</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1598703776680</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -433,7 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="switching to deployed settings1" />
     <MESSAGE value="Notifications unit tests added" />
     <MESSAGE value="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG" />
     <MESSAGE value="Big screen: .block_title (height) limited" />
@@ -458,17 +455,18 @@
     <MESSAGE value="h6 media query added for tab screens" />
     <MESSAGE value="cookie banner position fixed" />
     <MESSAGE value="texte cookiebanner corrigé" />
-    <option name="LAST_COMMIT_MESSAGE" value="texte cookiebanner corrigé" />
+    <MESSAGE value="trigger added for superuser Token" />
+    <option name="LAST_COMMIT_MESSAGE" value="trigger added for superuser Token" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598703711989">
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598736744446">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559649370" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
-    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598703711989" />
+    <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598736744446" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -478,14 +476,14 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="201" key="Vcs.Push.Dialog.v2" timestamp="1598559650842">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598703777938">
+      <screen x="0" y="23" width="1920" height="997" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598559650842" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598484808413" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598703777938" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>

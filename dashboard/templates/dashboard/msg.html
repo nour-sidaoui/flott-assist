@@ -9,7 +9,7 @@
 
 
      {% if liste_messages_non_lus or liste_messages_lus %}
-        <div class="msgs">
+        <div class="msgs no_mobile_portrait">
             <p class="date"><b>Date</b></p>
             <p class="sender"><b>Reçu de</b></p>
             <p class="suj"><b>Sujet</b></p>
@@ -30,6 +30,8 @@
                 {% else %}
                     <b> flott'assist </b>
                 {% endif %}
+
+                <div class="break"></div> <!-- break -->
 
                 <b class="suj">{{ message_non_lu.sujet }} </b>
 
@@ -53,6 +55,8 @@
                 {% else %}
                     <p> flott'assist </p>
                 {% endif %}
+
+                <div class="break"></div> <!-- break -->
 
                 <p class="suj">{{ message_lu.sujet }}</p>
 
