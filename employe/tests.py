@@ -1,3 +1,4 @@
+from django.db.models import signals
 from django.test import TestCase
 
 from django.contrib.auth.models import User
@@ -88,5 +89,3 @@ class UserEmployeeTestCase(TestCase):
                                     id_vehicule=vehicule)
 
         self.assertEqual(amende.montant, 90)
-
-
