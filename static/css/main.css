@@ -1496,6 +1496,7 @@ and (max-width: 700px) {
 		.formulaire p select {
 		    width: calc(100% - 2vh);
 			padding: 5px 1vw;
+		    height: 2rem;
 		}
 
 		.ok_sans_cadre {

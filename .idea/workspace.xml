@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/templates/dashboard/restituer.html" afterDir="false" />
-    </list>
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,20 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00061" summary="changed to 3 separate ifs">
-      <created>1590677150874</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1590677150874</updated>
-    </task>
-    <task id="LOCAL-00062" summary="changed to 3 separate ifs 2">
-      <created>1590677223418</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1590677223418</updated>
     </task>
     <task id="LOCAL-00063" summary="notifications.count">
       <created>1590677311255</created>
@@ -421,7 +404,21 @@
       <option name="project" value="LOCAL" />
       <updated>1598874579225</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="css &quot;contentbox_restit&quot; created on page restitution">
+      <created>1598874994137</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1598874994137</updated>
+    </task>
+    <task id="LOCAL-00111" summary="css &quot;restit&quot; created and added on page restitution">
+      <created>1598875108545</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1598875108545</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -430,8 +427,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="DEPLOYED commented in settings.py" />
-    <MESSAGE value="Content Security Policy (CSP) added" />
     <MESSAGE value="Content Security Policy (CSP) removed" />
     <MESSAGE value="media queries &quot;only&quot; word removed" />
     <MESSAGE value="&lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot; /&gt; added" />
@@ -455,16 +450,18 @@
     <MESSAGE value="css contentbox corrected" />
     <MESSAGE value="&quot;J'accepte&quot; in bold" />
     <MESSAGE value="css &quot;formulaire&quot; corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="css &quot;formulaire&quot; corrected" />
+    <MESSAGE value="css &quot;contentbox_restit&quot; created on page restitution" />
+    <MESSAGE value="css &quot;restit&quot; created and added on page restitution" />
+    <option name="LAST_COMMIT_MESSAGE" value="css &quot;restit&quot; created and added on page restitution" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598874993997">
+    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598875108405">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
     <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
-    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1598874993997" />
+    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1598875108405" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
@@ -476,13 +473,13 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598874995336">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598875109837">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1598874995336" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1598875109837" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
