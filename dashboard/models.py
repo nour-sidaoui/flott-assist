@@ -23,3 +23,4 @@ class Notification(models.Model):
 
         else:
             return self
+

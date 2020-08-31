@@ -420,15 +420,16 @@ p.aucun{
 	grid-area: input;
 }
 
-.formulaire p select{
-	padding: 10px 1vw;
-	float: right;
-	grid-area: input;
-	margin: 1.5vh 1.5%;
-	border: 1px solid #b9b9b9;
-	border-radius: 4px;
-	background-color: white;
-	color: #5D5D5D;
+.formulaire p select {
+    padding: 0 10px;
+    height: 1.3rem;
+    float: right;
+    grid-area: input;
+    margin: 1.5vh 1.5%;
+    border: 1px solid #b9b9b9;
+    border-radius: 4px;
+    background-color: white;
+    color: #5D5D5D;
 }
 
 
@@ -1494,6 +1495,7 @@ and (max-width: 700px) {
 
 		.formulaire p select {
 		    width: calc(100% - 2vh);
+			padding: 10px 1vw;
 		}
 
 		.ok_sans_cadre {
