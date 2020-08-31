@@ -1495,7 +1495,7 @@ and (max-width: 700px) {
 
 		.formulaire p select {
 		    width: calc(100% - 2vh);
-			padding: 10px 1vw;
+			padding: 5px 1vw;
 		}
 
 		.ok_sans_cadre {
@@ -1629,6 +1629,10 @@ and (max-width: 700px) {
 
 		.contentbox input:not([type=checkbox]) {
 			width: calc(100% - 12vh);
+		}
+
+		.contentbox_restit input:not([type=checkbox]) {
+			width: calc(100% - 4vh);
 		}
 
 		.bouton_cond {
