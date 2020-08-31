@@ -1631,7 +1631,7 @@ and (max-width: 700px) {
 			width: calc(100% - 12vh);
 		}
 
-		.contentbox_restit input:not([type=checkbox]) {
+		.restit input:not([type=checkbox]) {
 			width: calc(100% - 4vh);
 		}
 
