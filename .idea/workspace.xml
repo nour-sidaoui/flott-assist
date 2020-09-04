@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="" />
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cookielaw/banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cookielaw/banner.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,27 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00063" summary="notifications.count">
-      <created>1590677311255</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1590677311255</updated>
-    </task>
-    <task id="LOCAL-00064" summary="notifications.count }}">
-      <created>1590677388784</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1590677388784</updated>
-    </task>
-    <task id="LOCAL-00065" summary=".count }} )">
-      <created>1590677446549</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1590677446549</updated>
     </task>
     <task id="LOCAL-00066" summary="corrections and user_passes_test added to charger vehicules">
       <created>1592246477477</created>
@@ -418,7 +401,28 @@
       <option name="project" value="LOCAL" />
       <updated>1598875108545</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="css &quot;formulaire p select&quot; corrected and added on page restitution">
+      <created>1598875199064</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1598875199064</updated>
+    </task>
+    <task id="LOCAL-00113" summary="css &quot;formulaire p select&quot; corrected and added on page attribuer">
+      <created>1598875275688</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1598875275689</updated>
+    </task>
+    <task id="LOCAL-00114" summary="css class &quot;restit&quot; corrected and added">
+      <created>1598875349841</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1598875349841</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -427,9 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Content Security Policy (CSP) removed" />
-    <MESSAGE value="media queries &quot;only&quot; word removed" />
-    <MESSAGE value="&lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot; /&gt; added" />
     <MESSAGE value="W3C validated CSS" />
     <MESSAGE value="W3C validated CSS." />
     <MESSAGE value="W3C validated CSS.." />
@@ -452,16 +453,18 @@
     <MESSAGE value="css &quot;formulaire&quot; corrected" />
     <MESSAGE value="css &quot;contentbox_restit&quot; created on page restitution" />
     <MESSAGE value="css &quot;restit&quot; created and added on page restitution" />
-    <option name="LAST_COMMIT_MESSAGE" value="css &quot;restit&quot; created and added on page restitution" />
+    <MESSAGE value="css &quot;formulaire p select&quot; corrected and added on page restitution" />
+    <MESSAGE value="css &quot;formulaire p select&quot; corrected and added on page attribuer" />
+    <MESSAGE value="css class &quot;restit&quot; corrected and added" />
+    <option name="LAST_COMMIT_MESSAGE" value="css class &quot;restit&quot; corrected and added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1598875275551">
+    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599226441144">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
-    <state x="297" y="23" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1590350668320" />
-    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1598875275551" />
+    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599226441143" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
@@ -473,13 +476,12 @@
     </state>
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598875276968">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1598875357090">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1590350672265" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1598875276968" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1598875357090" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
