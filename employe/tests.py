@@ -1,9 +1,11 @@
+from django.db import DatabaseError, transaction
 from django.db.models import signals
 from django.test import TestCase
 
 from django.contrib.auth.models import User
 from vehicule.models import Vehicule
 from .models import Employe, Conduire, Amende
+from conducteur.views import page_km_in
 
 from datetime import datetime
 
@@ -89,3 +91,15 @@ class UserEmployeeTestCase(TestCase):
                                     id_vehicule=vehicule)
 
         self.assertEqual(amende.montant, 90)
+
+    @transaction.atomic
+    def test_page_km_in(self):
+        created_user = User.objects.get(username='test1')
+        created_employe = Employe.objects.get(user=created_user)
+
+        # retrieving and locking the instance with select_for_update(), it remains effective until .save() is called
+        Conduire.objects.select_for_update().get(id_employe=created_employe, km_prise=1300)
+
+        # asserting that TypeError exception raises as the object will not be callable
+        self.assertRaises(TypeError, Conduire.objects.select_for_update().get(id_employe=created_employe,
+                                                                              km_prise=1300))

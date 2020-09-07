@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.shortcuts import render, redirect
 
 from dashboard.views import report_difference
@@ -19,46 +20,54 @@ def index(request):
 
 def page_km_in(request):
     """Km in submission page"""
-    try:
-        conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
 
-    except Conduire.DoesNotExist:
-        messages.error(request, 'Aucun véhicule ne vous a été attribué')
-        return redirect('conducteur:index')
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
 
-    form_conduite = FormConduirePrise(instance=conduite)
+        try:
+            conduite = Conduire.objects.select_for_update().get(id_employe=request.user.employe.id, km_restit=None)
 
-    context = {'conduite': conduite,
-               'form_conduite': form_conduite,
-               }
-
-    # gathering vehicle's issues
-    issues = MessageProbleme.objects.filter(id_vehicule=conduite.id_vehicule,
-                                            solved=False)
-    if issues:
-        issue = issues.latest('sent_at')
-        context['issue'] = issue
-
-    if request.POST:
-        form_conduite = FormConduirePrise(request.POST, instance=conduite)
-
-        if form_conduite.is_valid():
-
-            # raising a notification in case of discrepancy
-            if form_conduite.cleaned_data['km_prise'] != conduite.id_vehicule.km:
-
-                difference = form_conduite.cleaned_data['km_prise']
-
-                # calling the function that raises a notification
-                report_difference(conduite.id_employe, conduite.id_vehicule, difference)
-
-            form_conduite.save()
-            messages.success(request, 'Km de prise a été enregistré avec succès')
+        except Conduire.DoesNotExist:
+            messages.error(request, 'Aucun véhicule ne vous a été attribué')
             return redirect('conducteur:index')
 
-        else:
-            messages.error(request, form_conduite.errors)
-            return redirect()
+        except TypeError:
+            messages.error(request, 'Un problème est survenu, merci de réessayer.')
+            return redirect('conducteur:index')
+
+        form_conduite = FormConduirePrise(instance=conduite)
+
+        context = {'conduite': conduite,
+                   'form_conduite': form_conduite,
+                   }
+
+        # gathering vehicle's issues
+        issues = MessageProbleme.objects.filter(id_vehicule=conduite.id_vehicule,
+                                                solved=False)
+        if issues:
+            issue = issues.latest('sent_at')
+            context['issue'] = issue
+
+        if request.POST:
+            form_conduite = FormConduirePrise(request.POST, instance=conduite)
+
+            if form_conduite.is_valid():
+
+                # raising a notification in case of discrepancy
+                if form_conduite.cleaned_data['km_prise'] != conduite.id_vehicule.km:
+
+                    difference = form_conduite.cleaned_data['km_prise']
+
+                    # calling the function that raises a notification
+                    report_difference(conduite.id_employe, conduite.id_vehicule, difference)
+
+                form_conduite.save()
+                messages.success(request, 'Km de prise a été enregistré avec succès')
+                return redirect('conducteur:index')
+
+            else:
+                messages.error(request, form_conduite.errors)
+                return redirect()  # refreshing page
 
     return render(request=request,
                   template_name='conducteur/km_in.html',
@@ -67,33 +76,41 @@ def page_km_in(request):
 
 def page_km_out(request):
     """Km out submission page"""
-    try:
-        conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
 
-    except Conduire.DoesNotExist:
-        messages.error(request, "Vous n'avez aucun véhicule à restituer")
-        return redirect('conducteur:index')
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
 
-    form_conduite = FormConduireRestit(instance=conduite)
+        try:
+            conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
 
-    context = {'conduite': conduite,
-               'form_conduite': form_conduite}
-
-    if request.POST:
-        form_conduite = FormConduireRestit(request.POST, instance=conduite)
-
-        if form_conduite.is_valid():
-            vehicule = Vehicule.objects.get(id=conduite.id_vehicule.id)
-            vehicule.km = form_conduite.cleaned_data['km_restit']
-            vehicule.save()
-
-            form_conduite.save()
-            messages.success(request, 'Le vehicule ' + conduite.id_vehicule.immat + ' a été restitué avec succès')
+        except Conduire.DoesNotExist:
+            messages.error(request, "Vous n'avez aucun véhicule à restituer")
             return redirect('conducteur:index')
 
-        else:
-            messages.error(request, form_conduite.errors)
-            return redirect()
+        except TypeError:
+            messages.error(request, 'Un problème est survenu, merci de réessayer.')
+            return redirect('conducteur:index')
+
+        form_conduite = FormConduireRestit(instance=conduite)
+
+        context = {'conduite': conduite,
+                   'form_conduite': form_conduite}
+
+        if request.POST:
+            form_conduite = FormConduireRestit(request.POST, instance=conduite)
+
+            if form_conduite.is_valid():
+                vehicule = Vehicule.objects.get(id=conduite.id_vehicule.id)
+                vehicule.km = form_conduite.cleaned_data['km_restit']
+                vehicule.save()
+
+                form_conduite.save()
+                messages.success(request, 'Le vehicule ' + conduite.id_vehicule.immat + ' a été restitué avec succès')
+                return redirect('conducteur:index')
+
+            else:
+                messages.error(request, form_conduite.errors)
+                return redirect()  # refreshing page
 
     return render(request=request,
                   template_name='conducteur/km_out.html',
@@ -102,34 +119,42 @@ def page_km_out(request):
 
 def declarer_prob(request):
     """Declare a problem submission page"""
-    try:
-        conduite = Conduire.objects.get(id_employe=request.user.employe.id,
-                                        km_restit=None)
 
-    except Conduire.DoesNotExist:
-        messages.error(request, "Un véhicule doit vous être attribué pour déclarer un problème.")
-        return redirect('conducteur:index')
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
 
-    form_message = FormMessage()
+        try:
+            conduite = Conduire.objects.get(id_employe=request.user.employe.id,
+                                            km_restit=None)
 
-    context = {'conduite': conduite,
-               'form_message': form_message}
-
-    if request.POST:
-        filled_form_message = FormMessage(request.POST, instance=MessageProbleme(
-            id_employe=request.user.employe,
-            id_vehicule=conduite.id_vehicule
-        ))
-
-        if filled_form_message.is_valid():
-            filled_form_message.save()
-
-            messages.success(request, 'Votre message a été envoyé avec succès.')
+        except Conduire.DoesNotExist:
+            messages.error(request, "Un véhicule doit vous être attribué pour déclarer un problème.")
             return redirect('conducteur:index')
 
-        else:
-            messages.error(request, filled_form_message.errors)
-            return redirect()
+        except TypeError:
+            messages.error(request, 'Un problème est survenu, merci de réessayer.')
+            return redirect('conducteur:index')
+
+        form_message = FormMessage()
+
+        context = {'conduite': conduite,
+                   'form_message': form_message}
+
+        if request.POST:
+            filled_form_message = FormMessage(request.POST, instance=MessageProbleme(
+                id_employe=request.user.employe,
+                id_vehicule=conduite.id_vehicule
+            ))
+
+            if filled_form_message.is_valid():
+                filled_form_message.save()
+
+                messages.success(request, 'Votre message a été envoyé avec succès.')
+                return redirect('conducteur:index')
+
+            else:
+                messages.error(request, filled_form_message.errors)
+                return redirect()
 
     return render(request=request,
                   template_name='conducteur/declarer_prob.html',

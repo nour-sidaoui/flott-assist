@@ -1,3 +1,4 @@
+from django.db import transaction
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
@@ -34,41 +35,48 @@ def retrieve_employe(request):
 @permission_classes((IsAuthenticated,))
 def api_km_prise(request):
     """POST saved entered Km and GET returns Km and date_de_prise """
+
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
-    try:
-        conduite = Conduire.objects.get(id_employe=conducteur,
-                                        km_restit=None)
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
 
-    except Conduire.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        try:
+            conduite = Conduire.objects.get(id_employe=conducteur,
+                                            km_restit=None)
 
-    if request.method == 'POST':
-        serializer = KmInSerializer(conduite, data=request.data)
+        except Conduire.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-        if serializer.is_valid():
-            vehicule = conduite.id_vehicule
+        # TypeError exception raises in case of concurrency as the object will not be callable
+        except TypeError:
+            return Response(status=status.HTTP_409_CONFLICT)
 
-            # creating notification and message if Km does not match
-            if vehicule.km != serializer.validated_data['km_prise']:
+        if request.method == 'POST':
+            serializer = KmInSerializer(conduite, data=request.data)
 
-                difference = serializer.validated_data['km_prise']
+            if serializer.is_valid():
+                vehicule = conduite.id_vehicule
 
-                # calling the function that raises a notification
-                report_difference(conducteur, vehicule, difference)
+                # creating notification and message if Km does not match
+                if vehicule.km != serializer.validated_data['km_prise']:
 
-                vehicule.km = serializer.validated_data['km_prise']
-                vehicule.save()
+                    difference = serializer.validated_data['km_prise']
 
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+                    # calling the function that raises a notification
+                    report_difference(conducteur, vehicule, difference)
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+                    vehicule.km = serializer.validated_data['km_prise']
+                    vehicule.save()
 
-    # else if request is GET
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    serializer = KmInSerializer(conduite)
-    return Response(serializer.data)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        # else if request is GET
+        serializer = KmInSerializer(conduite)
+        return Response(serializer.data)
 
 
 @api_view(['POST', ])
@@ -77,26 +85,32 @@ def api_km_restit(request):
     """receives and saves km_de_restit and adds actual time"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
-    try:
-        conduite = Conduire.objects.get(id_employe=conducteur,
-                                        km_restit=None)
-    except Conduire.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
+        try:
+            conduite = Conduire.objects.get(id_employe=conducteur,
+                                            km_restit=None)
+        except Conduire.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-    conduite.date_et_temps_de_restitution = datetime.now()
-    conduite.save()
+        # TypeError exception raises in case of concurrency as the object will not be callable
+        except TypeError:
+            return Response(status=status.HTTP_409_CONFLICT)
 
-    serializer = KmOutSerializer(conduite, data=request.data)
+        conduite.date_et_temps_de_restitution = datetime.now()
+        conduite.save()
 
-    if serializer.is_valid():
-        vehicule = conduite.id_vehicule
-        vehicule.km = serializer.validated_data['km_restit']
-        vehicule.save()
+        serializer = KmOutSerializer(conduite, data=request.data)
 
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        if serializer.is_valid():
+            vehicule = conduite.id_vehicule
+            vehicule.km = serializer.validated_data['km_restit']
+            vehicule.save()
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET', ])
@@ -143,23 +157,29 @@ def api_declarer_prob(request):
     """receives a declared problem to conduite instance"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
-    try:
-        conduite = Conduire.objects.get(id_employe=conducteur,
-                                        km_restit=None)
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
+        try:
+            conduite = Conduire.objects.get(id_employe=conducteur,
+                                            km_restit=None)
 
-    except Conduire.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        except Conduire.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-    msg = MessageProbleme(id_employe=conducteur,
-                          id_vehicule=conduite.id_vehicule)
+        # TypeError exception raises in case of concurrency as the object will not be callable
+        except TypeError:
+            return Response(status=status.HTTP_409_CONFLICT)
 
-    serializer = MessageProblemeSerializer(msg, data=request.data)
+        msg = MessageProbleme(id_employe=conducteur,
+                              id_vehicule=conduite.id_vehicule)
 
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        serializer = MessageProblemeSerializer(msg, data=request.data)
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST', ])
@@ -168,24 +188,30 @@ def api_gps(request):
     """receives GPS coordinates from mobile app"""
     conducteur = retrieve_employe(request)                          # retrieving sender's Employe object
 
-    try:
-        conduite = Conduire.objects.get(id_employe=conducteur,
-                                        km_restit=None)
+    # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
+    with transaction.atomic():
+        try:
+            conduite = Conduire.objects.get(id_employe=conducteur,
+                                            km_restit=None)
 
-    except Conduire.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        except Conduire.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
 
-    msg = MessageProbleme(id_employe=conducteur,
-                          id_vehicule=conduite.id_vehicule,
-                          sujet='Coord. GPS partagées')
+        # TypeError exception raises in case of concurrency as the object will not be callable
+        except TypeError:
+            return Response(status=status.HTTP_409_CONFLICT)
 
-    serializer = GpsSerializer(msg, data=request.data)
+        msg = MessageProbleme(id_employe=conducteur,
+                              id_vehicule=conduite.id_vehicule,
+                              sujet='Coord. GPS partagées')
 
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        serializer = GpsSerializer(msg, data=request.data)
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['PUT', ])
