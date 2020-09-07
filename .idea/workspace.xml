@@ -461,14 +461,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="CookielawBanner updated for RGPD" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599245456975">
+    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599483787541">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
-    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599245456975" />
+    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599483787541" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
+    <state x="59" y="58" key="DiffContextDialog" timestamp="1599483801269">
+      <screen x="0" y="23" width="1920" height="1001" />
+    </state>
+    <state x="59" y="58" key="DiffContextDialog/0.23.1920.1001@0.23.1920.1001" timestamp="1599483801269" />
     <state x="230" y="114" key="MergeDialog" timestamp="1598444523886">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
@@ -482,12 +486,12 @@
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="938" y="85" key="SettingsEditor/0.23.1920.1001@0.23.1920.1001" timestamp="1599336733597" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599245458210">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599483802410">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599245458210" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599483802410" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">

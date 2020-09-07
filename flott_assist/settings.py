@@ -11,10 +11,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6)$fc)m8crei*l8m!8vo1sppq5(bu$s6u_#0=h(cqkt-67!6ji'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Change to shift between dev mode and deployed mode
-DEPLOYED = False
+DEPLOYED = True
 
 ALLOWED_HOSTS = ['192.168.1.11',
                  'sidaoui.pythonanywhere.com',
