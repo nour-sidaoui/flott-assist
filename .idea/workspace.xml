@@ -4,9 +4,6 @@
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conducteur/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conducteur/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/conducteur/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employe/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,20 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00069" summary="admin.site.site_header changed">
-      <created>1593160875821</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1593160875821</updated>
-    </task>
-    <task id="LOCAL-00070" summary="updated to jQuery 3.5.1">
-      <created>1597668115580</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1597668115581</updated>
     </task>
     <task id="LOCAL-00071" summary="commented jQuery removed &amp; &#10;aria-labelledBy added to historique">
       <created>1597682594839</created>
@@ -424,7 +407,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599245457109</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Concurrency managed on POST requests (api and conducteur) unit test added">
+      <created>1599483787781</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1599483787781</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Concurrency managed on POST requests (api and conducteur) unit test added">
+      <created>1599483821656</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1599483821656</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -433,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="W3C validated CSS.." />
     <MESSAGE value="W3C validated CSS..." />
     <MESSAGE value="W3C validated CSS...." />
     <MESSAGE value="W3C validated CSS + mobile version readapted" />
@@ -458,15 +454,16 @@
     <MESSAGE value="css class &quot;restit&quot; corrected and added" />
     <MESSAGE value="CookielawBanner updated for RGPD (.)" />
     <MESSAGE value="CookielawBanner updated for RGPD" />
-    <option name="LAST_COMMIT_MESSAGE" value="CookielawBanner updated for RGPD" />
+    <MESSAGE value="Concurrency managed on POST requests (api and conducteur) unit test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Concurrency managed on POST requests (api and conducteur) unit test added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599483787541">
+    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599484594706">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
-    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599483787541" />
+    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599484594706" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
     <state x="59" y="58" key="DiffContextDialog" timestamp="1599483801269">
@@ -486,12 +483,12 @@
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="938" y="85" key="SettingsEditor/0.23.1920.1001@0.23.1920.1001" timestamp="1599336733597" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599483802410">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599483827463">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599483802410" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599483827463" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">

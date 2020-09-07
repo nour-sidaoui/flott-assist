@@ -42,8 +42,8 @@ def api_km_prise(request):
     with transaction.atomic():
 
         try:
-            conduite = Conduire.objects.get(id_employe=conducteur,
-                                            km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=conducteur,
+                                                                km_restit=None)
 
         except Conduire.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -88,8 +88,8 @@ def api_km_restit(request):
     # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
     with transaction.atomic():
         try:
-            conduite = Conduire.objects.get(id_employe=conducteur,
-                                            km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=conducteur,
+                                                                km_restit=None)
         except Conduire.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
@@ -160,8 +160,8 @@ def api_declarer_prob(request):
     # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
     with transaction.atomic():
         try:
-            conduite = Conduire.objects.get(id_employe=conducteur,
-                                            km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=conducteur,
+                                                                km_restit=None)
 
         except Conduire.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -191,8 +191,8 @@ def api_gps(request):
     # using with transaction.atomic() to lock the db row with select_for_update() on the entire block
     with transaction.atomic():
         try:
-            conduite = Conduire.objects.get(id_employe=conducteur,
-                                            km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=conducteur,
+                                                                km_restit=None)
 
         except Conduire.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)

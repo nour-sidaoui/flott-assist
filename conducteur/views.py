@@ -81,7 +81,8 @@ def page_km_out(request):
     with transaction.atomic():
 
         try:
-            conduite = Conduire.objects.get(id_employe=request.user.employe.id, km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=request.user.employe.id,
+                                                                km_restit=None)
 
         except Conduire.DoesNotExist:
             messages.error(request, "Vous n'avez aucun véhicule à restituer")
@@ -124,8 +125,8 @@ def declarer_prob(request):
     with transaction.atomic():
 
         try:
-            conduite = Conduire.objects.get(id_employe=request.user.employe.id,
-                                            km_restit=None)
+            conduite = Conduire.objects.select_for_update().get(id_employe=request.user.employe.id,
+                                                                km_restit=None)
 
         except Conduire.DoesNotExist:
             messages.error(request, "Un véhicule doit vous être attribué pour déclarer un problème.")
