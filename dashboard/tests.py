@@ -64,3 +64,5 @@ class UserEmployeeTestCase(TestCase):
         notif_assurance = Notification.objects.get(id_vehicule=created_vehicule1,
                                                    is_assurance=True)
         self.assertEqual(notif_assurance.is_assurance, True)
+
+
