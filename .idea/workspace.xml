@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
+    <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="check version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehicule/templates/vehicule/fiche.html" beforeDir="false" afterPath="$PROJECT_DIR$/vehicule/templates/vehicule/fiche.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,13 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00072" summary="commented jQuery removed &amp; &#10;aria-labelledBy added to historique">
-      <created>1597682787475</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1597682787475</updated>
     </task>
     <task id="LOCAL-00073" summary="aria-labelledBy removed">
       <created>1597682846322</created>
@@ -422,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599484663076</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="updated modules and test modules installed">
+      <created>1599655082910</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1599655082910</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -431,7 +430,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="W3C validated CSS...." />
     <MESSAGE value="W3C validated CSS + mobile version readapted" />
     <MESSAGE value="DEPLOYED active" />
     <MESSAGE value="CookieLaw added and set" />
@@ -456,15 +454,16 @@
     <MESSAGE value="CookielawBanner updated for RGPD" />
     <MESSAGE value="Concurrency managed on POST requests (api and conducteur) unit test added" />
     <MESSAGE value="Concurrency managed on POST requests (api and conducteur) select_for_update() added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Concurrency managed on POST requests (api and conducteur) select_for_update() added" />
+    <MESSAGE value="updated modules and test modules installed" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated modules and test modules installed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1599484662942">
+    <state x="439" y="24" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1600637748266">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
     <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
-    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1599484662942" />
+    <state x="439" y="24" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1600637748266" />
     <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
     <state x="59" y="58" key="DiffContextDialog" timestamp="1599483801269">
@@ -484,12 +483,12 @@
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="938" y="85" key="SettingsEditor/0.23.1920.1001@0.23.1920.1001" timestamp="1599336733597" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599484664318">
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1599655084986">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
     <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599484664318" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1599655084986" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
