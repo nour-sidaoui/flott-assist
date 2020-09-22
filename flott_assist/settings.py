@@ -85,12 +85,12 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    "https://localhost:8100",
-    "https://127.0.0.1:8100",
+    'http://localhost:8100',
+    'http://127.0.0.1:8100',
 ]
 
-if DEPLOYED:
-    CORS_ORIGIN_WHITELIST += "https://81.249.202.21"         # <-- adding Xcode simulator ip
+# if DEPLOYED:
+#     CORS_ORIGIN_WHITELIST += "81.249.202.21:8000"         # <-- adding Xcode simulator ip
 
 CORS_ALLOW_METHODS = [
     'GET',
