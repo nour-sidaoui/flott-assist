@@ -7,4 +7,4 @@ __pycache__
 .gitignore
 static/node_modules/
 package-lock.json
-
+secret_settings.py
