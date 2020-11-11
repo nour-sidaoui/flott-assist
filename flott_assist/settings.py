@@ -52,7 +52,6 @@ INSTALLED_APPS = [
 
     # Cookie-law
     'cookielaw',
-
 ]
 
 REST_FRAMEWORK = {

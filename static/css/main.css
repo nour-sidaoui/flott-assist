@@ -1181,7 +1181,7 @@ and (max-width: 700px) {
 	and (orientation: portrait) {
 
 	/* BURGER MENU */
-	  	span {
+		.span {
 			display: block;
 			background: #566973;
 			border-radius: 2px;

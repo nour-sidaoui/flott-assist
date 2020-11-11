@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2575171c-e28b-4af0-9651-f24e321fab52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flott_assist/secret_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flott_assist/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flott_assist/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employe/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/employe/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/scripts/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -79,13 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582800669388</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Notifications unit tests added">
-      <created>1598123440302</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1598123440302</updated>
     </task>
     <task id="LOCAL-00079" summary="proportional fonts size limited for big screens in CSS and STATIC ROOT linked to DEBUG">
       <created>1598125176544</created>
@@ -423,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600776384279</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="secret key moved to .secret_settings">
+      <created>1601391357115</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1601391357115</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -432,7 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="h6 fontsize restored" />
     <MESSAGE value="h6 media query added for tab screens" />
     <MESSAGE value="cookie banner position fixed" />
     <MESSAGE value="texte cookiebanner corrigé" />
@@ -457,16 +455,19 @@
     <MESSAGE value="http:// added to CORS whitelist" />
     <MESSAGE value="https:// added to CORS whitelist" />
     <MESSAGE value="if deployed commented out of CORS whitelist" />
-    <option name="LAST_COMMIT_MESSAGE" value="if deployed commented out of CORS whitelist" />
+    <MESSAGE value="secret key moved to .secret_settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="secret key moved to .secret_settings" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="870" y="41" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1600776384160">
+    <state x="588" y="312" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605030608113">
+      <screen x="0" y="23" width="1920" height="1005" />
+    </state>
+    <state x="588" y="312" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1005@0.23.1920.1005" timestamp="1605030608113" />
+    <state x="870" y="41" width="1224" height="996" key="CommitChangelistDialog2" timestamp="1601391356950">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="439" y="1" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868743029" />
-    <state x="329" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1592248879766" />
-    <state x="870" y="41" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1600776384160" />
-    <state x="439" y="23" key="CommitChangelistDialog2/0.23.1920.996@0.23.1920.996" timestamp="1593160875712" />
+    <state x="870" y="41" key="CommitChangelistDialog2/0.23.1920.1001@0.23.1920.1001" timestamp="1601391356950" />
     <state x="439" y="23" width="1224" height="996" key="CommitChangelistDialog2/0.23.1920.997@0.23.1920.997" timestamp="1598738331605" />
     <state x="59" y="58" key="DiffContextDialog" timestamp="1599483801269">
       <screen x="0" y="23" width="1920" height="1001" />
@@ -479,29 +480,26 @@
     <state x="714" y="246" key="MultipleFileMergeDialog" timestamp="1598444526780">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
-    <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.996@0.23.1920.996" timestamp="1593160864408" />
     <state x="714" y="246" key="MultipleFileMergeDialog/0.23.1920.997@0.23.1920.997" timestamp="1598444526780" />
-    <state x="938" y="85" key="SettingsEditor" timestamp="1599336733597">
+    <state x="938" y="85" key="SettingsEditor" timestamp="1602347301993">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
-    <state x="938" y="85" key="SettingsEditor/0.23.1920.1001@0.23.1920.1001" timestamp="1599336733597" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1600776385627">
+    <state x="938" y="85" key="SettingsEditor/0.23.1920.1001@0.23.1920.1001" timestamp="1602347301993" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2" timestamp="1601391359066">
       <screen x="0" y="23" width="1920" height="1001" />
     </state>
     <state x="427" y="201" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1598868745680" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1592248894310" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1600776385627" />
-    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.996@0.23.1920.996" timestamp="1593160877061" />
+    <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.1001@0.23.1920.1001" timestamp="1601391359066" />
     <state x="427" y="209" key="Vcs.Push.Dialog.v2/0.23.1920.997@0.23.1920.997" timestamp="1598738333052" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598444685955">
       <screen x="0" y="23" width="1920" height="997" />
     </state>
-    <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.996@0.23.1920.996" timestamp="1593160851532" />
     <state x="700" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.997@0.23.1920.997" timestamp="1598444685955" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1598554648307">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="625" y="247" width="670" height="630" key="search.everywhere.popup" timestamp="1605031167356">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1598554648307" />
+    <state x="625" y="247" width="670" height="630" key="search.everywhere.popup/0.23.1920.1005@0.23.1920.1005" timestamp="1605031167356" />
     <state x="625" y="245" width="670" height="625" key="search.everywhere.popup/0.23.1920.997@0.23.1920.997" timestamp="1598447002326" />
   </component>
 </project>
