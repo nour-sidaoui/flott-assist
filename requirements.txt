@@ -14,7 +14,7 @@ GitPython==3.1.8
 iniconfig==1.0.1
 more-itertools==8.5.0
 packaging==20.4
-Pillow==7.2.0
+Pillow==8.2.0
 pluggy==0.13.1
 py==1.9.0
 pydotplus==2.0.2
