@@ -8,7 +8,7 @@ django-csp==3.7
 django-extensions==3.0.8
 django-pipeline==2.0.5
 django-sql==1.0.1
-djangorestframework==3.11.1
+djangorestframework==3.11.2
 gitdb==4.0.5
 GitPython==3.1.8
 iniconfig==1.0.1
